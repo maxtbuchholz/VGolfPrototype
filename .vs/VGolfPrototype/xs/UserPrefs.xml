@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cbe00fbc-55ac-4fdf-aaa1-dbfb3e2e45f0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VGolfPrototype/Assets/FollowBall.cs">
+    <Files>
+      <File FileName="Assets/SizeCameraToScreen.cs" Line="8" Column="1" />
+      <File FileName="Assets/FollowBall.cs" Line="42" Column="61" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VGolfPrototype" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
