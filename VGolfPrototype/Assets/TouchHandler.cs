@@ -6,6 +6,7 @@ using UnityEngine;
 public class TouchHandler : MonoBehaviour
 {
     [SerializeField] GameObject Ball;
+    [SerializeField] Camera camera;
 
     private List<int> activeTouches;
     private List<int> touchesWeThinkAreActive;
@@ -27,9 +28,9 @@ public class TouchHandler : MonoBehaviour
 
             if (Input.touches[i].phase == TouchPhase.Began)
             {
-                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+                Vector3 touchPosition = camera.ScreenToWorldPoint(Input.touches[i].position);
                 Vector2 touchPosWorld2D = new Vector2(touchPosition.x, touchPosition.y);
-                RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, Camera.main.transform.forward);
+                RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, camera.transform.forward);
                 if (hitInformation.collider != null)
                 {
                     GameObject touchedObject = hitInformation.transform.gameObject;

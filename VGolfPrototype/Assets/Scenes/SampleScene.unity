@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 955157279}
+  camera: {fileID: 545401586}
 --- !u!1 &236762942
 GameObject:
   m_ObjectHideFlags: 0
