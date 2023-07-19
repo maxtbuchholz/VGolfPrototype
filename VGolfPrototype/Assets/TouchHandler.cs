@@ -14,7 +14,7 @@ public class TouchHandler : MonoBehaviour
     private Dictionary<int, string> touchJob;
     private Dictionary<int, Vector2> originalTouchPos;
     private float maxPullBack = 4.0f;
-    private float pushForce = 3f;
+    private float pushForce = 4f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
     private void Start()
@@ -68,7 +68,7 @@ public class TouchHandler : MonoBehaviour
                         tempPos.x = origPos.x + (maxPullBack * (float)System.Math.Cos(radia));
                         tempPos.y = origPos.y + (maxPullBack * (float)System.Math.Sin(radia));
                     }
-                    if (hypot > 0.3)
+                    if (hypot > 0.8)
                     {
                         PullDistanceLongEnough = true;
                         trajectory.Show();

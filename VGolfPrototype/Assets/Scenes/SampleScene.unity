@@ -268,6 +268,7 @@ MonoBehaviour:
   Ball: {fileID: 955157279}
   camera: {fileID: 545401586}
   trajectory: {fileID: 647628060}
+  scoreController: {fileID: 162040456}
 --- !u!114 &162040456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 236762942}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 84ed6714e954342c99851cc0a4be117d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -865,7 +866,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 693385771}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 84ed6714e954342c99851cc0a4be117d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1063,6 +1064,7 @@ GameObject:
   - component: {fileID: 955157280}
   - component: {fileID: 955157283}
   - component: {fileID: 955157282}
+  - component: {fileID: 955157284}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -1151,7 +1153,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.8
+  m_AngularDrag: 2
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1199,6 +1201,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &955157284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955157279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466508fc58ddd4fda890a2ab950fa2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1124326485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1261,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1124326485}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 75625a352bd2a467c898f15b100c1c9e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1462,7 +1476,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1171703102}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 75625a352bd2a467c898f15b100c1c9e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1812,7 +1826,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1462620077}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 75625a352bd2a467c898f15b100c1c9e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2072,7 +2086,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1957078997}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 84ed6714e954342c99851cc0a4be117d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2154,7 +2168,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2091897286}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 84ed6714e954342c99851cc0a4be117d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
