@@ -50,6 +50,7 @@ public class Trajectory : MonoBehaviour
 
             dotsList[i].position = new Vector3(pos.x, pos.y, transform.position.z);
             timeStamp += dotSpacing;
+            //Debug.DrawLine(ballPos, dotsList[i].position, Color.magenta);
         }
     }
 

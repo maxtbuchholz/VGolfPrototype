@@ -18,6 +18,7 @@ public class TouchHandler : MonoBehaviour
     {
         touchesWeThinkAreActive = new List<int>();
         touchJob = new Dictionary<int, string>();
+        originalTouchPos = new Dictionary<int, Vector2>();
         Application.targetFrameRate = 60;
     }
     void Update()
@@ -28,10 +29,9 @@ public class TouchHandler : MonoBehaviour
         {
             activeTouches.Add(Input.touches[i].fingerId);
             if(!touchesWeThinkAreActive.Contains(Input.touches[i].fingerId)) touchesWeThinkAreActive.Add(Input.touches[i].fingerId);
-            originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
+            Vector3 touchPosition = camera.ScreenToWorldPoint(Input.touches[i].position);
             if (Input.touches[i].phase == TouchPhase.Began)
             {
-                Vector3 touchPosition = camera.ScreenToWorldPoint(Input.touches[i].position);
                 Vector2 touchPosWorld2D = new Vector2(touchPosition.x, touchPosition.y);
                 RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, camera.transform.forward);
                 if (hitInformation.collider != null)
@@ -39,7 +39,9 @@ public class TouchHandler : MonoBehaviour
                     GameObject touchedObject = hitInformation.transform.gameObject;
                     if(touchedObject == Ball) //touching ball
                     {
+                        originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
                         touchJob[Input.touches[i].fingerId] = "Ball";
+                        trajectory.Show();
                     }
                 }
             }
@@ -49,8 +51,8 @@ public class TouchHandler : MonoBehaviour
                 touchJob.TryGetValue(touchesWeThinkAreActive[i], out job);
                 if (job == "Ball")
                 {
-                    Vector2 tempPos = Input.touches[i].position;
-                    Vector2 origPos = originalTouchPos[Input.touches[i].fingerId];
+                    Vector2 tempPos = camera.ScreenToWorldPoint(Input.touches[i].position);
+                    Vector2 origPos = Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
                     float angle = AngleBetween(tempPos, origPos);
                     if (angle < 0)
                         angle = 360 + angle;
@@ -61,6 +63,7 @@ public class TouchHandler : MonoBehaviour
                         tempPos.x = origPos.x + (maxPullBack * (float)System.Math.Cos(radia));
                         tempPos.y = origPos.y + (maxPullBack * (float)System.Math.Sin(radia));
                     }
+                    //Debug.Log(hypot);
                     //tempPos.z = -6;
                     Vector2 trajSpeed = new Vector2((tempPos.x - origPos.x) / maxPullBack, (tempPos.y - origPos.y) / maxPullBack);
                     //Debug.Log(speed.x.ToString() + "  " + speed.y.ToString());
@@ -71,7 +74,8 @@ public class TouchHandler : MonoBehaviour
                     Vector2 Force = direction * distance * pushForce;
                     trajectory.UpdateDots(Ball.transform.position, Force);
                     trajectory.Show();
-                    Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint);
+                    Debug.DrawLine(Ball.transform.position, LaunchGrapEndingPoint, Color.blue);
+                    Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint, Color.red);
                     ////tempOb.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
                 }
             }
@@ -84,7 +88,8 @@ public class TouchHandler : MonoBehaviour
                 touchJob.TryGetValue(touchesWeThinkAreActive[i], out job);
                 if (job == "Ball")
                 {
-                    Destroy(Ball);
+                    trajectory.Hide();
+                    //Destroy(Ball);
                 }
                 touchesWeThinkAreActive.RemoveAt(i);
             }

@@ -781,10 +781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d3c0eaa75444125b9548a1a00981ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotsNumber: 30
+  dotsNumber: 5
   dotsParent: {fileID: 1750904114}
   dotPrefab: {fileID: 1657211437086512468, guid: b95a676eeb2d24d2590eaa7121e29d65, type: 3}
-  dotSpacing: 0
+  dotSpacing: 0.1
   dotMinScale: 0.1
   dotMaxScale: 0.2
 --- !u!4 &647628061
