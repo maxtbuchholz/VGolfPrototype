@@ -12,8 +12,10 @@ public class TouchHandler : MonoBehaviour
     private List<int> touchesWeThinkAreActive;
     private Dictionary<int, string> touchJob;
     private Dictionary<int, Vector2> originalTouchPos;
-    private float maxPullBack = 2.0f;
+    private float maxPullBack = 4.0f;
     private float pushForce = 10f;
+    private Vector2 Force;
+    private bool PullDistanceLongEnough = false;
     private void Start()
     {
         touchesWeThinkAreActive = new List<int>();
@@ -32,18 +34,20 @@ public class TouchHandler : MonoBehaviour
             Vector3 touchPosition = camera.ScreenToWorldPoint(Input.touches[i].position);
             if (Input.touches[i].phase == TouchPhase.Began)
             {
-                Vector2 touchPosWorld2D = new Vector2(touchPosition.x, touchPosition.y);
-                RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, camera.transform.forward);
-                if (hitInformation.collider != null)
-                {
-                    GameObject touchedObject = hitInformation.transform.gameObject;
-                    if(touchedObject == Ball) //touching ball
-                    {
-                        originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
-                        touchJob[Input.touches[i].fingerId] = "Ball";
-                        trajectory.Show();
-                    }
-                }
+                //Vector2 touchPosWorld2D = new Vector2(touchPosition.x, touchPosition.y);
+                //RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, camera.transform.forward);
+                //if ((hitInformation.collider != null)
+                //{
+                //    GameObject touchedObject = hitInformation.transform.gameObject;
+                //    if((touchedObject == Ball) || true) //touching ball
+                //    {
+                //        originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
+                //        touchJob[Input.touches[i].fingerId] = "Ball";
+                //        //trajectory.Show();
+                //    }
+                //}
+                originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
+                touchJob[Input.touches[i].fingerId] = "Ball";
             }
             else
             {
@@ -52,7 +56,7 @@ public class TouchHandler : MonoBehaviour
                 if (job == "Ball")
                 {
                     Vector2 tempPos = camera.ScreenToWorldPoint(Input.touches[i].position);
-                    Vector2 origPos = Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
+                    Vector2 origPos = camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]); // Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
                     float angle = AngleBetween(tempPos, origPos);
                     if (angle < 0)
                         angle = 360 + angle;
@@ -63,6 +67,16 @@ public class TouchHandler : MonoBehaviour
                         tempPos.x = origPos.x + (maxPullBack * (float)System.Math.Cos(radia));
                         tempPos.y = origPos.y + (maxPullBack * (float)System.Math.Sin(radia));
                     }
+                    if (hypot > 0.3)
+                    {
+                        PullDistanceLongEnough = true;
+                        trajectory.Show();
+                    }
+                    else
+                    {
+                        PullDistanceLongEnough = false;
+                        trajectory.Hide();
+                    }
                     //Debug.Log(hypot);
                     //tempPos.z = -6;
                     Vector2 trajSpeed = new Vector2((tempPos.x - origPos.x) / maxPullBack, (tempPos.y - origPos.y) / maxPullBack);
@@ -71,9 +85,8 @@ public class TouchHandler : MonoBehaviour
                     Vector2 LaunchGrapStartingPoint = origPos;
                     float distance = Vector2.Distance(LaunchGrapStartingPoint, LaunchGrapEndingPoint);
                     Vector2 direction = (LaunchGrapStartingPoint - LaunchGrapEndingPoint).normalized;
-                    Vector2 Force = direction * distance * pushForce;
+                    Force = direction * distance * pushForce;
                     trajectory.UpdateDots(Ball.transform.position, Force);
-                    trajectory.Show();
                     Debug.DrawLine(Ball.transform.position, LaunchGrapEndingPoint, Color.blue);
                     Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint, Color.red);
                     ////tempOb.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
@@ -89,7 +102,8 @@ public class TouchHandler : MonoBehaviour
                 if (job == "Ball")
                 {
                     trajectory.Hide();
-                    //Destroy(Ball);
+                    if(PullDistanceLongEnough)
+                        Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
                 }
                 touchesWeThinkAreActive.RemoveAt(i);
             }
