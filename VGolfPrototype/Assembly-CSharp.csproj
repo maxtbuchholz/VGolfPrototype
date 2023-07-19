@@ -64,6 +64,7 @@
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/ResizeWallColliders.cs" />
     <Compile Include="Assets/FPSCounter.cs" />
+    <Compile Include="Assets/ScoreController.cs" />
     <Compile Include="Assets/SizeCameraToScreen.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,12 +8,13 @@ public class TouchHandler : MonoBehaviour
     [SerializeField] GameObject Ball;
     [SerializeField] Camera camera;
     [SerializeField] Trajectory trajectory;
+    [SerializeField] ScoreController scoreController;
     private List<int> activeTouches;
     private List<int> touchesWeThinkAreActive;
     private Dictionary<int, string> touchJob;
     private Dictionary<int, Vector2> originalTouchPos;
     private float maxPullBack = 4.0f;
-    private float pushForce = 10f;
+    private float pushForce = 3f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
     private void Start()
@@ -102,8 +103,11 @@ public class TouchHandler : MonoBehaviour
                 if (job == "Ball")
                 {
                     trajectory.Hide();
-                    if(PullDistanceLongEnough)
+                    if (PullDistanceLongEnough)
+                    {
                         Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
+                        scoreController.ScoreAdOne();
+                    }
                 }
                 touchesWeThinkAreActive.RemoveAt(i);
             }
