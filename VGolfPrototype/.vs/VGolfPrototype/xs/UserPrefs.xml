@@ -1,12 +1,18 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="52f7096e-533d-42a8-b3ad-55fc2a6706f0" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TouchHandler.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="25774e65-9e4f-473c-af93-9b8438c0976d" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Projection.cs">
     <Files>
       <File FileName="Assets/ResizeWallColliders.cs" />
-      <File FileName="Assets/TouchHandler.cs" Line="15" Column="34" />
+      <File FileName="Assets/TouchHandler.cs" Line="77" Column="55" />
       <File FileName="Assets/FPSCounter.cs" />
+      <File FileName="Assets/ScoreController.cs" />
+      <File FileName="Assets/BallSpeedReporter.cs" />
+      <File FileName="Assets/Projection.cs" Line="36" Column="44" />
+      <File FileName="Assets/FollowBall.cs" Line="39" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,8 +24,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

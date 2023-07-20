@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets/BallSpeedReporter.cs" />
     <Compile Include="Assets/TouchHandler.cs" />
+    <Compile Include="Assets/Projection.cs" />
     <Compile Include="Assets/Trajectory/Trajectory.cs" />
     <Compile Include="Assets/FollowBall.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />

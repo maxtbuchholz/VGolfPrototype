@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class TouchHandler : MonoBehaviour
 {
-    [SerializeField] GameObject Ball;
+    private GameObject Ball;
     [SerializeField] Camera camera;
     [SerializeField] Trajectory trajectory;
     [SerializeField] ScoreController scoreController;
+    [SerializeField] Projection projection;
     private List<int> activeTouches;
     private List<int> touchesWeThinkAreActive;
     private Dictionary<int, string> touchJob;
@@ -19,6 +20,7 @@ public class TouchHandler : MonoBehaviour
     private bool PullDistanceLongEnough = false;
     private void Start()
     {
+        Ball = GameObject.Find("Ball");
         touchesWeThinkAreActive = new List<int>();
         touchJob = new Dictionary<int, string>();
         originalTouchPos = new Dictionary<int, Vector2>();
@@ -26,7 +28,7 @@ public class TouchHandler : MonoBehaviour
     }
     void Update()
     {
-
+        //projection.SimulatrTrajectory(Ball.transform.position, new(2.0f, 2.0f));
         activeTouches = new List<int>();
         for (int i = 0; i < Input.touchCount; i++)
         {
@@ -72,6 +74,7 @@ public class TouchHandler : MonoBehaviour
                     {
                         PullDistanceLongEnough = true;
                         trajectory.Show();
+                        projection.SimulatrTrajectory(Ball.transform.position, Force);
                     }
                     else
                     {
