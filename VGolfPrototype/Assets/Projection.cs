@@ -10,8 +10,10 @@ public class Projection : MonoBehaviour
     private Scene simulationScene;
     private PhysicsScene2D physicsScene;
     private Dictionary<Transform, Transform> moveableObjects = new Dictionary<Transform, Transform>();
+    private bool show = false;
     private void Start()
     {
+        Hide();
         CreatePhysicsScene(); 
     }
     void CreatePhysicsScene()
@@ -58,5 +60,13 @@ public class Projection : MonoBehaviour
             line.SetPosition(i, ghostObj.transform.position);
         }
         Destroy(ghostObj);
+    }
+    public void Show()
+    {
+        line.enabled = true;
+    }
+    public void Hide()
+    {
+        line.enabled = false;
     }
 }

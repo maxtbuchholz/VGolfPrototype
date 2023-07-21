@@ -7,7 +7,7 @@ public class TouchHandler : MonoBehaviour
 {
     private GameObject Ball;
     [SerializeField] Camera camera;
-    [SerializeField] Trajectory trajectory;
+    //[SerializeField] Trajectory trajectory;
     [SerializeField] ScoreController scoreController;
     [SerializeField] Projection projection;
     private List<int> activeTouches;
@@ -73,13 +73,15 @@ public class TouchHandler : MonoBehaviour
                     if (hypot > 0.8)
                     {
                         PullDistanceLongEnough = true;
-                        trajectory.Show();
+                        projection.Show();
+                        //trajectory.Show();
                         projection.SimulatrTrajectory(Ball.transform.position, Force);
                     }
                     else
                     {
                         PullDistanceLongEnough = false;
-                        trajectory.Hide();
+                        projection.Hide();
+                        //trajectory.Hide();
                     }
                     //Debug.Log(hypot);
                     //tempPos.z = -6;
@@ -90,7 +92,7 @@ public class TouchHandler : MonoBehaviour
                     float distance = Vector2.Distance(LaunchGrapStartingPoint, LaunchGrapEndingPoint);
                     Vector2 direction = (LaunchGrapStartingPoint - LaunchGrapEndingPoint).normalized;
                     Force = direction * distance * pushForce;
-                    trajectory.UpdateDots(Ball.transform.position, Force);
+                    //trajectory.UpdateDots(Ball.transform.position, Force);
                     Debug.DrawLine(Ball.transform.position, LaunchGrapEndingPoint, Color.blue);
                     Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint, Color.red);
                     ////tempOb.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
@@ -105,7 +107,8 @@ public class TouchHandler : MonoBehaviour
                 touchJob.TryGetValue(touchesWeThinkAreActive[i], out job);
                 if (job == "Ball")
                 {
-                    trajectory.Hide();
+                    projection.Hide();
+                    //trajectory.Hide();
                     if (PullDistanceLongEnough)
                     {
                         Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
