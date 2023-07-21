@@ -1,30 +1,32 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Projection.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Touch/TouchHandler.cs">
     <Files>
       <File FileName="Assets/ResizeWallColliders.cs" />
-      <File FileName="Assets/TouchHandler.cs" Line="63" Column="31" />
-      <File FileName="Assets/FPSCounter.cs" />
+      <File FileName="Assets/FPSCounter.cs" Line="15" Column="10" />
       <File FileName="Assets/ScoreController.cs" />
       <File FileName="Assets/BallSpeedReporter.cs" />
-      <File FileName="Assets/Projection.cs" Line="65" Column="6" />
+      <File FileName="Assets/Projection.cs" />
       <File FileName="Assets/FollowBall.cs" />
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
+      <File FileName="Assets/Touch/TouchHandler.cs" Line="127" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VGolfPrototype">
-            <Node name="Assets" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Touch" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="38070026-4595-4b99-8304-7a003e6997c7" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6d9fb2cc-0564-470d-9122-b7e22c4719e6" />
-  <MultiItemStartupConfigurations />
 </Properties>

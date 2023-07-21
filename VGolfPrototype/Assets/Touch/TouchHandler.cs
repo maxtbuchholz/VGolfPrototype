@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class TouchHandler : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class TouchHandler : MonoBehaviour
     //[SerializeField] Trajectory trajectory;
     [SerializeField] ScoreController scoreController;
     [SerializeField] Projection projection;
+    [SerializeField] GameObject PullBackJoystick;
+    [SerializeField] private TextMeshProUGUI DebugText;
     private List<int> activeTouches;
     private List<int> touchesWeThinkAreActive;
     private Dictionary<int, string> touchJob;
@@ -25,6 +29,7 @@ public class TouchHandler : MonoBehaviour
         touchJob = new Dictionary<int, string>();
         originalTouchPos = new Dictionary<int, Vector2>();
         Application.targetFrameRate = 60;
+        PullBackJoystick.SetActive(false);
     }
     void Update()
     {
@@ -49,8 +54,11 @@ public class TouchHandler : MonoBehaviour
                 //        //trajectory.Show();
                 //    }
                 //}
-                originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
+                originalTouchPos[Input.touches[i].fingerId] = camera.ScreenToWorldPoint(Input.touches[i].position);
                 touchJob[Input.touches[i].fingerId] = "Ball";
+                PullBackJoystick.transform.position = originalTouchPos[Input.touches[i].fingerId];
+                PullBackJoystick.SetActive(true);
+                DebugText.text =  PullBackJoystick.transform.position.ToString();
             }
             else
             {
@@ -59,7 +67,7 @@ public class TouchHandler : MonoBehaviour
                 if (job == "Ball")
                 {
                     Vector2 tempPos = camera.ScreenToWorldPoint(Input.touches[i].position);
-                    Vector2 origPos = camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]); // Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
+                    Vector2 origPos = originalTouchPos[Input.touches[i].fingerId]; // Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
                     float angle = AngleBetween(tempPos, origPos);
                     if (angle < 0)
                         angle = 360 + angle;
@@ -95,6 +103,7 @@ public class TouchHandler : MonoBehaviour
                     //trajectory.UpdateDots(Ball.transform.position, Force);
                     Debug.DrawLine(Ball.transform.position, LaunchGrapEndingPoint, Color.blue);
                     Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint, Color.red);
+                    PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
                     ////tempOb.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
                 }
             }
@@ -114,6 +123,7 @@ public class TouchHandler : MonoBehaviour
                         Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
                         scoreController.ScoreAdOne();
                     }
+                    PullBackJoystick.SetActive(false);
                 }
                 touchesWeThinkAreActive.RemoveAt(i);
             }
