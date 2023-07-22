@@ -19,7 +19,7 @@ public class TouchHandler : MonoBehaviour
     private Dictionary<int, string> touchJob;
     private Dictionary<int, Vector2> originalTouchPos;
     private float maxPullBack = 4.0f;
-    private float pushForce = 4f;
+    private float pushForce = 5f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
     private void Start()
@@ -31,7 +31,7 @@ public class TouchHandler : MonoBehaviour
         Application.targetFrameRate = 60;
         PullBackJoystick.SetActive(false);
     }
-    void Update()
+    void FixedUpdate()
     {
         //projection.SimulatrTrajectory(Ball.transform.position, new(2.0f, 2.0f));
         activeTouches = new List<int>();
@@ -83,7 +83,14 @@ public class TouchHandler : MonoBehaviour
                         PullDistanceLongEnough = true;
                         projection.Show();
                         //trajectory.Show();
-                        projection.SimulatrTrajectory(Ball.transform.position, Force);
+                        Vector2 currentMvmtForce = Vector2.zero;
+                        float currentRot = 0.0f;
+                        if (Ball.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+                        {
+                            currentMvmtForce = rb.velocity;
+                            currentRot = rb.rotation;
+                        }
+                        projection.SimulatrTrajectory(Ball.transform.position, Force, currentMvmtForce, currentRot, Ball.transform.rotation);
                     }
                     else
                     {

@@ -47,13 +47,15 @@ public class Projection : MonoBehaviour
     }
     [SerializeField] LineRenderer line;
     [SerializeField] int MaxPhysicsFrameIterations;
-    public void SimulatrTrajectory(Vector2 pos, Vector2 force)
+    public void SimulatrTrajectory(Vector2 pos, Vector2 force, Vector2 currentMvmt, float currentRot, Quaternion transformRot)
     {
-        var ghostObj = Instantiate(Ball.gameObject, pos, Quaternion.identity);
+        var ghostObj = Instantiate(Ball.gameObject, pos, transformRot);
         SceneManager.MoveGameObjectToScene(ghostObj.gameObject, simulationScene);
 
         if(ghostObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
+            rb.AddForce(currentMvmt, ForceMode2D.Impulse);
+            rb.rotation = currentRot;
             rb.AddForce(force, ForceMode2D.Impulse);
         }
 
