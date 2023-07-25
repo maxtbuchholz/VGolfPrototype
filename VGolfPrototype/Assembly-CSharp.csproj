@@ -61,6 +61,7 @@
     <Compile Include="Assets/Trajectory/Trajectory.cs" />
     <Compile Include="Assets/FollowBall.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/MovingBlock.cs" />
     <Compile Include="Assets/ResizeWallColliders.cs" />
     <Compile Include="Assets/Touch/TouchHandler.cs" />
     <Compile Include="Assets/ScoreController.cs" />

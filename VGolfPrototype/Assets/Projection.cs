@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class Projection : MonoBehaviour
     [SerializeField] Transform objectsParent;
     [SerializeField] GameObject Ball;
     [SerializeField] GameObject ProjectionDot;
+    [SerializeField] private TextMeshProUGUI DebugText;
     private List<GameObject> DotList;
     [SerializeField] int DotAmount;
     private Scene simulationScene;
@@ -33,23 +35,27 @@ public class Projection : MonoBehaviour
                 ren.enabled = false;
             }
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
-            if (!ghostObj.isStatic) moveableObjects.Add(obj, ghostObj.transform);
+            if (!ghostObj.CompareTag("Static")) moveableObjects.Add(obj, ghostObj.transform);
 
         }
     }
     private void Update()
     {
+        int num = 0;
         foreach(var obj in moveableObjects)
         {
+            num++;
             obj.Value.position = obj.Key.position;
             obj.Value.rotation = obj.Key.rotation;
         }
+        DebugText.text = num.ToString();
     }
     [SerializeField] LineRenderer line;
     [SerializeField] int MaxPhysicsFrameIterations;
     public void SimulatrTrajectory(Vector2 pos, Vector2 force, Vector2 currentMvmt, float currentRot, Quaternion transformRot)
     {
         var ghostObj = Instantiate(Ball.gameObject, pos, transformRot);
+        ghostObj.GetComponent<BallSpeedReporter>().isReal = false;
         SceneManager.MoveGameObjectToScene(ghostObj.gameObject, simulationScene);
 
         if(ghostObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))

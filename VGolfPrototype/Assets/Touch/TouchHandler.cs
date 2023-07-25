@@ -155,6 +155,7 @@ public class TouchHandler : MonoBehaviour
                 }
                 pulling = false;
                 touchesWeThinkAreActive.RemoveAt(i);
+                touchJob[i] = "";
             }
         }
     }
