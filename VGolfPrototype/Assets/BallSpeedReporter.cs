@@ -13,22 +13,24 @@ public class BallSpeedReporter : MonoBehaviour
     [SerializeField] GameObject originalParent;
     bool grounded = false;
     private SpriteRenderer ballSprite;
-    private Color hittable = new(0, 1, 1, 1);
-    private Color notHittable = new(1f, 0.5f, 0.5f, 1);
+    private Color hittable = new(1, 1, 1, 1);
+    private Color notHittable = new(1, 1, 1, 0.5f);
     private Vector2 originalSca;
+    private float distToGround;
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         ballSprite = GetComponent<SpriteRenderer>();
         originalSca = transform.localScale;
+        distToGround = collider.bounds.extents.y;
     }
     private void Update()
     {
         //DebugText.text = gameObject.transform.parent.ToString();
         //DebugText.text = ((rb2d.velocity.magnitude * rb2d.mass) / 4).ToString() + " " + grounded.ToString();
         //DebugText.text = AbleToBeHit.ToString();
-        if ((rb2d.velocity.magnitude < 0.2) && grounded)
+        if ((rb2d.velocity.magnitude < 0.02) && grounded)
         {
             //rb2d.velocity = Vector2.zero;
             AbleToBeHit = true;
@@ -46,7 +48,6 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        grounded = false;
         if (isReal)
         {
             if (originalParent != null)
@@ -59,7 +60,11 @@ public class BallSpeedReporter : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (isReal)
+        if(GetGrounded())
+        {
+            grounded = true;
+        }
+        if (isReal && (col.gameObject.transform.parent != null))
         {
             if (col.gameObject.CompareTag("Movable"))
             {
@@ -71,5 +76,12 @@ public class BallSpeedReporter : MonoBehaviour
             //gameObject.transform.localScale.z / col.gameObject.transform.localScale.z);
             //gameObject.transform.localScale = originalSca / col.gameObject.transform.localScale;
         }
+    }
+    private bool GetGrounded()
+    {
+        RaycastHit2D[] hits =  Physics2D.RaycastAll(transform.position, -Vector2.up, distToGround + 0.01f);
+        if (hits.Length > 1)
+            return true;
+        return false;
     }
 } 

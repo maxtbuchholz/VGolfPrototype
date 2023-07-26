@@ -35,7 +35,7 @@ public class Projection : MonoBehaviour
                 ren.enabled = false;
             }
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
-            if (!ghostObj.CompareTag("Static")) moveableObjects.Add(obj, ghostObj.transform);
+            if (ghostObj.CompareTag("Movable")) moveableObjects.Add(obj, ghostObj.transform);
 
         }
     }

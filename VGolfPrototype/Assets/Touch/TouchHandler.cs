@@ -93,7 +93,7 @@ public class TouchHandler : MonoBehaviour
                 if ((job == "Ball") && (BallSpeed.AbleToBeHit))
                 {
                     Vector2 tempPos = camera.ScreenToWorldPoint(Input.touches[i].position);
-                    Vector2 origPos = originalTouchPos[Input.touches[i].fingerId]; // Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
+                    Vector2 origPos = PullBackJoystick.transform.position;//originalTouchPos[Input.touches[i].fingerId]; // Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
                     float angle = AngleBetween(tempPos, origPos);
                     if (angle < 0)
                         angle = 360 + angle;
@@ -161,7 +161,7 @@ public class TouchHandler : MonoBehaviour
     }
     private void LaunchBall()
     {
-        //projection.Hide();
+        projection.Hide();
         //trajectory.Hide();
         if (PullDistanceLongEnough)
         {
