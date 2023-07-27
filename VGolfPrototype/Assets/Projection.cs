@@ -48,7 +48,6 @@ public class Projection : MonoBehaviour
             obj.Value.position = obj.Key.position;
             obj.Value.rotation = obj.Key.rotation;
         }
-        DebugText.text = num.ToString();
     }
     [SerializeField] LineRenderer line;
     [SerializeField] int MaxPhysicsFrameIterations;
@@ -70,7 +69,6 @@ public class Projection : MonoBehaviour
         {
             physicsScene.Simulate(Time.fixedDeltaTime);
             line.SetPosition(i, ghostObj.transform.position);
-            //if(i % (int)((float)(MaxPhysicsFrameIterations / (float)DotAmount)) == 0)DotList[(int)((float)i / ((float)MaxPhysicsFrameIterations / (float)DotAmount))].transform.position = ghostObj.transform.position;
         }
         Destroy(ghostObj);
     }

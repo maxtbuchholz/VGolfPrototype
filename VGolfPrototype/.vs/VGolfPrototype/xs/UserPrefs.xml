@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Projection.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BallSpeedReporter.cs">
     <Files>
-      <File FileName="Assets/Projection.cs" Line="60" Column="1" />
+      <File FileName="Assets/Projection.cs" />
       <File FileName="Assets/ResizeWallColliders.cs" />
-      <File FileName="Assets/FPSCounter.cs" Line="1" Column="1" />
+      <File FileName="Assets/FPSCounter.cs" />
       <File FileName="Assets/ScoreController.cs" />
-      <File FileName="Assets/BallSpeedReporter.cs" Line="53" Column="14" />
-      <File FileName="Assets/FollowBall.cs" Line="1" Column="1" />
+      <File FileName="Assets/BallSpeedReporter.cs" Line="50" Column="63" />
+      <File FileName="Assets/FollowBall.cs" />
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
-      <File FileName="Assets/Touch/TouchHandler.cs" Line="50" Column="41" />
+      <File FileName="Assets/Touch/TouchHandler.cs" />
       <File FileName="Assets/MovingBlock.cs" />
     </Files>
     <Pads>
@@ -23,11 +26,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c433935f-a79b-4a96-8bf2-7265999410d8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c33b15af-f72b-4053-be9d-6ef8cbab5f80" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

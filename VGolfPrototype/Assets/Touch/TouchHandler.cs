@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Windows;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class TouchHandler : MonoBehaviour
@@ -10,7 +11,6 @@ public class TouchHandler : MonoBehaviour
     private GameObject Ball;
     private Rigidbody2D BallRB;
     [SerializeField] Camera camera;
-    //[SerializeField] Trajectory trajectory;
     [SerializeField] ScoreController scoreController;
     [SerializeField] Projection projection;
     [SerializeField] GameObject PullBackJoystick;
@@ -24,9 +24,9 @@ public class TouchHandler : MonoBehaviour
     private float pushForce = 5f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
-    private bool pulling = false;
     private void Start()
     {
+        DebugText.text = "Init";
         maxForce = pushForce * pushForce;
         Ball = GameObject.Find("Ball");
         touchesWeThinkAreActive = new List<int>();
@@ -36,133 +36,105 @@ public class TouchHandler : MonoBehaviour
         PullBackJoystick.SetActive(false);
         BallRB = Ball.GetComponent<Rigidbody2D>();
     }
-    void FixedUpdate()
+    string debugOutput;
+    int pullingIndex = -1;
+    private void FixedUpdate()
     {
-        //projection.SimulatrTrajectory(Ball.transform.position, new(2.0f, 2.0f));
         activeTouches = new List<int>();
-        for (int i = 0; i < Input.touchCount; i++)
+        for (int i = 0; i < UnityEngine.Input.touchCount; i++)
         {
-            activeTouches.Add(Input.touches[i].fingerId);
-            if(!touchesWeThinkAreActive.Contains(Input.touches[i].fingerId)) touchesWeThinkAreActive.Add(Input.touches[i].fingerId);
-            Vector3 touchPosition = camera.ScreenToWorldPoint(Input.touches[i].position);
-            if (Input.touches[i].phase == TouchPhase.Began)
+            int fingerIndex = UnityEngine.Input.touches[i].fingerId;
+            activeTouches.Add(fingerIndex);
+            string fingerJob = "";
+            touchJob.TryGetValue(fingerIndex, out fingerJob);
+            if ((UnityEngine.Input.touches[i].phase == TouchPhase.Began) && (fingerJob != "Used"))
             {
-                //Vector2 touchPosWorld2D = new Vector2(touchPosition.x, touchPosition.y);
-                //RaycastHit2D hitInformation = Physics2D.Raycast(touchPosWorld2D, camera.transform.forward);
-                //if ((hitInformation.collider != null)
-                //{
-                //    GameObject touchedObject = hitInformation.transform.gameObject;
-                //    if((touchedObject == Ball) || true) //touching ball
-                //    {
-                //        originalTouchPos[Input.touches[i].fingerId] = Input.touches[i].position;
-                //        touchJob[Input.touches[i].fingerId] = "Ball";
-                //        //trajectory.Show();
-                //    }
-                //}
-                if (BallSpeed.AbleToBeHit)
+                if (fingerJob == "Used") DebugText.text = "Used Got Through";
+                if (!touchesWeThinkAreActive.Contains(fingerIndex)) touchesWeThinkAreActive.Add(fingerIndex);
+                if (pullingIndex == -1)  //aim touch
                 {
-                    if (!pulling)
+                    pullingIndex = fingerIndex;
+                    touchJob[fingerIndex] = "Ball";
+                    PullBackJoystick.transform.position = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
+                    PullBackJoystick.SetActive(true);
+                }
+                else                    //launch touch
+                {
+                    for (int j = 0; j < UnityEngine.Input.touchCount; j++)
                     {
-                        pulling = true;
-                        originalTouchPos[Input.touches[i].fingerId] = camera.ScreenToWorldPoint(Input.touches[i].position);
-                        touchJob[Input.touches[i].fingerId] = "Ball";
-                        PullBackJoystick.transform.position = originalTouchPos[Input.touches[i].fingerId];
-                        PullBackJoystick.SetActive(true);
+                        touchJob.TryGetValue(activeTouches[j], out string job);
+                        if (job == "Ball")
+                        {
+                            touchJob[activeTouches[j]] = "Used";
+                            LaunchBall();
+                            pullingIndex = -1;
+                            touchJob[fingerIndex] = "Used";
+                        }
                     }
-                    //else
-                    //{
-                    //    pulling = false;
-                    //    for (int j = 0; j < Input.touchCount; j++)
-                    //    {
-                    //        string job;
-                    //        if (touchJob.TryGetValue(touchesWeThinkAreActive[j], out job))
-                    //        {
-                    //            if (job == "Ball") touchJob[j] = "";
-                    //        }
-                    //        LaunchBall();
-                    //    }
-                    //    //originalTouchPos[Input.touches[i].fingerId] = camera.ScreenToWorldPoint(Input.touches[i].position);
-                    //    //touchJob[Input.touches[i].fingerId] = "LaunchClick";
-                    //}
                 }
             }
-            else
+            else if ((pullingIndex != -1) && (fingerJob == "Ball"))   //switch aim touch
             {
-                string job = "";
-                touchJob.TryGetValue(touchesWeThinkAreActive[i], out job);
-                if ((job == "Ball") && (BallSpeed.AbleToBeHit))
+                Vector2 tempPos = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
+                Vector2 origPos = PullBackJoystick.transform.position;
+
+                float angle = AngleBetween(tempPos, origPos);
+                if (angle < 0)
+                    angle = 360 + angle;
+                float radia = ConvertToRadians(angle);
+                float hypot = (tempPos.y - origPos.y) / (float)System.Math.Sin(radia);
+                if (hypot > maxPullBack)
                 {
-                    Vector2 tempPos = camera.ScreenToWorldPoint(Input.touches[i].position);
-                    Vector2 origPos = PullBackJoystick.transform.position;//originalTouchPos[Input.touches[i].fingerId]; // Ball.transform.position;// camera.ScreenToWorldPoint(originalTouchPos[Input.touches[i].fingerId]);
-                    float angle = AngleBetween(tempPos, origPos);
-                    if (angle < 0)
-                        angle = 360 + angle;
-                    float radia = ConvertToRadians(angle);
-                    float hypot = (tempPos.y - origPos.y) / (float)System.Math.Sin(radia);
-                    if (hypot > maxPullBack)
+                    tempPos.x = origPos.x + (maxPullBack * (float)System.Math.Cos(radia));
+                    tempPos.y = origPos.y + (maxPullBack * (float)System.Math.Sin(radia));
+                }
+                Vector2 trajSpeed = new Vector2((tempPos.x - origPos.x) / maxPullBack, (tempPos.y - origPos.y) / maxPullBack);
+                float distance = Vector2.Distance(origPos, tempPos);
+                Vector2 direction = (origPos - tempPos).normalized;
+                Force = direction * distance * pushForce;
+                PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
+
+                if (hypot > 0.8)
+                {
+                    PullDistanceLongEnough = true;
+                    projection.Show();
+                    Vector2 currentMvmtForce = Vector2.zero;
+                    float currentRot = 0.0f;
+                    if (Ball.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
                     {
-                        tempPos.x = origPos.x + (maxPullBack * (float)System.Math.Cos(radia));
-                        tempPos.y = origPos.y + (maxPullBack * (float)System.Math.Sin(radia));
+                        currentMvmtForce = rb.velocity;
+                        currentRot = rb.rotation;
+                        currentMvmtForce = (currentMvmtForce * rb.mass) / 4f;
                     }
-                    //Debug.Log(hypot);
-                    //tempPos.z = -6;
-                    Vector2 trajSpeed = new Vector2((tempPos.x - origPos.x) / maxPullBack, (tempPos.y - origPos.y) / maxPullBack);
-                    //Debug.Log(speed.x.ToString() + "  " + speed.y.ToString());
-                    Vector2 LaunchGrapEndingPoint = tempPos;
-                    Vector2 LaunchGrapStartingPoint = origPos;
-                    float distance = Vector2.Distance(LaunchGrapStartingPoint, LaunchGrapEndingPoint);
-                    Vector2 direction = (LaunchGrapStartingPoint - LaunchGrapEndingPoint).normalized;
-                    Force = direction * distance * pushForce;
-                    //trajectory.UpdateDots(Ball.transform.position, Force);
-                    Debug.DrawLine(Ball.transform.position, LaunchGrapEndingPoint, Color.blue);
-                    Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint, Color.red);
-                    PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
-                    ////tempOb.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
-                    if (hypot > 0.8)
-                    {
-                        PullDistanceLongEnough = true;
-                        projection.Show();
-                        //trajectory.Show();
-                        Vector2 currentMvmtForce = Vector2.zero;
-                        float currentRot = 0.0f;
-                        if (Ball.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
-                        {
-                            currentMvmtForce = rb.velocity;
-                            currentRot = rb.rotation;
-                            currentMvmtForce = (currentMvmtForce * rb.mass) / 4f;
-                        }
-                        //Force = GetForceToAdd3(currentMvmtForce, Force);
-                        projection.SimulatrTrajectory(Ball.transform.position, Force, currentMvmtForce, currentRot, Ball.transform.rotation);
-                    }
-                    else
-                    {
-                        PullDistanceLongEnough = false;
-                        projection.Hide();
-                        //trajectory.Hide();
-                    }
+                    projection.SimulatrTrajectory(Ball.transform.position, Force, currentMvmtForce, currentRot, Ball.transform.rotation);
+                }
+                else
+                {
+                    PullDistanceLongEnough = false;
+                    projection.Hide();
                 }
             }
         }
-        for(int i = 0; i < touchesWeThinkAreActive.Count; i++)
+        for (int i = 0; i < touchesWeThinkAreActive.Count; i++)
         {
+            //DebugText.text = ListToString(touchesWeThinkAreActive) + "\n" + ListToString(activeTouches);
             if (!activeTouches.Contains(touchesWeThinkAreActive[i]))
             {
-                string job = "";
-                touchJob.TryGetValue(touchesWeThinkAreActive[i], out job);
+                touchJob.TryGetValue(touchesWeThinkAreActive[i], out string job);
                 if ((job == "Ball") && BallSpeed.AbleToBeHit)
                 {
                     LaunchBall();
+                    pullingIndex = -1;
                 }
-                pulling = false;
                 touchesWeThinkAreActive.RemoveAt(i);
                 touchJob[i] = "";
             }
         }
     }
+
     private void LaunchBall()
     {
         projection.Hide();
-        //trajectory.Hide();
         if (PullDistanceLongEnough)
         {
             Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
@@ -294,6 +266,121 @@ public class TouchHandler : MonoBehaviour
         Vector2 addForce = new Vector2(x, y) - currForce;
         return addForce;
 
+    }
+
+    //void FixedUpdate()
+    //{
+    //    debugOutput = "";
+    //    activeTouches = new List<int>();
+    //    for (int i = 0; i < Input.touchCount; i++)
+    //    {
+    //        touchJob.TryGetValue(touchesWeThinkAreActive[i], out string origJob);
+    //        activeTouches.Add(Input.touches[i].fingerId);
+    //        Vector3 touchPosition = camera.ScreenToWorldPoint(Input.touches[i].position);
+    //        if ((Input.touches[i].phase == TouchPhase.Began) && BallSpeed.AbleToBeHit)
+    //        {
+    //            if (!touchesWeThinkAreActive.Contains(Input.touches[i].fingerId)) touchesWeThinkAreActive.Add(Input.touches[i].fingerId);
+    //            touchJob.TryGetValue(touchesWeThinkAreActive[i], out string job);
+    //            origJob = job;
+    //            if (BallSpeed.AbleToBeHit && (job != "Used"))
+    //            {
+    //                if (!pulling)
+    //                {
+    //                    pulling = true;
+    //                    originalTouchPos[Input.touches[i].fingerId] = camera.ScreenToWorldPoint(Input.touches[i].position);
+    //                    touchJob[Input.touches[i].fingerId] = "Ball";
+    //                    PullBackJoystick.transform.position = originalTouchPos[Input.touches[i].fingerId];
+    //                    PullBackJoystick.SetActive(true);
+    //                }
+    //                //else
+    //                //{
+    //                //    for (int j = 0; j < Input.touchCount; j++)
+    //                //    {
+    //                //        touchJob.TryGetValue(touchesWeThinkAreActive[j], out job);
+    //                //        if (job == "Ball")
+    //                //        {
+    //                //            LaunchBall();
+    //                //            pulling = false;
+    //                //            touchJob[touchesWeThinkAreActive[j]] = "Used";
+    //                //            touchJob[i] = "Used";
+    //                //        }
+    //                //    }
+    //                //}
+    //            }
+    //        }
+    //        else
+    //        {
+    //            touchJob.TryGetValue(touchesWeThinkAreActive[i], out string testJob);
+    //            if ((testJob == "Ball") && (BallSpeed.AbleToBeHit))
+    //            {
+    //                Vector2 tempPos = camera.ScreenToWorldPoint(Input.touches[i].position);
+    //                Vector2 origPos = PullBackJoystick.transform.position;
+    //                float angle = AngleBetween(tempPos, origPos);
+    //                if (angle < 0)
+    //                    angle = 360 + angle;
+    //                float radia = ConvertToRadians(angle);
+    //                float hypot = (tempPos.y - origPos.y) / (float)System.Math.Sin(radia);
+    //                if (hypot > maxPullBack)
+    //                {
+    //                    tempPos.x = origPos.x + (maxPullBack * (float)System.Math.Cos(radia));
+    //                    tempPos.y = origPos.y + (maxPullBack * (float)System.Math.Sin(radia));
+    //                }
+    //                Vector2 trajSpeed = new Vector2((tempPos.x - origPos.x) / maxPullBack, (tempPos.y - origPos.y) / maxPullBack);
+    //                Vector2 LaunchGrapEndingPoint = tempPos;
+    //                Vector2 LaunchGrapStartingPoint = origPos;
+    //                float distance = Vector2.Distance(LaunchGrapStartingPoint, LaunchGrapEndingPoint);
+    //                Vector2 direction = (LaunchGrapStartingPoint - LaunchGrapEndingPoint).normalized;
+    //                Force = direction * distance * pushForce;
+    //                Debug.DrawLine(Ball.transform.position, LaunchGrapEndingPoint, Color.blue);
+    //                Debug.DrawLine(LaunchGrapStartingPoint, LaunchGrapEndingPoint, Color.red);
+    //                PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
+    //                if (hypot > 0.8)
+    //                {
+    //                    PullDistanceLongEnough = true;
+    //                    projection.Show();
+    //                    Vector2 currentMvmtForce = Vector2.zero;
+    //                    float currentRot = 0.0f;
+    //                    if (Ball.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+    //                    {
+    //                        currentMvmtForce = rb.velocity;
+    //                        currentRot = rb.rotation;
+    //                        currentMvmtForce = (currentMvmtForce * rb.mass) / 4f;
+    //                    }
+    //                    projection.SimulatrTrajectory(Ball.transform.position, Force, currentMvmtForce, currentRot, Ball.transform.rotation);
+    //                }
+    //                else
+    //                {
+    //                    PullDistanceLongEnough = false;
+    //                    projection.Hide();
+    //                }
+    //            }
+    //        }
+    //        debugOutput += "[" + origJob + "\n]";
+    //    }
+    //    for (int i = 0; i < touchesWeThinkAreActive.Count; i++)
+    //    {
+    //        if (!activeTouches.Contains(touchesWeThinkAreActive[i]))
+    //        {
+    //            touchJob.TryGetValue(touchesWeThinkAreActive[i], out string job);
+    //            if ((job == "Ball") && BallSpeed.AbleToBeHit)
+    //            {
+    //                LaunchBall();
+    //                pulling = false;
+    //            }
+    //            touchesWeThinkAreActive.RemoveAt(i);
+    //            touchJob[i] = "";
+    //        }
+    //    }
+    //    DebugText.text = debugOutput;
+    //}
+    private string ListToString(List<int> list)
+    {
+        string r = "";
+        foreach(int s in list)
+        {
+            r += s + " ";
+        }
+        return r;
     }
 
 }

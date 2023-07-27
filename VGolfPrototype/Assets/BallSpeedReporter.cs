@@ -17,6 +17,7 @@ public class BallSpeedReporter : MonoBehaviour
     private Color notHittable = new(1, 1, 1, 0.5f);
     private Vector2 originalSca;
     private float distToGround;
+    int FramesThoughtGrounded;
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -30,7 +31,7 @@ public class BallSpeedReporter : MonoBehaviour
         //DebugText.text = gameObject.transform.parent.ToString();
         //DebugText.text = ((rb2d.velocity.magnitude * rb2d.mass) / 4).ToString() + " " + grounded.ToString();
         //DebugText.text = AbleToBeHit.ToString();
-        if ((rb2d.velocity.magnitude < 0.02) && grounded)
+        if ((rb2d.velocity.magnitude < 0.2) && grounded)
         {
             //rb2d.velocity = Vector2.zero;
             AbleToBeHit = true;
@@ -44,10 +45,24 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        grounded = true;
+        if (!grounded)
+        {
+            if (GetGrounded() && (rb2d.velocity.magnitude < 0.2))
+                FramesThoughtGrounded++;
+            else
+                FramesThoughtGrounded = 0;
+            if (FramesThoughtGrounded > 9)
+            {
+                grounded = true;
+            }
+        }
+
+        //grounded = true;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+
+        grounded = false;
         if (isReal)
         {
             if (originalParent != null)
@@ -62,7 +77,8 @@ public class BallSpeedReporter : MonoBehaviour
     {
         if(GetGrounded())
         {
-            grounded = true;
+            //FramesThoughtGrounded = 1;
+            //grounded = true;
         }
         if (isReal && (col.gameObject.transform.parent != null))
         {
