@@ -24,6 +24,7 @@ public class TouchHandler : MonoBehaviour
     private float pushForce = 5f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
+    bool CanStartAim = true;
     private void Start()
     {
         DebugText.text = "Init";
@@ -41,6 +42,7 @@ public class TouchHandler : MonoBehaviour
     private void FixedUpdate()
     {
         activeTouches = new List<int>();
+        DebugText.text = CanStartAim.ToString() + "\n" + BallSpeed.AbleToBeHit.ToString() + "\n" + pullingIndex.ToString();
         for (int i = 0; i < UnityEngine.Input.touchCount; i++)
         {
             int fingerIndex = UnityEngine.Input.touches[i].fingerId;
@@ -51,26 +53,32 @@ public class TouchHandler : MonoBehaviour
             {
                 if (fingerJob == "Used") DebugText.text = "Used Got Through";
                 if (!touchesWeThinkAreActive.Contains(fingerIndex)) touchesWeThinkAreActive.Add(fingerIndex);
-                if (pullingIndex == -1)  //aim touch
+                if (CanStartAim && BallSpeed.AbleToBeHit && (pullingIndex == -1))   //aim
                 {
+                    CanStartAim = false;
                     pullingIndex = fingerIndex;
                     touchJob[fingerIndex] = "Ball";
                     PullBackJoystick.transform.position = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
                     PullBackJoystick.SetActive(true);
                 }
-                else                    //launch touch
+                else if (BallSpeed.AbleToBeHit)                                     //launch
                 {
-                    for (int j = 0; j < UnityEngine.Input.touchCount; j++)
+                    for (int j = 0; j < touchesWeThinkAreActive.Count; j++)
                     {
-                        touchJob.TryGetValue(activeTouches[j], out string job);
+                        touchJob.TryGetValue(touchesWeThinkAreActive[j], out string job);
                         if (job == "Ball")
                         {
-                            touchJob[activeTouches[j]] = "Used";
+                            CanStartAim = true;
+                            touchJob[touchesWeThinkAreActive[j]] = "Used";
                             LaunchBall();
                             pullingIndex = -1;
                             touchJob[fingerIndex] = "Used";
                         }
                     }
+                }
+                else
+                {
+                    DebugText.text = "more than 2 fingers";
                 }
             }
             else if ((pullingIndex != -1) && (fingerJob == "Ball"))   //switch aim touch
@@ -121,10 +129,11 @@ public class TouchHandler : MonoBehaviour
             if (!activeTouches.Contains(touchesWeThinkAreActive[i]))
             {
                 touchJob.TryGetValue(touchesWeThinkAreActive[i], out string job);
-                if ((job == "Ball") && BallSpeed.AbleToBeHit)
+                if ((job == "Ball"))
                 {
                     LaunchBall();
                     pullingIndex = -1;
+                    CanStartAim = true;
                 }
                 touchesWeThinkAreActive.RemoveAt(i);
                 touchJob[i] = "";
