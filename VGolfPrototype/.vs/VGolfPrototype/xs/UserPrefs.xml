@@ -1,33 +1,36 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BallSpeedReporter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Goal.cs">
     <Files>
       <File FileName="Assets/Projection.cs" />
       <File FileName="Assets/ResizeWallColliders.cs" />
       <File FileName="Assets/FPSCounter.cs" />
       <File FileName="Assets/ScoreController.cs" />
-      <File FileName="Assets/BallSpeedReporter.cs" Line="50" Column="63" />
+      <File FileName="Assets/BallSpeedReporter.cs" Line="57" Column="14" />
       <File FileName="Assets/FollowBall.cs" />
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
-      <File FileName="Assets/Touch/TouchHandler.cs" />
+      <File FileName="Assets/Touch/TouchHandler.cs" Line="64" Column="48" />
       <File FileName="Assets/MovingBlock.cs" />
+      <File FileName="Assets/Goal.cs" Line="18" Column="10" />
+      <File FileName="Assets/GoalHitReport.cs" Line="10" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="VGolfPrototype">
+          <Node name="VGolfPrototype" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Touch" expanded="True" />
+              <Node name="Goal.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c33b15af-f72b-4053-be9d-6ef8cbab5f80" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a7a972a0-17d8-4289-a19e-9e43be89df2b" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -44,10 +44,6 @@ public class TouchHandler : MonoBehaviour
     private void FixedUpdate()
     {
         activeTouches = new List<int>();
-        if(activeTouches != prevFrameActiveTouches)
-        {
-            DebugText.text = "yay";
-        }
         //DebugText.text = CanStartAim.ToString() + "\n" + BallSpeed.AbleToBeHit.ToString() + "\n" + pullingIndex.ToString();
         if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();
         for (int i = 0; i < UnityEngine.Input.touchCount; i++)
