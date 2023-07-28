@@ -43,6 +43,7 @@ public class TouchHandler : MonoBehaviour
     {
         activeTouches = new List<int>();
         DebugText.text = CanStartAim.ToString() + "\n" + BallSpeed.AbleToBeHit.ToString() + "\n" + pullingIndex.ToString();
+        if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();
         for (int i = 0; i < UnityEngine.Input.touchCount; i++)
         {
             int fingerIndex = UnityEngine.Input.touches[i].fingerId;
@@ -139,6 +140,11 @@ public class TouchHandler : MonoBehaviour
                 touchJob[i] = "";
             }
         }
+    }
+    private void ResetTouch()   //function to reset the touches because im big dum dum
+    {
+        pullingIndex = -1;
+        projection.Hide();
     }
 
     private void LaunchBall()
