@@ -7,7 +7,12 @@ public class GoalHitReport : MonoBehaviour
     [SerializeField] Goal goal;
     private void OnCollisionStay2D(Collision2D collision)
     {
-        goal.CheckForGoal();
+        GameObject ob = collision.gameObject;
+        if(ob.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
+        { 
+            if(BSR.isReal)
+                goal.CheckForGoal();
+        }
     }
 
 }

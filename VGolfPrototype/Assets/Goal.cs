@@ -12,7 +12,9 @@ public class Goal : MonoBehaviour
 
     public void CheckForGoal()
     {
-        if (GoalRect.rect.Contains(Ball.position) && BallSpeed.AbleToBeHit)
+        Rect r = GoalRect.rect;
+        r.position = transform.position;
+        if (r.Contains(Ball.position) && BallSpeed.AbleToBeHit)
         {
             DebugText.text += "Goal!";
         }
