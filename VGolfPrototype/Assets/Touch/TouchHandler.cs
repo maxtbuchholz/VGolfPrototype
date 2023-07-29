@@ -43,6 +43,7 @@ public class TouchHandler : MonoBehaviour
     int pullingIndex = -1;
     private void FixedUpdate()
     {
+        projection.SimulatrTrajectory(Ball.transform.position, Force, new Vector2(2,2), 0.0f, Ball.transform.rotation);
         activeTouches = new List<int>();
         //DebugText.text = CanStartAim.ToString() + "\n" + BallSpeed.AbleToBeHit.ToString() + "\n" + pullingIndex.ToString();
         if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();
@@ -60,7 +61,9 @@ public class TouchHandler : MonoBehaviour
                     CanStartAim = false;
                     pullingIndex = fingerIndex;
                     touchJob[fingerIndex] = "Ball";
-                    PullBackJoystick.transform.position = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
+                    Vector3 JoyStickPos = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
+                    JoyStickPos.z = transform.position.z - 0.5f;
+                    PullBackJoystick.transform.position = JoyStickPos;
                     PullBackJoystick.SetActive(true);
                 }
                 else if (BallSpeed.AbleToBeHit)                                     //launch
@@ -98,7 +101,8 @@ public class TouchHandler : MonoBehaviour
                 float distance = Vector2.Distance(origPos, tempPos);
                 Vector2 direction = (origPos - tempPos).normalized;
                 Force = direction * distance * pushForce;
-                PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = tempPos;
+                Vector3 JoyCirPos = new Vector3(tempPos.x, tempPos.y, PullBackJoystick.transform.position.z);
+                PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = JoyCirPos;
 
                 if (hypot > 0.8)
                 {

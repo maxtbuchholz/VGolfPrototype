@@ -10,7 +10,8 @@ public class Goal : MonoBehaviour
     [SerializeField] BallSpeedReporter BallSpeed;
     [SerializeField] Transform Ball;
     [SerializeField] TextMeshProUGUI DebugText;
-
+    [SerializeField] GameObject GameCamera;
+    [SerializeField] TouchHandler TouchH;
     private bool VictoryLoaded = false;
     public void CheckForGoal()
     {
@@ -22,9 +23,16 @@ public class Goal : MonoBehaviour
             {
                 VictoryLoaded = true;
                 DebugText.text += "Goal!";
+                TouchH.enabled = false;
                 int y = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene("Victory", LoadSceneMode.Single);
-                SceneManager.UnloadSceneAsync(y);
+                DataGameToVictory.instance.SetGameCameraYOffset(transform.position.y);
+                if (GameCamera.TryGetComponent<Camera>(out Camera cam))
+                {
+                    DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
+                }
+                SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
+                //GameCamera.SetActive(false);
+                //SceneManager.UnloadSceneAsync(y);
             }
         }
     }

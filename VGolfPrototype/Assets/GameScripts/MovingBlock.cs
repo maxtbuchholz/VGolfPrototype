@@ -16,7 +16,7 @@ public class MovingBlock : MonoBehaviour
     private Vector2 farPos;
     private void Start()
     {
-        originalPos = transform.position;
+        originalPos = transform.localPosition;
         farPos = originalPos + new Vector2(horizontalMvmtDiff, verticleMvmtDiff);
         r2bd = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -35,7 +35,7 @@ public class MovingBlock : MonoBehaviour
             float t = (time / timeForFull) * 2;
             if(t < 1)
             {
-                transform.position = new Vector2(originalPos.x + (horizontalMvmtDiff * t), originalPos.y + (verticleMvmtDiff * t));
+                transform.localPosition = new Vector2(originalPos.x + (horizontalMvmtDiff * t), originalPos.y + (verticleMvmtDiff * t));
                 //r2bd.velocity = new Vector2(0, 1);
             }
             else
@@ -43,7 +43,7 @@ public class MovingBlock : MonoBehaviour
                 //r2bd.velocity = new Vector2(0, -1);
                 t -= 1;
                 t = 1 - t;
-                transform.position = new Vector2(originalPos.x + (horizontalMvmtDiff * t), originalPos.y + (verticleMvmtDiff * t));
+                transform.localPosition = new Vector2(originalPos.x + (horizontalMvmtDiff * t), originalPos.y + (verticleMvmtDiff * t));
             }
         }
     }

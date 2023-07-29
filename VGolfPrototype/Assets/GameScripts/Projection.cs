@@ -34,6 +34,10 @@ public class Projection : MonoBehaviour
             {
                 ren.enabled = false;
             }
+            Renderer[] renderers = ghostObj.GetComponentsInChildren<Renderer>();
+
+            foreach (Renderer cRen in renderers)
+                cRen.enabled = false;
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
             if (ghostObj.CompareTag("Movable")) moveableObjects.Add(obj, ghostObj.transform);
 
@@ -42,7 +46,7 @@ public class Projection : MonoBehaviour
     private void Update()
     {
         int num = 0;
-        foreach(var obj in moveableObjects)
+        foreach (var obj in moveableObjects)
         {
             num++;
             obj.Value.position = obj.Key.position;
@@ -67,21 +71,22 @@ public class Projection : MonoBehaviour
         line.positionCount = MaxPhysicsFrameIterations;
         for (int i = 0; i < MaxPhysicsFrameIterations; i++)
         {
+            Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z+11);
             physicsScene.Simulate(Time.fixedDeltaTime);
-            line.SetPosition(i, ghostObj.transform.position);
+            line.SetPosition(i, sPos);
         }
         Destroy(ghostObj);
     }
     public void Show()
     {
         line.enabled = true;
-        for(int i = 1; i < DotList.Count; i++)
-        {
-            if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
-            {
-                //ren.enabled = true;
-            }
-        }
+        //for(int i = 1; i < DotList.Count; i++)
+        //{
+        //    if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
+        //    {
+        //        //ren.enabled = true;
+        //    }
+        //}
     }
     public void Hide()
     {

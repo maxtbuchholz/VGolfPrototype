@@ -10,7 +10,7 @@ public class GoalHitReport : MonoBehaviour
         GameObject ob = collision.gameObject;
         if(ob.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
         { 
-            if(BSR.isReal)
+            if(BSR.isReal && (goal != null))
                 goal.CheckForGoal();
         }
     }
