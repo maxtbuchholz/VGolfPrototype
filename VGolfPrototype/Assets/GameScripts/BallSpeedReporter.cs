@@ -13,16 +13,19 @@ public class BallSpeedReporter : MonoBehaviour
     [SerializeField] GameObject originalParent;
     bool grounded = false;
     private SpriteRenderer ballSprite;
+    private Transform ballTrail;
     private Color hittable = new(1, 1, 1, 1);
-    private Color notHittable = new(1, 1, 1, 0.5f);
+    private Color notHittable = new(0.8f, 0.8f, 0.8f, 1);
     private Vector2 originalSca;
     private float distToGround;
     int FramesThoughtGrounded;
+    private bool LastTimeWasEnabled = false;
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         ballSprite = GetComponent<SpriteRenderer>();
+        ballTrail = transform.Find("Trail");
         originalSca = transform.localScale;
         distToGround = collider.bounds.extents.y;
     }
@@ -36,11 +39,17 @@ public class BallSpeedReporter : MonoBehaviour
             //rb2d.velocity = Vector2.zero;
             AbleToBeHit = true;
             ballSprite.material.color = hittable;
+            if (!LastTimeWasEnabled)
+                ballTrail.gameObject.SetActive(false);
+            LastTimeWasEnabled = true;
         }
         else
         {
             AbleToBeHit = false;
             ballSprite.material.color = notHittable;
+            if(LastTimeWasEnabled)
+                ballTrail.gameObject.SetActive(true);
+            LastTimeWasEnabled = false;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

@@ -1,35 +1,38 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VictoryScripts/ThumbsUpAnimation.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/BallSpeedReporter.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
       <File FileName="Assets/Touch/TouchHandler.cs" />
-      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" Line="1" Column="1" />
+      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" />
       <File FileName="Assets/GameScripts/Goal.cs" />
       <File FileName="Assets/PassDataScripts/DataGameToVictory.cs" />
       <File FileName="Assets/GameScripts/GoalHitReport.cs" />
       <File FileName="Assets/GameScripts/MovingBlock.cs" />
       <File FileName="Assets/GameScripts/Projection.cs" />
-      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" />
+      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="18" Column="52" />
       <File FileName="Assets/VictoryScripts/SlideBackground.cs" />
-      <File FileName="Assets/GameScripts/SpriteSorter.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/SpriteSorter.cs" />
       <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Shaders/2D/Sprite-Lit-Default.shader" />
-      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" Line="25" Column="39" />
+      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VGolfPrototype">
-            <Node name="Assets" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="GameScripts" expanded="True" />
+              <Node name="VictoryScripts" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="afa1aa29-3bd6-4774-ac56-c867dafdfe46" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5512f141-0dd3-4690-9319-b3323b8a2c05" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
