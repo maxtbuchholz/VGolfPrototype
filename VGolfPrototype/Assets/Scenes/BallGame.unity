@@ -3583,12 +3583,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 438887490975095267, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438887490975095267, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
+      propertyPath: m_Parameters.textureMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438887490975095267, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 15243eda9850d4f41880c93e2116aa3d, type: 2}
+      objectReference: {fileID: 2100000, guid: a206473dee7bd46749c0f9b6c22d70cf, type: 2}
     - target: {fileID: 438887490975095267, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
       propertyPath: m_Parameters.widthMultiplier
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1825518044382820790, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
       propertyPath: m_Radius
