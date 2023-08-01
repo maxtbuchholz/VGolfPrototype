@@ -1,37 +1,35 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bb155624-c9a9-41dc-9651-ce8a7df60e5f" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VictoryScripts/SlideBackground.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VictoryScripts/ThumbsUpAnimation.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
       <File FileName="Assets/Touch/TouchHandler.cs" />
-      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" Line="31" Column="30" />
+      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" Line="1" Column="1" />
       <File FileName="Assets/GameScripts/Goal.cs" />
       <File FileName="Assets/PassDataScripts/DataGameToVictory.cs" />
       <File FileName="Assets/GameScripts/GoalHitReport.cs" />
       <File FileName="Assets/GameScripts/MovingBlock.cs" />
       <File FileName="Assets/GameScripts/Projection.cs" />
       <File FileName="Assets/GameScripts/BallSpeedReporter.cs" />
-      <File FileName="Assets/VictoryScripts/SlideBackground.cs" Line="15" Column="56" />
+      <File FileName="Assets/VictoryScripts/SlideBackground.cs" />
+      <File FileName="Assets/GameScripts/SpriteSorter.cs" Line="1" Column="1" />
+      <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Shaders/2D/Sprite-Lit-Default.shader" />
+      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" Line="25" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VGolfPrototype">
-            <Node name="Assets" expanded="True">
-              <Node name="GameScripts" expanded="True" />
-              <Node name="PassDataScripts" expanded="True" />
-              <Node name="Touch" expanded="True" />
-              <Node name="VictoryScripts" expanded="True" />
-            </Node>
+            <Node name="Assets" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5512f141-0dd3-4690-9319-b3323b8a2c05" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

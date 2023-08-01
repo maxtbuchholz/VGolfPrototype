@@ -8,6 +8,7 @@ public class VictoryScreenStart : MonoBehaviour
     [SerializeField] RectTransform SlideUp;
     [SerializeField] GameObject Background;
     [SerializeField] GameObject Background2;
+    [SerializeField] ThumbsUpAnimation ThumbsUpA;
     void Start()
     {
         //ResizeWallColliders();
@@ -46,6 +47,7 @@ public class VictoryScreenStart : MonoBehaviour
     {
         SlideDown.transform.localPosition = new Vector2(0, SlideDown.rect.height / 2f);
         SlideUp.transform.localPosition = new Vector2(0, -SlideDown.rect.height /2f);
+        ThumbsUpA.StartAnimation();
     }
     private void SizeToScreen()
     {
