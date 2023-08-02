@@ -1,20 +1,26 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5815e5c5-eb46-4851-9506-d160cf9eb785" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/BallSpeedReporter.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
-      <File FileName="Assets/Touch/TouchHandler.cs" />
+      <File FileName="Assets/Touch/TouchHandler.cs" Line="47" Column="90" />
       <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" />
       <File FileName="Assets/GameScripts/Goal.cs" />
       <File FileName="Assets/PassDataScripts/DataGameToVictory.cs" />
       <File FileName="Assets/GameScripts/GoalHitReport.cs" />
       <File FileName="Assets/GameScripts/MovingBlock.cs" />
-      <File FileName="Assets/GameScripts/Projection.cs" />
-      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="18" Column="52" />
+      <File FileName="Assets/GameScripts/Projection.cs" Line="117" Column="6" />
+      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="67" Column="15" />
       <File FileName="Assets/VictoryScripts/SlideBackground.cs" />
       <File FileName="Assets/GameScripts/SpriteSorter.cs" />
       <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Shaders/2D/Sprite-Lit-Default.shader" />
-      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" />
+      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,6 +28,7 @@
           <Node name="VGolfPrototype">
             <Node name="Assets" expanded="True">
               <Node name="GameScripts" expanded="True" />
+              <Node name="Touch" expanded="True" />
               <Node name="VictoryScripts" expanded="True" />
             </Node>
           </Node>
@@ -29,10 +36,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="afa1aa29-3bd6-4774-ac56-c867dafdfe46" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

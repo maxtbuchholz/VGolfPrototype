@@ -11,9 +11,13 @@ public class BallSpeedReporter : MonoBehaviour
     private Collider2D collider;
     [SerializeField] private TextMeshProUGUI DebugText;
     [SerializeField] GameObject originalParent;
+    [SerializeField] GameObject BackCircle;
     bool grounded = false;
     private SpriteRenderer ballSprite;
     private Transform ballTrail;
+    //private Transform ballParticle;
+    private Transform BallDashedLineParent;
+    private RectTransform[] BallDashedLines;
     private Color hittable = new(1, 1, 1, 1);
     private Color notHittable = new(0.8f, 0.8f, 0.8f, 1);
     private Vector2 originalSca;
@@ -26,6 +30,13 @@ public class BallSpeedReporter : MonoBehaviour
         collider = GetComponent<Collider2D>();
         ballSprite = GetComponent<SpriteRenderer>();
         ballTrail = transform.Find("Trail");
+        BallDashedLineParent = transform.Find("DashedLineParent");
+        BallDashedLines = BallDashedLineParent.GetComponentsInChildren<RectTransform>();
+        originalRotSinDist = BallDashedLines[1].anchoredPosition.y;
+        BallDashedLineParent.gameObject.SetActive(false);
+        BackCircle.gameObject.SetActive(true);
+        //ballParticle = transform.Find("Particle");
+        //ballParticle.gameObject.SetActive(false);
         originalSca = transform.localScale;
         distToGround = collider.bounds.extents.y;
     }
@@ -37,20 +48,52 @@ public class BallSpeedReporter : MonoBehaviour
         if ((rb2d.velocity.magnitude < 0.2) && grounded)
         {
             //rb2d.velocity = Vector2.zero;
+            UpdateDashedCircle();
             AbleToBeHit = true;
-            ballSprite.material.color = hittable;
+            //ballSprite.material.color = hittable;
             if (!LastTimeWasEnabled)
+            {
+                BackCircle.gameObject.SetActive(false);
                 ballTrail.gameObject.SetActive(false);
+                BallDashedLineParent.gameObject.SetActive(true);
+                //ballParticle.gameObject.SetActive(true);
+            }
             LastTimeWasEnabled = true;
         }
         else
         {
+            rotSinTime = 0;
             AbleToBeHit = false;
-            ballSprite.material.color = notHittable;
-            if(LastTimeWasEnabled)
+            //ballSprite.material.color = notHittable;
+            if (LastTimeWasEnabled)
+            {
+                BackCircle.gameObject.SetActive(true);
                 ballTrail.gameObject.SetActive(true);
+                BallDashedLineParent.gameObject.SetActive(false);
+                //ballParticle.gameObject.SetActive(false);
+            }
             LastTimeWasEnabled = false;
         }
+    }
+    private float prevRotation = 0;
+    private float rotSpeed = 40;
+    private float rotSinTime = 0;
+    private float originalRotSinDist;
+    private float rotSinDistance = 3f;
+    private float rotSinSpeed = 4;
+    private void UpdateDashedCircle()
+    {
+        float delTim = Time.deltaTime;
+        prevRotation = (prevRotation + (rotSpeed * delTim)) % 360;
+        BallDashedLineParent.transform.eulerAngles = new Vector3(0, 0, prevRotation);
+        rotSinTime += (delTim * rotSinSpeed);
+        rotSinTime %= 6.283185f; //mod by 2pi
+        float s = rotSinDistance * -Mathf.Cos(rotSinTime);
+        s += originalRotSinDist;
+        BallDashedLines[1].anchoredPosition = new Vector2(0, s);
+        BallDashedLines[2].anchoredPosition = new Vector2(s, 0);
+        BallDashedLines[3].anchoredPosition = new Vector2(0, -s);
+        BallDashedLines[4].anchoredPosition = new Vector2(-s, 0);
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

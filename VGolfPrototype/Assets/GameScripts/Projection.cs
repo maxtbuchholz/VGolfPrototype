@@ -11,13 +11,14 @@ public class Projection : MonoBehaviour
     [SerializeField] GameObject ProjectionDot;
     [SerializeField] private TextMeshProUGUI DebugText;
     private List<GameObject> DotList;
-    [SerializeField] int DotAmount;
+    private int DotAmount = 10;
     private Scene simulationScene;
     private PhysicsScene2D physicsScene;
     private Dictionary<Transform, Transform> moveableObjects = new Dictionary<Transform, Transform>();
     private bool show = false;
     private void Start()
     {
+        DotAmount++;
         CreatePhysicsScene();
         CreateDotList();
         Hide();
@@ -67,31 +68,55 @@ public class Projection : MonoBehaviour
             rb.rotation = currentRot;
             rb.AddForce(force, ForceMode2D.Impulse);
         }
-
+        Vector2[] LinePos = new Vector2[MaxPhysicsFrameIterations];
         line.positionCount = MaxPhysicsFrameIterations;
         for (int i = 0; i < MaxPhysicsFrameIterations; i++)
         {
             Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z+11);
             physicsScene.Simulate(Time.fixedDeltaTime);
             line.SetPosition(i, sPos);
+            LinePos[i] = sPos;
         }
+        SetDotPositions(LinePos);
         Destroy(ghostObj);
+    }
+    private void SetDotPositions(Vector2[] LinePos)
+    {
+        float totalChangeOfPos = 0;
+        for(int i = 1; i < MaxPhysicsFrameIterations; i++)
+        {
+            totalChangeOfPos += (LinePos[i] - LinePos[i - 1]).magnitude;
+        }
+        totalChangeOfPos /= DotAmount;
+        int currDotIndex = 0;
+        float currChangeInPos = 0;
+        for (int i = 1; i < MaxPhysicsFrameIterations; i++)
+        {
+            currChangeInPos += (LinePos[i] - LinePos[i - 1]).magnitude;
+            if(currChangeInPos >= totalChangeOfPos)
+            {
+                currChangeInPos = 0;
+                DotList[currDotIndex].transform.position = new Vector3(LinePos[i].x, LinePos[i].y, Ball.transform.position.z);
+                currDotIndex++;
+            }
+        }
     }
     public void Show()
     {
-        line.enabled = true;
-        //for(int i = 1; i < DotList.Count; i++)
-        //{
-        //    if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
-        //    {
-        //        //ren.enabled = true;
-        //    }
-        //}
+        //line.enabled = true;
+        for (int i = 0; i < DotList.Count - 1; i++)
+        {
+            if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
+            {
+                DebugText.text = DotList.Count.ToString();
+                ren.enabled = true;
+            }
+        }
     }
     public void Hide()
     {
         line.enabled = false;
-        for (int i = 0; i < DotList.Count; i++)
+        for (int i = 0; i < DotList.Count - 1; i++)
         {
             if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
             {
@@ -105,11 +130,13 @@ public class Projection : MonoBehaviour
         for(int i = 0; i < DotAmount; i++)
         {
             GameObject dot = Instantiate(ProjectionDot.gameObject, Vector2.zero, Quaternion.identity);
-            SceneManager.MoveGameObjectToScene(dot, simulationScene);
+            //SceneManager.MoveGameObjectToScene(dot, simulationScene);
             if(dot.TryGetComponent<Renderer>(out Renderer ren))
             {
                 ren.enabled = false;
             }
+            float scale = (dot.transform.localScale.x + 10f) / (float)(i + 10) / 4f;
+            dot.transform.localScale = new Vector2(scale, scale);
             DotList.Add(dot);
         }
     }
