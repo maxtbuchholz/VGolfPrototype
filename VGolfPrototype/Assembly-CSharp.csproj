@@ -68,6 +68,7 @@
     <Compile Include="Assets/Touch/TouchHandler.cs" />
     <Compile Include="Assets/VictoryScripts/ThumbsUpAnimation.cs" />
     <Compile Include="Assets/GameScripts/GoalHitReport.cs" />
+    <Compile Include="Assets/LaunchPad.cs" />
     <Compile Include="Assets/GameScripts/ResizeWallColliders.cs" />
     <Compile Include="Assets/GameScripts/SizeCameraToScreen.cs" />
     <Compile Include="Assets/VictoryScripts/InitVictoryCamera.cs" />

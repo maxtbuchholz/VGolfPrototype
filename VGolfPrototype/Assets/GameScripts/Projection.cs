@@ -52,6 +52,16 @@ public class Projection : MonoBehaviour
             num++;
             obj.Value.position = obj.Key.position;
             obj.Value.rotation = obj.Key.rotation;
+            int c = obj.Value.childCount;
+            for(int i = 0; i < c; i++)
+            {
+                obj.Value.GetChild(i).position = obj.Key.GetChild(i).position;
+                obj.Value.GetChild(i).rotation = obj.Key.GetChild(i).rotation;
+                if(obj.Value.GetChild(i).TryGetComponent<LaunchPad>(out LaunchPad LP))
+                {
+                    LP.Reset();
+                }
+            }
         }
     }
     [SerializeField] LineRenderer line;
@@ -103,15 +113,15 @@ public class Projection : MonoBehaviour
     }
     public void Show()
     {
-        //line.enabled = true;
-        for (int i = 0; i < DotList.Count - 1; i++)
-        {
-            if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
-            {
-                DebugText.text = DotList.Count.ToString();
-                ren.enabled = true;
-            }
-        }
+        line.enabled = true;
+        //for (int i = 0; i < DotList.Count - 1; i++)
+        //{
+        //    if (DotList[i].TryGetComponent<Renderer>(out Renderer ren))
+        //    {
+        //        DebugText.text = DotList.Count.ToString();
+        //        ren.enabled = true;
+        //    }
+        //}
     }
     public void Hide()
     {
