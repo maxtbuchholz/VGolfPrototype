@@ -65,12 +65,12 @@ public class BallSpeedReporter : MonoBehaviour
             //ballSprite.material.color = hittable;
             if (!LastTimeWasEnabled)
             {
-                BackCircle.gameObject.SetActive(false);
-                ballTrail.gameObject.SetActive(false);
-                WaveCircleParent.SetActive(true);
-                BallDashedLineParent.gameObject.SetActive(true);
-                InnerSplitCircleParent.gameObject.SetActive(true);
-                //ballParticle.gameObject.SetActive(true);
+                    BackCircle.gameObject.SetActive(false);
+                    ballTrail.gameObject.SetActive(false);
+                    WaveCircleParent.SetActive(true);
+                    BallDashedLineParent.gameObject.SetActive(true);
+                    InnerSplitCircleParent.gameObject.SetActive(true);
+                    //ballParticle.gameObject.SetActive(true);\
             }
             LastTimeWasEnabled = true;
         }
@@ -85,7 +85,7 @@ public class BallSpeedReporter : MonoBehaviour
                 BackCircle.gameObject.SetActive(true);
                 ballTrail.gameObject.SetActive(true);
                 WaveCircleParent.SetActive(false);
-                for(int i = 0; i < WaveCircleRenderers.Length; i++)
+                for (int i = 0; i < WaveCircleRenderers.Length; i++)
                 {
                     WaveCircles[i + 1].transform.localScale = new Vector2(origWaveCircleScale, origWaveCircleScale);
                 }
@@ -95,6 +95,16 @@ public class BallSpeedReporter : MonoBehaviour
             }
             LastTimeWasEnabled = false;
         }
+    }
+    private bool InGoal = false;
+    public void SetInGoal()
+    {
+        InGoal = true;
+        BackCircle.gameObject.SetActive(true);
+        ballTrail.gameObject.SetActive(false);
+        WaveCircleParent.SetActive(false);
+        BallDashedLineParent.gameObject.SetActive(false);
+        InnerSplitCircleParent.gameObject.SetActive(false);
     }
     private float WaveCircleTime = 0;
     private const float MaxWaveCircleTime = 1;
@@ -107,10 +117,10 @@ public class BallSpeedReporter : MonoBehaviour
     const float multiCircleOffset = 0.2f;
     private void UpdateWaveCircles()
     {
-        if(WaveCircleRenderers == null)
+        if (WaveCircleRenderers == null)
         {
             WaveCircleRenderers = new SpriteRenderer[WaveCircles.Length - 1];
-            for (int i  = 1; i < WaveCircles.Length; i++)
+            for (int i = 1; i < WaveCircles.Length; i++)
             {
                 WaveCircleRenderers[i - 1] = WaveCircles[i].GetComponent<SpriteRenderer>();
             }
@@ -129,7 +139,7 @@ public class BallSpeedReporter : MonoBehaviour
                 WaveCircles[i + 1].transform.localScale = new Vector2(scale, scale);
                 WaveCircleRenderers[i].color = originalWaveCircleColor;
             }
-            else if(pT <= 1)
+            else if (pT <= 1)
             {
                 Color origAlp = originalWaveCircleColor;
                 origAlp.a = coW * originalWaveCircleColor.a;
@@ -152,7 +162,7 @@ public class BallSpeedReporter : MonoBehaviour
         BallDashedLineParent.transform.eulerAngles = new Vector3(0, 0, prevRotation);
         rotSinTime += (delTim * rotSinSpeed);
         rotSinTime %= 6.283185f; //mod by 2pi
-        float s = rotSinDistance * (1-Mathf.Cos(rotSinTime));
+        float s = rotSinDistance * (1 - Mathf.Cos(rotSinTime));
         float s1 = s + originalRotSinDist;
         BallDashedLines[1].anchoredPosition = new Vector2(0, s1);
         BallDashedLines[2].anchoredPosition = new Vector2(s1, 0);
@@ -198,7 +208,7 @@ public class BallSpeedReporter : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(GetGrounded())
+        if (GetGrounded())
         {
             //FramesThoughtGrounded = 1;
             //grounded = true;
@@ -218,9 +228,9 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private bool GetGrounded()
     {
-        RaycastHit2D[] hits =  Physics2D.RaycastAll(transform.position, -Vector2.up, distToGround + 0.01f);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -Vector2.up, distToGround + 0.01f);
         if (hits.Length > 1)
             return true;
         return false;
     }
-} 
+}

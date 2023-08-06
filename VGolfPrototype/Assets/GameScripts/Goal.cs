@@ -14,28 +14,40 @@ public class Goal : MonoBehaviour
     [SerializeField] GameObject GameCamera;
     [SerializeField] TouchHandler TouchH;
     private bool VictoryLoaded = false;
+    private bool ShouldCheck = false;
     public void CheckForGoal()
     {
-        //Rect r = GoalRect.rect;
-        //r.position = GoalRect.rect.position -  GoalRect.anchoredPosition;
-        Vector2 BallPos = Ball.transform.position;
-
-        if (ContainsPoint(BallPos, GoalRect) && BallSpeed.AbleToBeHit)
+        ShouldCheck = true;
+    }
+    public void Update()
+    {
+        if (ShouldCheck && !VictoryLoaded)
         {
-            if (!VictoryLoaded)
+            //Rect r = GoalRect.rect;
+            //r.position = GoalRect.rect.position -  GoalRect.anchoredPosition;
+            Vector2 BallPos = Ball.transform.position;
+
+            if (ContainsPoint(BallPos, GoalRect) && BallSpeed.AbleToBeHit)
             {
-                VictoryLoaded = true;
-                DebugText.text += "Goal!";
-                TouchH.enabled = false;
-                int y = SceneManager.GetActiveScene().buildIndex;
-                DataGameToVictory.instance.SetGameCameraYOffset(transform.position.y);
-                if (GameCamera.TryGetComponent<Camera>(out Camera cam))
+                if (!VictoryLoaded)
                 {
-                    DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
+                    if(Ball.gameObject.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
+                    {
+                        BSR.SetInGoal();
+                    }
+                    VictoryLoaded = true;
+                    DebugText.text += "Goal!";
+                    TouchH.enabled = false;
+                    int y = SceneManager.GetActiveScene().buildIndex;
+                    DataGameToVictory.instance.SetGameCameraYOffset(transform.position.y);
+                    if (GameCamera.TryGetComponent<Camera>(out Camera cam))
+                    {
+                        DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
+                    }
+                    SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
+                    //GameCamera.SetActive(false);
+                    //SceneManager.UnloadSceneAsync(y);
                 }
-                SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
-                //GameCamera.SetActive(false);
-                //SceneManager.UnloadSceneAsync(y);
             }
         }
     }

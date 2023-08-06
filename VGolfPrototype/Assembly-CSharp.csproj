@@ -78,6 +78,7 @@
     <Compile Include="Assets/GameScripts/Goal.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />
+    <Compile Include="Assets/GoalArrow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
