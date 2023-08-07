@@ -12,10 +12,18 @@ public class GoalArrow : MonoBehaviour
     [SerializeField] Transform Ball;
     [SerializeField] TextMeshProUGUI DebugText;
     [SerializeField] Camera camera;
+    [SerializeField] Transform ArrowParent;
+    private SpriteRenderer[] ArrowSprites;
 
     private float MinDistanceFromGoal = 3f;
+    bool origPosSet = false;
+    private void Start()
+    {
+        ArrowSprites = ArrowParent.GetComponentsInChildren<SpriteRenderer>();
+    }
     void Update()
     {
+        UpdateGoalArrow();
         Vector3 vertPos = Ball.position;
         Vector3 angleBetween0 = vertPos - Goal.position;
         angleBetween0.z = 0;
@@ -29,15 +37,21 @@ public class GoalArrow : MonoBehaviour
         Rect rect = GetWorldRect(Screen);
         Vector2 MinScreenPos = rect.min;
         Vector2 MaxScreenPos = rect.max;
+        MinScreenPos.x += 1.5f;
+        MinScreenPos.y += 1.5f;
+        MaxScreenPos.x -= 1.5f;
+        MaxScreenPos.y -= 1.5f;
         Debug.DrawLine(MaxScreenPos, MinScreenPos, Color.yellow);
         if(rect.Contains(angleBetween0))
         {
-            transform.position = (angleBetween0 + (transform.position * 3)) / 4;
+            if (origPosSet)
+                transform.position = (angleBetween0 + (transform.position * 3)) / 4;
+            else
+                transform.position = angleBetween0;
             //float angle = Mathf.Rad2Deg * Mathf.Atan((Goal.position.y - transform.position.y) / (Goal.position.x - transform.position.x));
             //float angle = Vector2.SignedAngle(transform.position, Goal.position);
             float angle = Mathf.Rad2Deg * (Mathf.Atan2(Goal.position.y - transform.position.y, Goal.position.x - transform.position.x));
             angle = -(90 - angle);
-            DebugText.text = angle.ToString();
             //if (vertPos.y <= Goal.position.y)
             //{
             //    if (angle < 0)
@@ -65,14 +79,16 @@ public class GoalArrow : MonoBehaviour
                 angleBetween0 = new Vector3(Goal.position.x, MinScreenPos.y, 0);
             }
             angleBetween0.z = transform.position.z;
-            transform.position = (angleBetween0 + (transform.position * 3)) / 4;
+            if (origPosSet)
+                transform.position = (angleBetween0 + (transform.position * 3)) / 4;
+            else
+                transform.position = angleBetween0;
         }
         Debug.DrawLine(Goal.position, transform.position, Color.red);
         //float angle2 = Mathf.Rad2Deg * Mathf.Atan((Goal.position.y - transform.position.y) / (Goal.position.x - transform.position.x));
         //float angle2 = Vector2.SignedAngle(transform.position, Goal.position);
         float angle2 = Mathf.Rad2Deg * (Mathf.Atan2(Goal.position.y - transform.position.y, Goal.position.x - transform.position.x));
         angle2 = -(90 - angle2);
-        DebugText.text = angle2.ToString();
         //if (vertPos.y <= Goal.position.y)
         //{
         //    if (angle2 < 0)
@@ -88,6 +104,23 @@ public class GoalArrow : MonoBehaviour
         //        angle2 += 90;
         //}
         transform.eulerAngles = new Vector3(0, 0, angle2);
+    }
+    float sTime = 0;
+    float MaxTime = 2f;
+    float MaxAlpha = 0.5f;
+    private void UpdateGoalArrow()
+    {
+        sTime += Time.deltaTime;
+        sTime %= MaxTime;
+        //sTime /= MaxTime;
+        float val = Mathf.Sin((1f / MaxTime) * sTime * 6.28318530718f);
+        for(int i = 0; i < ArrowSprites.Length; i++)
+        {
+            Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
+            originalArrowColor.a = (val * (MaxAlpha)) + (0.5f * MaxAlpha);
+            DebugText.text = (originalArrowColor.a).ToString();
+            ArrowSprites[i].color = originalArrowColor;
+        }
     }
     private static Rect GetWorldRect(RectTransform rectTransform)
     {

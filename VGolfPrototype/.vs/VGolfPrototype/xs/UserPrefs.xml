@@ -1,5 +1,12 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d37744f1-9cea-4ec7-a1aa-d97ff849edbe" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoalArrow.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
@@ -10,13 +17,13 @@
       <File FileName="Assets/GameScripts/GoalHitReport.cs" />
       <File FileName="Assets/GameScripts/MovingBlock.cs" />
       <File FileName="Assets/GameScripts/Projection.cs" />
-      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="20" Column="27" />
-      <File FileName="Assets/VictoryScripts/SlideBackground.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" />
+      <File FileName="Assets/VictoryScripts/SlideBackground.cs" />
       <File FileName="Assets/GameScripts/SpriteSorter.cs" />
       <File FileName="Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Shaders/2D/Sprite-Lit-Default.shader" />
-      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" Line="1" Column="1" />
-      <File FileName="Assets/LaunchPad.cs" Line="1" Column="1" />
-      <File FileName="Assets/GoalArrow.cs" Line="74" Column="33" />
+      <File FileName="Assets/VictoryScripts/ThumbsUpAnimation.cs" />
+      <File FileName="Assets/LaunchPad.cs" />
+      <File FileName="Assets/GoalArrow.cs" Line="127" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,12 +39,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="81d824ff-bb7e-42d0-ab7d-6d503350306e" />
 </Properties>
