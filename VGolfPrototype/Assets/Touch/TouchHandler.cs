@@ -43,8 +43,15 @@ public class TouchHandler : MonoBehaviour
     int pullingIndex = -1;
     private void FixedUpdate()
     {
-        //projection.Show();
-        //projection.SimulatrTrajectory(Ball.transform.position, Force, new Vector2(10,10), 0.0f, Ball.transform.rotation);
+        projection.Show();
+        try
+        {
+            projection.SimulatrTrajectory(Ball.transform.position, Force, new Vector2(-10, 0), 0.0f, Ball.transform.rotation);
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e.ToString());
+        }
         activeTouches = new List<int>();
         //DebugText.text = CanStartAim.ToString() + "\n" + BallSpeed.AbleToBeHit.ToString() + "\n" + pullingIndex.ToString();
         if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();

@@ -15,20 +15,24 @@ public class Projection : MonoBehaviour
     private Scene simulationScene;
     private PhysicsScene2D physicsScene;
     private Dictionary<Transform, Transform> moveableObjects = new Dictionary<Transform, Transform>();
+    private List<GravityWell> GravityWells;
     private bool show = false;
     private void Start()
     {
-        DotAmount++;
-        CreatePhysicsScene();
-        CreateDotList();
-        Hide();
+        //if (SceneUtility.GetBuildIndexByScenePath("Simulation") != -1)
+        //{
+            DotAmount++;
+            CreatePhysicsScene();
+            CreateDotList();
+            Hide();
+        //}
     }
     void CreatePhysicsScene()
     {
         simulationScene = SceneManager.CreateScene("Simulation", new CreateSceneParameters(LocalPhysicsMode.Physics2D));
         physicsScene = simulationScene.GetPhysicsScene2D();
-
-        foreach(Transform obj in objectsParent)
+        GravityWells = new List<GravityWell>();
+        foreach (Transform obj in objectsParent)
         {
             var ghostObj = Instantiate(obj.gameObject, obj.position, obj.rotation);
             if(ghostObj.TryGetComponent<Renderer>(out Renderer ren))
@@ -41,8 +45,8 @@ public class Projection : MonoBehaviour
                 cRen.enabled = false;
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
             if (ghostObj.CompareTag("Movable")) moveableObjects.Add(obj, ghostObj.transform);
-
         }
+        GravityWells = new List<GravityWell>(objectsParent.GetComponentsInChildren<GravityWell>());
     }
     private void Update()
     {
@@ -69,10 +73,17 @@ public class Projection : MonoBehaviour
     public void SimulatrTrajectory(Vector2 pos, Vector2 force, Vector2 currentMvmt, float currentRot, Quaternion transformRot)
     {
         var ghostObj = Instantiate(Ball.gameObject, pos, transformRot);
-        ghostObj.GetComponent<BallSpeedReporter>().isReal = false;
+        //ghostObj.GetComponent<BallSpeedReporter>().isReal = false;
         SceneManager.MoveGameObjectToScene(ghostObj.gameObject, simulationScene);
 
-        if(ghostObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+        //set gravity wells to use affected object
+        for(int i = 0; i < GravityWells.Count; i++)
+        {
+            GravityWells[i].SetAffectEdObjectListForProjection(ghostObj);
+        }
+        //set gravity wells to use affected object
+
+        if (ghostObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
             rb.AddForce(currentMvmt, ForceMode2D.Impulse);
             rb.rotation = currentRot;
@@ -82,6 +93,10 @@ public class Projection : MonoBehaviour
         line.positionCount = MaxPhysicsFrameIterations;
         for (int i = 0; i < MaxPhysicsFrameIterations; i++)
         {
+            for (int j = 0; j < GravityWells.Count; j++)
+            {
+                GravityWells[j].UpdateGravityWell();
+            }
             Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z+11);
             physicsScene.Simulate(Time.fixedDeltaTime);
             line.SetPosition(i, sPos);

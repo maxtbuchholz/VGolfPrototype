@@ -59,26 +59,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/VictoryScripts/SlideBackground.cs" />
+    <Compile Include="Assets/GameScripts/BallGravityhandler.cs" />
     <Compile Include="Assets/GameScripts/BallSpeedReporter.cs" />
     <Compile Include="Assets/Trajectory/Trajectory.cs" />
     <Compile Include="Assets/GameScripts/FollowBall.cs" />
     <Compile Include="Assets/GameScripts/ScoreController.cs" />
+    <Compile Include="Assets/GravityWell.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/GameScripts/Projection.cs" />
     <Compile Include="Assets/Touch/TouchHandler.cs" />
     <Compile Include="Assets/VictoryScripts/ThumbsUpAnimation.cs" />
     <Compile Include="Assets/GameScripts/GoalHitReport.cs" />
-    <Compile Include="Assets/LaunchPad.cs" />
     <Compile Include="Assets/GameScripts/ResizeWallColliders.cs" />
     <Compile Include="Assets/GameScripts/SizeCameraToScreen.cs" />
     <Compile Include="Assets/VictoryScripts/InitVictoryCamera.cs" />
+    <Compile Include="Assets/GameScripts/LaunchPad.cs" />
     <Compile Include="Assets/GameScripts/MovingBlock.cs" />
+    <Compile Include="Assets/GameScripts/GoalArrow.cs" />
     <Compile Include="Assets/PassDataScripts/DataGameToVictory.cs" />
     <Compile Include="Assets/VictoryScripts/VictoryScreenStart.cs" />
     <Compile Include="Assets/GameScripts/Goal.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />
-    <Compile Include="Assets/GoalArrow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

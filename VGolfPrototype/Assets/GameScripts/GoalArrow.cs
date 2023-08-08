@@ -15,11 +15,15 @@ public class GoalArrow : MonoBehaviour
     [SerializeField] Transform ArrowParent;
     private SpriteRenderer[] ArrowSprites;
 
-    private float MinDistanceFromGoal = 3f;
+    private float MinDistanceFromGoal = 2f;
     bool origPosSet = false;
     private void Start()
     {
         ArrowSprites = ArrowParent.GetComponentsInChildren<SpriteRenderer>();
+        for(int i = 0; i < ArrowSprites.Length; i++)
+        {
+            ArrowSprites[i].gameObject.transform.localPosition = new Vector3(ArrowSprites[i].gameObject.transform.localPosition.x, (float)i * -ArrowOffset, ArrowSprites[i].gameObject.transform.localPosition.z);
+        }
     }
     void Update()
     {
@@ -41,7 +45,7 @@ public class GoalArrow : MonoBehaviour
         MinScreenPos.y += 1.5f;
         MaxScreenPos.x -= 1.5f;
         MaxScreenPos.y -= 1.5f;
-        Debug.DrawLine(MaxScreenPos, MinScreenPos, Color.yellow);
+        //Debug.DrawLine(MaxScreenPos, MinScreenPos, Color.yellow);
         if(rect.Contains(angleBetween0))
         {
             if (origPosSet)
@@ -84,7 +88,7 @@ public class GoalArrow : MonoBehaviour
             else
                 transform.position = angleBetween0;
         }
-        Debug.DrawLine(Goal.position, transform.position, Color.red);
+        //Debug.DrawLine(Goal.position, transform.position, Color.red);
         //float angle2 = Mathf.Rad2Deg * Mathf.Atan((Goal.position.y - transform.position.y) / (Goal.position.x - transform.position.x));
         //float angle2 = Vector2.SignedAngle(transform.position, Goal.position);
         float angle2 = Mathf.Rad2Deg * (Mathf.Atan2(Goal.position.y - transform.position.y, Goal.position.x - transform.position.x));
@@ -107,19 +111,24 @@ public class GoalArrow : MonoBehaviour
     }
     float sTime = 0;
     float MaxTime = 2f;
-    float MaxAlpha = 0.5f;
+    float MaxAlpha = 0.2f;
+    float ArrowOffset = 0.1f;
+    float ArrowMoveMaxOffset = 0.1f;
+    float TimeArrowOffsetPerOneSec = 0.1f;
     private void UpdateGoalArrow()
     {
         sTime += Time.deltaTime;
         sTime %= MaxTime;
         //sTime /= MaxTime;
-        float val = Mathf.Sin((1f / MaxTime) * sTime * 6.28318530718f);
         for(int i = 0; i < ArrowSprites.Length; i++)
         {
-            Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
-            originalArrowColor.a = (val * (MaxAlpha)) + (0.5f * MaxAlpha);
-            DebugText.text = (originalArrowColor.a).ToString();
-            ArrowSprites[i].color = originalArrowColor;
+            float val = ArrowMoveMaxOffset * Mathf.Sin((1f / MaxTime) * sTime * 6.28318530718f);
+            ArrowSprites[i].gameObject.transform.localPosition = new Vector3(0, val , ArrowSprites[i].gameObject.transform.localPosition.z);
+            //float val = Mathf.Sin((1f / MaxTime) * (sTime + ((float)i * TimeArrowOffsetPerOneSec * MaxTime)) * 6.28318530718f);
+            //Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
+            //originalArrowColor.a = (val * (MaxAlpha)) + (0.5f * MaxAlpha);
+            //DebugText.text = (originalArrowColor.a).ToString();
+            //ArrowSprites[i].color = originalArrowColor;
         }
     }
     private static Rect GetWorldRect(RectTransform rectTransform)

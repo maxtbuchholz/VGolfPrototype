@@ -53,10 +53,12 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private void Update()
     {
+        //DebugText.text = transform.parent.ToString();
+        UpdateGrounded();
         //DebugText.text = gameObject.transform.parent.ToString();
         //DebugText.text = ((rb2d.velocity.magnitude * rb2d.mass) / 4).ToString() + " " + grounded.ToString();
         //DebugText.text = AbleToBeHit.ToString();
-        if ((rb2d.velocity.magnitude < 0.2) && grounded)
+        if (grounded)
         {
             //rb2d.velocity = Vector2.zero;
             //UpdateDashedCircle();
@@ -176,11 +178,11 @@ public class BallSpeedReporter : MonoBehaviour
         BallInnerCurveLines[4].transform.localPosition = new Vector2(0, s2);
         BallInnerCurveLines[6].transform.localPosition = new Vector2(0, s2);
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void UpdateGrounded()
     {
         if (!grounded)
         {
-            if (GetGrounded() && (rb2d.velocity.magnitude < 0.2))
+            if (GetGrounded())
                 FramesThoughtGrounded++;
             else
                 FramesThoughtGrounded = 0;
@@ -213,9 +215,9 @@ public class BallSpeedReporter : MonoBehaviour
             //FramesThoughtGrounded = 1;
             //grounded = true;
         }
-        if (isReal && (col.gameObject.transform.parent != null))
+        if (col.gameObject.transform.parent != null)
         {
-            if (col.gameObject.CompareTag("Movable"))
+            if (col.gameObject.CompareTag("Movable")|| col.gameObject.CompareTag("Well"))
             {
                 gameObject.transform.SetParent(col.gameObject.transform.parent.transform, true);
             }
@@ -226,11 +228,26 @@ public class BallSpeedReporter : MonoBehaviour
             //gameObject.transform.localScale = originalSca / col.gameObject.transform.localScale;
         }
     }
+
+    float prevGroundedDist = -1;
     private bool GetGrounded()
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -Vector2.up, distToGround + 0.01f);
-        if (hits.Length > 1)
+        if (transform.parent == null) return false;
+
+        float dist = (transform.position - transform.parent.position).magnitude;
+        if (Mathf.Abs(dist - prevGroundedDist) < 0.2)
+        {
             return true;
-        return false;
+        }
+        else
+        {
+            prevGroundedDist = dist;
+            return false;
+        }
+
+        //RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -Vector2.up, distToGround + 0.01f);
+        //if (hits.Length > 1)
+        //    return true;
+        //return false;
     }
 }
