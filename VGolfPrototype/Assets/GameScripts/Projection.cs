@@ -46,7 +46,12 @@ public class Projection : MonoBehaviour
             SceneManager.MoveGameObjectToScene(ghostObj, simulationScene);
             if (ghostObj.CompareTag("Movable")) moveableObjects.Add(obj, ghostObj.transform);
         }
-        GravityWells = new List<GravityWell>(objectsParent.GetComponentsInChildren<GravityWell>());
+        GravityWells = new List<GravityWell>(GameObject.FindObjectsByType<GravityWell>(FindObjectsSortMode.InstanceID));
+        for(int i = GravityWells.Count - 1; i >= 0; i--)
+        {
+            if (GravityWells[i].gameObject.scene.name != "Simulation")
+                GravityWells.RemoveAt(i);
+        }
     }
     private void Update()
     {

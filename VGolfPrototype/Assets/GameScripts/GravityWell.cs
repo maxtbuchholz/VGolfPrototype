@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GravityWell : MonoBehaviour
 {
@@ -9,15 +10,27 @@ public class GravityWell : MonoBehaviour
     BallGravityhandler[] affectedObjectsGravHandlers;
     Collider2D[] affectedObjectsColliders;
     [SerializeField] TextMeshProUGUI DebugText;
+    private bool[] affectedIsTouching;
     private Collider2D CenterCollider;
     float radius = 5;
     float gravityPull = 10;
     private void Start()
     {
+        List<GameObject> tempobj = new List<GameObject>(GameObject.FindGameObjectsWithTag("Ball"));
+        for(int i = tempobj.Count - 1; i >= 0; i--)
+        {
+            if (tempobj[i].scene != gameObject.scene)
+                tempobj.RemoveAt(i);
+        }
+        affectedObjects = tempobj.ToArray();
         SetUpAffectedObjects();
+        if (gameObject.scene.name != "Simulation")
+            Debug.Log("");
     }
     public void SetAffectEdObjectListForProjection(GameObject obj)
     {
+        if (gameObject.scene.name != "Simulation")
+            Debug.Log("");
         affectedObjects = new GameObject[] { obj };
         SetUpAffectedObjects();
     }
@@ -41,7 +54,8 @@ public class GravityWell : MonoBehaviour
                 }
                 catch (System.Exception e)
                 {
-                    Debug.Log(e.Message);
+                    if (affectedObjects[i].name == "Ball")
+                        Debug.Log(e.Message);
                 }
                 if (true)
                 {
@@ -63,26 +77,64 @@ public class GravityWell : MonoBehaviour
                         var rig = affectedObjects[i].GetComponent<Rigidbody2D>();
                         Vector2 force = offset / mag / mag * (gravityPull * Time.deltaTime);
                         //rig.velocity = rig.velocity + force;
-                        rig.AddForce(force, ForceMode2D.Impulse);
+                        if (!affectedIsTouching[i])
+                        {
+                            rig.AddForce(force, ForceMode2D.Impulse);
+                        }
+                        else
+                        {
+                            rig.velocity = Vector2.zero;
+                        }
                     }
-                    else if (LastTimeWasGrav)
+                    else
                     {
+                        if (affectedObjects[i].name == "Ball")
+                            Debug.Log("Ball");
                         affectedObjectsGravHandlers[i].UpdateGravityInfluence(transform.GetInstanceID(), false);
                         LastTimeWasGrav = false;
                     }
                 }
             }
+            else
+            {
+                if(gameObject.scene.name != "Simulation")
+                    Debug.Log("");
+            }
         }
     }
     private void SetUpAffectedObjects()
     {
+        affectedIsTouching = new bool[affectedObjects.Length];
         CenterCollider = transform.GetComponent<Collider2D>();
         affectedObjectsGravHandlers = new BallGravityhandler[affectedObjects.Length];
         affectedObjectsColliders = new Collider2D[affectedObjects.Length];
         for (int i = 0; i < affectedObjects.Length; i++)
         {
+            affectedIsTouching[i] = false;
             affectedObjectsGravHandlers[i] = affectedObjects[i].GetComponent<BallGravityhandler>();
             affectedObjectsColliders[i] = affectedObjects[i].GetComponent<Collider2D>();
+        }
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("");
+        for(int i = 0; i < affectedObjects.Length; i++)
+        {
+            if (affectedObjects[i] = col.gameObject)
+            {
+                affectedIsTouching[i] = true;
+            }
+        }
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        Debug.Log("");
+        for (int i = 0; i < affectedObjects.Length; i++)
+        {
+            if (affectedObjects[i] = col.gameObject)
+            {
+                affectedIsTouching[i] = false;
+            }
         }
     }
 }

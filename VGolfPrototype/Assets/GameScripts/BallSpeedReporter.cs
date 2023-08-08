@@ -51,6 +51,7 @@ public class BallSpeedReporter : MonoBehaviour
         originalSca = transform.localScale;
         distToGround = collider.bounds.extents.y;
     }
+    float rotSinTime = 0;
     private void Update()
     {
         //DebugText.text = transform.parent.ToString();
@@ -91,7 +92,7 @@ public class BallSpeedReporter : MonoBehaviour
                 {
                     WaveCircles[i + 1].transform.localScale = new Vector2(origWaveCircleScale, origWaveCircleScale);
                 }
-                BallDashedLineParent.gameObject.SetActive(false);
+                //BallDashedLineParent.gameObject.SetActive(false);
                 //InnerSplitCircleParent.gameObject.SetActive(false);
                 //ballParticle.gameObject.SetActive(false);
             }
@@ -150,34 +151,6 @@ public class BallSpeedReporter : MonoBehaviour
             }
         }
     }
-    private float prevRotation = 0;
-    private float rotSpeed = 40;
-    private float rotSinTime = 0;
-    private float originalRotSinDist;
-    private float originalInnerRotSinDist;
-    private float rotSinDistance = 3f;
-    private float rotSinSpeed = 4;
-    //private void UpdateDashedCircle()
-    //{
-    //    float delTim = Time.deltaTime;
-    //    prevRotation = (prevRotation + (rotSpeed * delTim)) % 360;
-    //    BallDashedLineParent.transform.eulerAngles = new Vector3(0, 0, prevRotation);
-    //    rotSinTime += (delTim * rotSinSpeed);
-    //    rotSinTime %= 6.283185f; //mod by 2pi
-    //    float s = rotSinDistance * (1 - Mathf.Cos(rotSinTime));
-    //    float s1 = s + originalRotSinDist;
-    //    BallDashedLines[1].anchoredPosition = new Vector2(0, s1);
-    //    BallDashedLines[2].anchoredPosition = new Vector2(s1, 0);
-    //    BallDashedLines[3].anchoredPosition = new Vector2(0, -s1);
-    //    BallDashedLines[4].anchoredPosition = new Vector2(-s1, 0);
-
-    //    float s2 = (s / 3.8f) + originalInnerRotSinDist;
-    //    var o = BallInnerCurveLines[0].transform;
-    //    InnerSplitCircleParent.transform.eulerAngles = new Vector3(0, 0, -prevRotation);
-    //    BallInnerCurveLines[2].transform.localPosition = new Vector2(0, s2);
-    //    BallInnerCurveLines[4].transform.localPosition = new Vector2(0, s2);
-    //    BallInnerCurveLines[6].transform.localPosition = new Vector2(0, s2);
-    //}
     private void UpdateGrounded()
     {
         if (!grounded)
