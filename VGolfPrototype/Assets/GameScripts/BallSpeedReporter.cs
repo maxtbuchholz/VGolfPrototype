@@ -13,8 +13,8 @@ public class BallSpeedReporter : MonoBehaviour
     private Collider2D collider;
     [SerializeField] private TextMeshProUGUI DebugText;
     [SerializeField] GameObject originalParent;
-    [SerializeField] GameObject BackCircle;
-    [SerializeField] GameObject InnerSplitCircleParent;
+    //[SerializeField] GameObject BackCircle;
+    //[SerializeField] GameObject InnerSplitCircleParent;
     [SerializeField] GameObject WaveCircleParent;
     Transform[] WaveCircles;
     bool grounded = false;
@@ -36,13 +36,13 @@ public class BallSpeedReporter : MonoBehaviour
         collider = GetComponent<Collider2D>();
         ballSprite = GetComponent<SpriteRenderer>();
         ballTrail = transform.Find("Trail");
-        BallDashedLineParent = transform.Find("DashedLineParent");
-        BallDashedLines = BallDashedLineParent.GetComponentsInChildren<RectTransform>();
-        BallInnerCurveLines = InnerSplitCircleParent.GetComponentsInChildren<Transform>().ToListPooled();
-        originalRotSinDist = BallDashedLines[1].anchoredPosition.y;
-        originalInnerRotSinDist = BallInnerCurveLines[2].localPosition.y;
-        BallDashedLineParent.gameObject.SetActive(false);
-        BackCircle.gameObject.SetActive(true);
+        //BallDashedLineParent = transform.Find("DashedLineParent");
+        //BallDashedLines = BallDashedLineParent.GetComponentsInChildren<RectTransform>();
+        //BallInnerCurveLines = InnerSplitCircleParent.GetComponentsInChildren<Transform>().ToListPooled();
+        //originalRotSinDist = BallDashedLines[1].anchoredPosition.y;
+        //originalInnerRotSinDist = BallInnerCurveLines[2].localPosition.y;
+        //BallDashedLineParent.gameObject.SetActive(false);
+        //BackCircle.gameObject.SetActive(true);
         WaveCircles = WaveCircleParent.GetComponentsInChildren<Transform>();
         origWaveCircleScale = WaveCircles[1].transform.localScale.x;
         originalWaveCircleColor = WaveCircles[1].GetComponent<SpriteRenderer>().color;
@@ -67,11 +67,11 @@ public class BallSpeedReporter : MonoBehaviour
             //ballSprite.material.color = hittable;
             if (!LastTimeWasEnabled)
             {
-                    BackCircle.gameObject.SetActive(false);
+                    //BackCircle.gameObject.SetActive(false);
                     ballTrail.gameObject.SetActive(false);
                     WaveCircleParent.SetActive(true);
-                    BallDashedLineParent.gameObject.SetActive(true);
-                    InnerSplitCircleParent.gameObject.SetActive(true);
+                    //BallDashedLineParent.gameObject.SetActive(true);
+                    //InnerSplitCircleParent.gameObject.SetActive(true);
                     //ballParticle.gameObject.SetActive(true);\
             }
             LastTimeWasEnabled = true;
@@ -84,7 +84,7 @@ public class BallSpeedReporter : MonoBehaviour
             //ballSprite.material.color = notHittable;
             if (LastTimeWasEnabled)
             {
-                BackCircle.gameObject.SetActive(true);
+                //BackCircle.gameObject.SetActive(true);
                 ballTrail.gameObject.SetActive(true);
                 WaveCircleParent.SetActive(false);
                 for (int i = 0; i < WaveCircleRenderers.Length; i++)
@@ -92,7 +92,7 @@ public class BallSpeedReporter : MonoBehaviour
                     WaveCircles[i + 1].transform.localScale = new Vector2(origWaveCircleScale, origWaveCircleScale);
                 }
                 BallDashedLineParent.gameObject.SetActive(false);
-                InnerSplitCircleParent.gameObject.SetActive(false);
+                //InnerSplitCircleParent.gameObject.SetActive(false);
                 //ballParticle.gameObject.SetActive(false);
             }
             LastTimeWasEnabled = false;
@@ -102,11 +102,11 @@ public class BallSpeedReporter : MonoBehaviour
     public void SetInGoal()
     {
         InGoal = true;
-        BackCircle.gameObject.SetActive(true);
+        //BackCircle.gameObject.SetActive(true);
         ballTrail.gameObject.SetActive(false);
         WaveCircleParent.SetActive(false);
         BallDashedLineParent.gameObject.SetActive(false);
-        InnerSplitCircleParent.gameObject.SetActive(false);
+        //InnerSplitCircleParent.gameObject.SetActive(false);
     }
     private float WaveCircleTime = 0;
     private const float MaxWaveCircleTime = 1;
@@ -157,27 +157,27 @@ public class BallSpeedReporter : MonoBehaviour
     private float originalInnerRotSinDist;
     private float rotSinDistance = 3f;
     private float rotSinSpeed = 4;
-    private void UpdateDashedCircle()
-    {
-        float delTim = Time.deltaTime;
-        prevRotation = (prevRotation + (rotSpeed * delTim)) % 360;
-        BallDashedLineParent.transform.eulerAngles = new Vector3(0, 0, prevRotation);
-        rotSinTime += (delTim * rotSinSpeed);
-        rotSinTime %= 6.283185f; //mod by 2pi
-        float s = rotSinDistance * (1 - Mathf.Cos(rotSinTime));
-        float s1 = s + originalRotSinDist;
-        BallDashedLines[1].anchoredPosition = new Vector2(0, s1);
-        BallDashedLines[2].anchoredPosition = new Vector2(s1, 0);
-        BallDashedLines[3].anchoredPosition = new Vector2(0, -s1);
-        BallDashedLines[4].anchoredPosition = new Vector2(-s1, 0);
+    //private void UpdateDashedCircle()
+    //{
+    //    float delTim = Time.deltaTime;
+    //    prevRotation = (prevRotation + (rotSpeed * delTim)) % 360;
+    //    BallDashedLineParent.transform.eulerAngles = new Vector3(0, 0, prevRotation);
+    //    rotSinTime += (delTim * rotSinSpeed);
+    //    rotSinTime %= 6.283185f; //mod by 2pi
+    //    float s = rotSinDistance * (1 - Mathf.Cos(rotSinTime));
+    //    float s1 = s + originalRotSinDist;
+    //    BallDashedLines[1].anchoredPosition = new Vector2(0, s1);
+    //    BallDashedLines[2].anchoredPosition = new Vector2(s1, 0);
+    //    BallDashedLines[3].anchoredPosition = new Vector2(0, -s1);
+    //    BallDashedLines[4].anchoredPosition = new Vector2(-s1, 0);
 
-        float s2 = (s / 3.8f) + originalInnerRotSinDist;
-        var o = BallInnerCurveLines[0].transform;
-        InnerSplitCircleParent.transform.eulerAngles = new Vector3(0, 0, -prevRotation);
-        BallInnerCurveLines[2].transform.localPosition = new Vector2(0, s2);
-        BallInnerCurveLines[4].transform.localPosition = new Vector2(0, s2);
-        BallInnerCurveLines[6].transform.localPosition = new Vector2(0, s2);
-    }
+    //    float s2 = (s / 3.8f) + originalInnerRotSinDist;
+    //    var o = BallInnerCurveLines[0].transform;
+    //    InnerSplitCircleParent.transform.eulerAngles = new Vector3(0, 0, -prevRotation);
+    //    BallInnerCurveLines[2].transform.localPosition = new Vector2(0, s2);
+    //    BallInnerCurveLines[4].transform.localPosition = new Vector2(0, s2);
+    //    BallInnerCurveLines[6].transform.localPosition = new Vector2(0, s2);
+    //}
     private void UpdateGrounded()
     {
         if (!grounded)
@@ -215,18 +215,13 @@ public class BallSpeedReporter : MonoBehaviour
             //FramesThoughtGrounded = 1;
             //grounded = true;
         }
-        if (col.gameObject.transform.parent != null)
-        {
-            if (col.gameObject.CompareTag("Movable")|| col.gameObject.CompareTag("Well"))
+            if (col.gameObject.transform.parent != null)
             {
-                gameObject.transform.SetParent(col.gameObject.transform.parent.transform, true);
+                if (col.gameObject.CompareTag("Movable") || col.gameObject.CompareTag("Well"))
+                {
+                    gameObject.transform.SetParent(col.gameObject.transform.parent.transform, true);
+                }
             }
-            //gameObject.transform.localScale = new Vector3(
-            //gameObject.transform.localScale.x / col.gameObject.transform.localScale.x,
-            //gameObject.transform.localScale.y / col.gameObject.transform.localScale.y,
-            //gameObject.transform.localScale.z / col.gameObject.transform.localScale.z);
-            //gameObject.transform.localScale = originalSca / col.gameObject.transform.localScale;
-        }
     }
 
     float prevGroundedDist = -1;

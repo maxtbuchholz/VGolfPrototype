@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BallGravityhandler : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI DebugText;
     List<int> IDS;
     Rigidbody2D rgd2;
     private void Start()
@@ -41,6 +43,8 @@ public class BallGravityhandler : MonoBehaviour
             if (IDS.Count == 0)
                 SetGlobalGravity(true);
         }
+        if (transform.name == "Ball")
+            DebugText.text = rgd2.gravityScale.ToString();
     }
     private void SetGlobalGravity(bool isActive)
     {
