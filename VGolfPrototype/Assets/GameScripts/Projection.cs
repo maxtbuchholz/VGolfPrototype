@@ -90,24 +90,28 @@ public class Projection : MonoBehaviour
 
         if (ghostObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
-            rb.AddForce(currentMvmt, ForceMode2D.Impulse);
+            rb.velocity = rb.velocity + currentMvmt;
             rb.rotation = currentRot;
-            rb.AddForce(force, ForceMode2D.Impulse);
+            //rb.AddForce(force, ForceMode2D.Impulse);
+            rb.velocity = rb.velocity + force;
         }
         Vector2[] LinePos = new Vector2[MaxPhysicsFrameIterations];
         line.positionCount = MaxPhysicsFrameIterations;
         for (int i = 0; i < MaxPhysicsFrameIterations; i++)
         {
+            if (i == 0)
+                Debug.Log("g");
             for (int j = 0; j < GravityWells.Count; j++)
             {
-                GravityWells[j].UpdateGravityWell();
+                GravityWells[j].UpdateGravityWell(true);
             }
-            Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z+11);
             physicsScene.Simulate(Time.fixedDeltaTime);
+            Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
             line.SetPosition(i, sPos);
             LinePos[i] = sPos;
         }
-        SetDotPositions(LinePos);
+        //SetDotPositions(LinePos);
+        //DebugText.text = ghostObj.GetComponent<CollisionCounter>().Collisions.ToString();
         Destroy(ghostObj);
     }
     private void SetDotPositions(Vector2[] LinePos)

@@ -43,6 +43,15 @@ public class TouchHandler : MonoBehaviour
     int pullingIndex = -1;
     private void FixedUpdate()
     {
+        //projection.Show();
+        //try
+        //{
+        //    projection.SimulatrTrajectory(Ball.transform.position, new Vector2(-10, 0), BallRB.velocity, 0.0f, Ball.transform.rotation);
+        //}
+        //catch (System.Exception e)
+        //{
+        //    Debug.Log(e.ToString());
+        //}
         activeTouches = new List<int>();
         if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();
         for (int i = 0; i < UnityEngine.Input.touchCount; i++)
@@ -153,7 +162,9 @@ public class TouchHandler : MonoBehaviour
         projection.Hide();
         if (PullDistanceLongEnough)
         {
-            Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
+            //Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
+            Rigidbody2D rb = Ball.GetComponent<Rigidbody2D>();
+            rb.velocity = rb.velocity + Force;
             scoreController.ScoreAdOne();
         }
         PullBackJoystick.SetActive(false);

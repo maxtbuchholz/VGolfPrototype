@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3540008419427708036}
   - component: {fileID: 3213766241164332154}
   - component: {fileID: 9080443605435492667}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: DeadBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796530521577989141}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.15, y: -26.48, z: 10}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3869124405076704899
 SpriteRenderer:
@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0173e31d6f147d79fcaef5b73ec34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugText: {fileID: 0}

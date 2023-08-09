@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991790256973479941, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8991790256973479941, guid: 7aeddaa5fffc1438abcd4e038622cd6e, type: 3}
       propertyPath: m_LocalScale.x
@@ -240,3 +240,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0173e31d6f147d79fcaef5b73ec34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugText: {fileID: 0}
