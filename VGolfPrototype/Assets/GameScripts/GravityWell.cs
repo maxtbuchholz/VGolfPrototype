@@ -27,8 +27,6 @@ public class GravityWell : MonoBehaviour
     }
     public void SetAffectEdObjectListForProjection(GameObject obj)
     {
-        if (gameObject.scene.name != "Simulation")
-            Debug.Log("");
         affectedObjects = new GameObject[] { obj };
         SetUpAffectedObjects();
     }
@@ -37,71 +35,45 @@ public class GravityWell : MonoBehaviour
     {
         UpdateGravityWell(true);
     }
-    public void UpdateGravityWell(bool NaturalUpdate)
+    private void UpdateGravityWell(bool NaturalUpdate)
     {
         //Debug.DrawLine(transform.position, new Vector2(transform.position.x + radius, transform.position.y), Color.green);
         //get object distance
         Vector2 WellPos = transform.position;
         for (int i = 0; i < affectedObjects.Length; i++)
         {
-            if (affectedObjectsColliders[i] != null)
+            AddGravToObject(affectedObjects[i], affectedObjectsColliders[i], affectedObjectsGravHandlers[i], 1);
+        }
+    }
+    public void AddGravToObject(GameObject obj, Collider2D col, BallGravityhandler gra, float percentPfUllGrav)
+    {
+            if (true)
             {
-                //try
-                //{
-                //    float closeMag = (CenterCollider.ClosestPoint(affectedObjectsColliders[i].transform.position) - WellPos).magnitude;
-                //}
-                //catch (System.Exception e)
-                //{
-                //    if (affectedObjects[i].name == "Ball")
-                //        Debug.Log(e.Message);
-                //}
-                if (true)
+                Vector2 ClosestDist = Physics2D.ClosestPoint(obj.transform.position, CenterCollider);
+                Vector2 vDist = new Vector2(ClosestDist.x - obj.transform.position.x, ClosestDist.y - obj.transform.position.y);
+                float dist = vDist.magnitude;
+                //float dist = Mathf.Sqrt(dx + dy);
+                //DebugText.text = Mathf.Round(dist).ToString();
+                if (dist <= radius)
                 {
-                    //float dx = (transform.position.x - affectedObjects[i].transform.position.x);
-                    //float dy = (transform.position.y - affectedObjects[i].transform.position.y);
-                    //dx = dx * dx;
-                    //dy = dy * dy;
-                    //Vector2 vDist = transform.position - affectedObjects[i].transform.position;
-                    Vector2 ClosestDist = Physics2D.ClosestPoint(affectedObjects[i].transform.position, CenterCollider);
-                    Vector2 vDist = new Vector2(ClosestDist.x - affectedObjects[i].transform.position.x, ClosestDist.y - affectedObjects[i].transform.position.y);
-                    float dist = vDist.magnitude;
-                    //float dist = Mathf.Sqrt(dx + dy);
-                    //DebugText.text = Mathf.Round(dist).ToString();
-                    if (dist <= radius)
-                    {
-                        if (!LastTimeWasGrav)
-                        {
-                            affectedObjectsGravHandlers[i].UpdateGravityInfluence(transform.GetInstanceID(), true);
-                            LastTimeWasGrav = true;
-                        }
-                        // apply force based on object stats
-                        //Debug.DrawLine(transform.position, affectedObjects[i].transform.position, Color.yellow);
-                        Vector2 offset = vDist;// (transform.position - affectedObjects[i].transform.position);
-                        //offset = offset.normalized;
-                        var mag = 5;// offset.magnitude;
-                        var rig = affectedObjects[i].GetComponent<Rigidbody2D>();
-                        Vector2 force = offset / mag / mag * (gravityPull);
-                        //rig.velocity = rig.velocity + force;
-                        //if (!affectedIsTouching[i])
-                        //{
-                        //rig.AddForce(force, ForceMode2D.Impulse);
-                        rig.velocity = rig.velocity + force;
-                        //}
-                        //else
-                        //{
-                        //if(NaturalUpdate)
-                        //    if(rig.velocity.magnitude < 0.1)
-                        //        rig.velocity = Vector2.zero;
-                        //}
-                    }
-                    else
-                    {
-                        affectedObjectsGravHandlers[i].UpdateGravityInfluence(transform.GetInstanceID(), false);
-                        LastTimeWasGrav = false;
-                    }
+                    gra.UpdateGravityInfluence(transform.GetInstanceID(), true);
+                    LastTimeWasGrav = true;
+                    // apply force based on object stats
+                    //Debug.DrawLine(transform.position, affectedObjects[i].transform.position, Color.yellow);
+                    Vector2 offset = vDist;// (transform.position - affectedObjects[i].transform.position);
+                                           //offset = offset.normalized;
+                    float mag = 5.0f;// * percentPfUllGrav;// offset.magnitude;
+                    var rig = obj.GetComponent<Rigidbody2D>();
+                    Vector2 force = offset / mag / mag * (gravityPull);
+                    force *= percentPfUllGrav;
+                    rig.velocity = rig.velocity + force;
+                }
+                else
+                {
+                    gra.UpdateGravityInfluence(transform.GetInstanceID(), false);
+                    LastTimeWasGrav = false;
                 }
             }
-        }
     }
     private void SetUpAffectedObjects()
     {

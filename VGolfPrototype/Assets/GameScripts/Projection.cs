@@ -53,7 +53,7 @@ public class Projection : MonoBehaviour
                 GravityWells.RemoveAt(i);
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
         int num = 0;
         foreach (var obj in moveableObjects)
@@ -80,12 +80,14 @@ public class Projection : MonoBehaviour
         var ghostObj = Instantiate(Ball.gameObject, pos, transformRot);
         //ghostObj.GetComponent<BallSpeedReporter>().isReal = false;
         SceneManager.MoveGameObjectToScene(ghostObj.gameObject, simulationScene);
-
+        Collider2D ghostCol = ghostObj.GetComponent<Collider2D>();
+        BallGravityhandler ghostGrav = ghostObj.GetComponent<BallGravityhandler>();
+        
         //set gravity wells to use affected object
-        for(int i = 0; i < GravityWells.Count; i++)
-        {
-            GravityWells[i].SetAffectEdObjectListForProjection(ghostObj);
-        }
+        //for(int i = 0; i < GravityWells.Count; i++)
+        //{
+        //    //GravityWells[i].SetAffectEdObjectListForProjection(ghostObj);
+        //}
         //set gravity wells to use affected object
 
         if (ghostObj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
@@ -99,16 +101,22 @@ public class Projection : MonoBehaviour
         line.positionCount = MaxPhysicsFrameIterations;
         for (int i = 0; i < MaxPhysicsFrameIterations; i++)
         {
-            if (i == 0)
-                Debug.Log("g");
-            for (int j = 0; j < GravityWells.Count; j++)
+            if (true)
             {
-                GravityWells[j].UpdateGravityWell(true);
+                for (int j = 0; j < GravityWells.Count; j++)
+                {
+                    if(i > -1)
+                        GravityWells[j].AddGravToObject(ghostObj, ghostCol, ghostGrav, 1.0f);
+                }
+                physicsScene.Simulate(Time.deltaTime);
+                Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
+                line.SetPosition(i, sPos);
+                LinePos[i] = sPos;
+                //for (int j = 0; j < GravityWells.Count; j++)
+                //{
+                //    GravityWells[j].AddGravToObject(ghostObj, ghostCol, ghostGrav, 0.4f);
+                //}
             }
-            physicsScene.Simulate(Time.fixedDeltaTime);
-            Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
-            line.SetPosition(i, sPos);
-            LinePos[i] = sPos;
         }
         //SetDotPositions(LinePos);
         //DebugText.text = ghostObj.GetComponent<CollisionCounter>().Collisions.ToString();

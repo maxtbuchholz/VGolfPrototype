@@ -5030,6 +5030,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 668623233}
     - target: {fileID: 8535496006331177671, guid: 6d2234dca29e544d0944d2187d032d41, type: 3}
+      propertyPath: Ball
+      value: 
+      objectReference: {fileID: 176206831066356085, guid: a221b51644c4d43eab69c9db3d9e3f5d, type: 3}
+    - target: {fileID: 8535496006331177671, guid: 6d2234dca29e544d0944d2187d032d41, type: 3}
       propertyPath: DebugText
       value: 
       objectReference: {fileID: 668623233}

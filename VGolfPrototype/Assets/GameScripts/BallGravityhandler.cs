@@ -43,8 +43,6 @@ public class BallGravityhandler : MonoBehaviour
             if (IDS.Count == 0)
                 SetGlobalGravity(true);
         }
-        if (transform.name == "Ball")
-            DebugText.text = rgd2.gravityScale.ToString();
     }
     private void SetGlobalGravity(bool isActive)
     {

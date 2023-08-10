@@ -1,27 +1,20 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="415d2d9b-6e9c-42a5-ac6c-226e144e22c6" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/GravityWell.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/Projection.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
       <File FileName="Assets/Touch/TouchHandler.cs" Line="33" Column="34" />
-      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" />
-      <File FileName="Assets/GameScripts/Goal.cs" />
-      <File FileName="Assets/GameScripts/Projection.cs" Line="103" Column="32" />
-      <File FileName="Assets/GameScripts/GravityWell.cs" Line="18" Column="6" />
+      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/Goal.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/Projection.cs" Line="156" Column="12" />
+      <File FileName="Assets/GameScripts/GravityWell.cs" Line="57" Column="34" />
       <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="179" Column="17" />
       <File FileName="Assets/CollisionCounter.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/BallGravityhandler.cs" Line="24" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="VGolfPrototype" expanded="True">
+          <Node name="VGolfPrototype">
             <Node name="Assets" expanded="True">
               <Node name="GameScripts" expanded="True" />
               <Node name="Touch" expanded="True" />
@@ -32,5 +25,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e242899e-f681-4f2d-8ef2-cf337d7a5aa2" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
