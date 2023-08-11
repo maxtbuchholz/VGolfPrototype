@@ -1,20 +1,23 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/Projection.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
-      <File FileName="Assets/Touch/TouchHandler.cs" Line="33" Column="34" />
-      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameScripts/Goal.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameScripts/Projection.cs" Line="156" Column="12" />
-      <File FileName="Assets/GameScripts/GravityWell.cs" Line="57" Column="34" />
-      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="179" Column="17" />
-      <File FileName="Assets/CollisionCounter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Touch/TouchHandler.cs" />
+      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" />
+      <File FileName="Assets/GameScripts/Goal.cs" />
+      <File FileName="Assets/GameScripts/Projection.cs" Line="123" Column="20" />
+      <File FileName="Assets/GameScripts/GravityWell.cs" />
+      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="1" Column="1" />
+      <File FileName="Assets/CollisionCounter.cs" />
       <File FileName="Assets/GameScripts/BallGravityhandler.cs" Line="24" Column="20" />
+      <File FileName="Assets/GameScripts/LaunchPad.cs" Line="46" Column="6" />
+      <File FileName="Assets/GhostBallCollision.cs" Line="7" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="VGolfPrototype">
+          <Node name="VGolfPrototype" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="GameScripts" expanded="True" />
               <Node name="Touch" expanded="True" />
@@ -25,12 +28,16 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e242899e-f681-4f2d-8ef2-cf337d7a5aa2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9231795c-a5bb-42a6-aa1e-0ba23fccc093" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Assets/GameScripts/Projection.cs" relfile="Assets/GameScripts/Projection.cs" line="31" column="1" />
+      <Breakpoint file="/Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Assets/GameScripts/Projection.cs" relfile="Assets/GameScripts/Projection.cs" line="30" column="1" />
+      <Breakpoint file="/Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Assets/GameScripts/Projection.cs" relfile="Assets/GameScripts/Projection.cs" line="27" column="1" />
+      <Breakpoint file="/Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Assets/GameScripts/Projection.cs" relfile="Assets/GameScripts/Projection.cs" line="25" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>

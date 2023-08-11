@@ -11,30 +11,34 @@ public class LaunchPad : MonoBehaviour
     private bool Launch = false;
     private bool frstLaunchComplete = false;
     private bool secondDownStarted = false;
-    void Update()
+    void FixedUpdate()
     {
         if (Launch)
         {
-            Vector2 distFromStart = transform.localPosition;
-            if (true)
+            LaunchPlatformGo();
+        }
+    }
+    void LaunchPlatformGo()
+    {
+        Vector2 distFromStart = transform.localPosition;
+        if (true)
+        {
+            if (!frstLaunchComplete)
             {
-                if (!frstLaunchComplete)
-                {
-                    frstLaunchComplete = true;
-                    rbd2.velocity = transform.up * UpwardForce;
-                }
-                else if (transform.localPosition.y > MaxYDist)
-                {
-                    secondDownStarted = true;
-                    rbd2.velocity = transform.up * -ResetDownForce;
-                }
-                else if ((transform.localPosition.y < 0) && secondDownStarted)
-                {
-                    rbd2.velocity = new Vector2(0, 0);
-                    frstLaunchComplete = false;
-                    secondDownStarted = false;
-                    Launch = false;
-                }
+                frstLaunchComplete = true;
+                rbd2.velocity = transform.up * UpwardForce;
+            }
+            else if (transform.localPosition.y > MaxYDist)
+            {
+                secondDownStarted = true;
+                rbd2.velocity = transform.up * -ResetDownForce;
+            }
+            else if ((transform.localPosition.y < 0) && secondDownStarted)
+            {
+                rbd2.velocity = new Vector2(0, 0);
+                frstLaunchComplete = false;
+                secondDownStarted = false;
+                Launch = false;
             }
         }
     }
@@ -42,6 +46,17 @@ public class LaunchPad : MonoBehaviour
     {
         Launch = true;
     }
+    public void GhostUpdate()
+    {
+        if (Launch)
+        {
+            LaunchPlatformGo();
+        }
+    }
+    //public void GhostTrigger()
+    //{
+    //    Launch = true;
+    //}
     public void Reset()
     {
         rbd2.velocity = new Vector2(0, 0);

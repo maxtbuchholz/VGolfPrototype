@@ -15,6 +15,7 @@ public class Projection : MonoBehaviour
     private Scene simulationScene;
     private PhysicsScene2D physicsScene;
     private Dictionary<Transform, Transform> moveableObjects = new Dictionary<Transform, Transform>();
+    private List<LaunchPad> launchpads;
     private List<GravityWell> GravityWells;
     private bool show = false;
     private void Start()
@@ -26,6 +27,24 @@ public class Projection : MonoBehaviour
             CreateDotList();
             Hide();
         //}
+        int num = 0;
+        launchpads = new List<LaunchPad>();
+        foreach (var obj in moveableObjects)
+        {
+            num++;
+            obj.Value.position = obj.Key.position;
+            obj.Value.rotation = obj.Key.rotation;
+            int c = obj.Value.childCount;
+            for (int i = 0; i < c; i++)
+            {
+                obj.Value.GetChild(i).position = obj.Key.GetChild(i).position;
+                obj.Value.GetChild(i).rotation = obj.Key.GetChild(i).rotation;
+                if (obj.Value.GetChild(i).TryGetComponent<LaunchPad>(out LaunchPad LP))
+                {
+                    launchpads.Add(LP);
+                }
+            }
+        }
     }
     void CreatePhysicsScene()
     {
@@ -55,23 +74,7 @@ public class Projection : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        int num = 0;
-        foreach (var obj in moveableObjects)
-        {
-            num++;
-            obj.Value.position = obj.Key.position;
-            obj.Value.rotation = obj.Key.rotation;
-            int c = obj.Value.childCount;
-            for(int i = 0; i < c; i++)
-            {
-                obj.Value.GetChild(i).position = obj.Key.GetChild(i).position;
-                obj.Value.GetChild(i).rotation = obj.Key.GetChild(i).rotation;
-                if(obj.Value.GetChild(i).TryGetComponent<LaunchPad>(out LaunchPad LP))
-                {
-                    LP.Reset();
-                }
-            }
-        }
+
     }
     [SerializeField] LineRenderer line;
     [SerializeField] int MaxPhysicsFrameIterations;
@@ -107,6 +110,10 @@ public class Projection : MonoBehaviour
                 {
                     if(i > -1)
                         GravityWells[j].AddGravToObject(ghostObj, ghostCol, ghostGrav, 1.0f);
+                }
+                for (int j = 0; j < launchpads.Count; j++)
+                {
+                    launchpads[j].GhostUpdate();
                 }
                 physicsScene.Simulate(Time.deltaTime);
                 Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
