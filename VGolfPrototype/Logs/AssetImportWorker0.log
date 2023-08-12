@@ -1409,3 +1409,2398 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.443 seconds
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.874 seconds
+Domain Reload Profiling: 1317ms
+	BeginReloadAssembly (89ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (316ms)
+		LoadAssemblies (163ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (174ms)
+			TypeCache.Refresh (164ms)
+				TypeCache.ScanAssembly (157ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (874ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (253ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (131ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5749 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.0 KB). Loaded Objects now: 6455.
+Memory consumption went from 419.3 MB to 419.0 MB.
+Total: 2.663167 ms (FindLiveObjects: 0.212209 ms CreateObjectMapping: 0.112792 ms MarkObjects: 2.225667 ms  DeleteObjects: 0.111917 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6455.
+Memory consumption went from 330.5 MB to 330.2 MB.
+Total: 2.692916 ms (FindLiveObjects: 0.197083 ms CreateObjectMapping: 0.099000 ms MarkObjects: 2.333542 ms  DeleteObjects: 0.063000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.445 seconds
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.878 seconds
+Domain Reload Profiling: 1323ms
+	BeginReloadAssembly (98ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (307ms)
+		LoadAssemblies (155ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (169ms)
+				TypeCache.ScanAssembly (161ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (879ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (286ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (44ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (133ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5749 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.2 KB). Loaded Objects now: 6460.
+Memory consumption went from 427.9 MB to 427.6 MB.
+Total: 2.507333 ms (FindLiveObjects: 0.196917 ms CreateObjectMapping: 0.092542 ms MarkObjects: 2.124792 ms  DeleteObjects: 0.092625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.407 seconds
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.525 seconds
+Domain Reload Profiling: 931ms
+	BeginReloadAssembly (85ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (11ms)
+	LoadAllAssembliesAndSetupDomain (284ms)
+		LoadAssemblies (129ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (161ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (525ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (325ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (91ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (123ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5749 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.3 KB). Loaded Objects now: 6465.
+Memory consumption went from 436.9 MB to 436.5 MB.
+Total: 2.591292 ms (FindLiveObjects: 0.167333 ms CreateObjectMapping: 0.097292 ms MarkObjects: 2.216375 ms  DeleteObjects: 0.109625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (316.9 KB). Loaded Objects now: 6465.
+Memory consumption went from 348.1 MB to 347.7 MB.
+Total: 2.892083 ms (FindLiveObjects: 0.161000 ms CreateObjectMapping: 0.076875 ms MarkObjects: 2.590542 ms  DeleteObjects: 0.063291 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+[usbmuxd] Detached: 3 00008120-000270303E44201E
+========================================================================
+Received Import Request.
+  Time since last request: 3060.849538 seconds.
+  path: Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+  artifactKey: Guid(c41005c129ba4d66911b75229fd70b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset using Guid(c41005c129ba4d66911b75229fd70b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58ada17e5def3dc8e43a42bd0430c84') in 0.006095 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0789db0e37874061242743974daea5fc') in 0.002050 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 171.238304 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@4x.png
+  artifactKey: Guid(748ae8b33df036b46a86e0387f1602cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@4x.png using Guid(748ae8b33df036b46a86e0387f1602cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eece20e8772e902bddd9e0bc7ea16557') in 0.000847 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.022289 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Selected/character_Mode@3x.png
+  artifactKey: Guid(dcea51d6065d64246aeec467afeff684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Selected/character_Mode@3x.png using Guid(dcea51d6065d64246aeec467afeff684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47e59af9ea9fc2d28465d53d7a0be06e') in 0.000687 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@2x.png
+  artifactKey: Guid(25096ce515c063c48a2bd6b108c95912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/character_Mode@2x.png using Guid(25096ce515c063c48a2bd6b108c95912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b6f449f1d663d56d71bfe696354c66') in 0.000532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.018922 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Selected/character_Mode.png
+  artifactKey: Guid(e60718119cec31e4190849292fcde068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Selected/character_Mode.png using Guid(e60718119cec31e4190849292fcde068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01d528830dfaaceba2964de8cf9bbeab') in 0.000659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.010064 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight.png
+  artifactKey: Guid(3092b2985cafe0b43b1f02ce1d6829d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight.png using Guid(3092b2985cafe0b43b1f02ce1d6829d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '362c3212dbfb8f4024271424cd3b9ae3') in 0.000715 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.024656 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CapsuleWithBorder.png
+  artifactKey: Guid(34587324d412940a79d530020c957dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CapsuleWithBorder.png using Guid(34587324d412940a79d530020c957dc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '375d14fbd656971a4ba530b01c33fcfb') in 0.000851 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.025409 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera2@2x.png
+  artifactKey: Guid(28f2917353630ce4fa307eeceadcd26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera2@2x.png using Guid(28f2917353630ce4fa307eeceadcd26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fabedaafab396f1c72df07bfef0e0a3b') in 0.000628 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.038681 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera1@2x.png
+  artifactKey: Guid(52b3ad4181ffbec4cad6eb26d07127f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera1@2x.png using Guid(52b3ad4181ffbec4cad6eb26d07127f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9c3897b5fd1db2e2f3f5d1b9df25e8') in 0.000710 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.037193 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence@4x.png
+  artifactKey: Guid(c7aa62ae78ffca0498c89e5f45f94c0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence@4x.png using Guid(c7aa62ae78ffca0498c89e5f45f94c0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f218ffc87fa6b123d34eacccb4291778') in 0.000637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.068306 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence@3x.png
+  artifactKey: Guid(cee9dbe90b270c944ae1dabf41c93b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence@3x.png using Guid(cee9dbe90b270c944ae1dabf41c93b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9afa08410b0c7841f390bc719644eafe') in 0.000700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.099254 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence@2x.png
+  artifactKey: Guid(7395bf0bc3cc40e4ab2dda5ec6832261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence@2x.png using Guid(7395bf0bc3cc40e4ab2dda5ec6832261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ced5d9f0830dc4615f1734c5b38702e6') in 0.000760 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.295840 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence.png
+  artifactKey: Guid(e92fc44f12c21dd44a49e390f39f7ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Light/Bone_Influence.png using Guid(e92fc44f12c21dd44a49e390f39f7ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0950bd8aa141d1c92c898157b66d1de') in 0.001013 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.194193 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_Edit_Pose@4x.png
+  artifactKey: Guid(4f3a106299767d146975053c7be09b97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_Edit_Pose@4x.png using Guid(4f3a106299767d146975053c7be09b97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3836d852c95e6bffe764ec8f331db2') in 0.001186 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_Generate_Weights@2x.png
+  artifactKey: Guid(f7e651b449fe96f42badf0e18b738c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_Generate_Weights@2x.png using Guid(f7e651b449fe96f42badf0e18b738c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f9f088b91cef4b32f51a65d2b7bdb4') in 0.000635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_Generate_Weights@4x.png
+  artifactKey: Guid(8e88614a5d2aead4998a8c70955662c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_Generate_Weights@4x.png using Guid(8e88614a5d2aead4998a8c70955662c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb0d708c37a3e92b1412c8a1abd4986') in 0.000674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_ErrorIcon_Small@2x.png
+  artifactKey: Guid(9cfa39010fe314547b3c17a05ff5f403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/EditorIcons/Dark/d_ErrorIcon_Small@2x.png using Guid(9cfa39010fe314547b3c17a05ff5f403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3c3c08169e0af72a456f7a18433bb4f') in 0.000645 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+[usbmuxd] Attached: 9 00008120-000270303E44201E
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6465.
+Memory consumption went from 347.2 MB to 346.8 MB.
+Total: 3.563709 ms (FindLiveObjects: 0.190708 ms CreateObjectMapping: 0.088750 ms MarkObjects: 3.221125 ms  DeleteObjects: 0.062917 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 116.066158 seconds.
+  path: Assets/Ball/Ball.prefab
+  artifactKey: Guid(6d2234dca29e544d0944d2187d032d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ball/Ball.prefab using Guid(6d2234dca29e544d0944d2187d032d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f9d5bd67bce184d5453ed9da6c74073') in 0.009496 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 93
+========================================================================
+Received Import Request.
+  Time since last request: 8.510290 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8937d11078e8fea1189bd70f3061ccfa') in 0.002723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 14.803006 seconds.
+  path: Assets/Touch
+  artifactKey: Guid(f9185b25305b84ebab55fd527fe4c7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch using Guid(f9185b25305b84ebab55fd527fe4c7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3067c10a5e6c2c726d9f575eb10e9142') in 0.000334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 18.285940 seconds.
+  path: Assets/Touch/JoyStickShape.cs
+  artifactKey: Guid(94820f4e56e37436d9a4d4e366110a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/JoyStickShape.cs using Guid(94820f4e56e37436d9a4d4e366110a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0ea1dac1b675910ac8f3e433df4089a') in 0.000456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.421 seconds
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.898 seconds
+Domain Reload Profiling: 1320ms
+	BeginReloadAssembly (87ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (297ms)
+		LoadAssemblies (147ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (171ms)
+			TypeCache.Refresh (161ms)
+				TypeCache.ScanAssembly (155ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (898ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (242ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (125ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.3 KB). Loaded Objects now: 6471.
+Memory consumption went from 445.4 MB to 445.0 MB.
+Total: 2.585917 ms (FindLiveObjects: 0.202708 ms CreateObjectMapping: 0.092792 ms MarkObjects: 2.192375 ms  DeleteObjects: 0.097792 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11.833513 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b258aac24acc7064a1828414ea4a960a') in 0.009093 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.455 seconds
+Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.847 seconds
+Domain Reload Profiling: 1302ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (324ms)
+		LoadAssemblies (167ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (180ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (163ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (847ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (252ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (133ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.1 KB). Loaded Objects now: 6476.
+Memory consumption went from 454.4 MB to 454.1 MB.
+Total: 2.719542 ms (FindLiveObjects: 0.185333 ms CreateObjectMapping: 0.097667 ms MarkObjects: 2.305958 ms  DeleteObjects: 0.130000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 212.828259 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56201fa599f79665a847f1a3136c63b4') in 0.007874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 3.761849 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45a90ea7540c6664d0680400a152f12c') in 0.001124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.380774 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d6d7eea41732979f6297ba7988981b') in 0.001326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.405 seconds
+Refreshing native plugins compatible for Editor in 1.89 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.466 seconds
+Domain Reload Profiling: 871ms
+	BeginReloadAssembly (84ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (11ms)
+	LoadAllAssembliesAndSetupDomain (284ms)
+		LoadAssemblies (129ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (177ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (161ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (466ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (247ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (127ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 2.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.2 KB). Loaded Objects now: 6481.
+Memory consumption went from 463.6 MB to 463.3 MB.
+Total: 2.710792 ms (FindLiveObjects: 0.205541 ms CreateObjectMapping: 0.101417 ms MarkObjects: 2.284209 ms  DeleteObjects: 0.119208 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 36.045433 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4ae41577655a569d75db3cd0f99aed4') in 0.008354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6481.
+Memory consumption went from 374.2 MB to 373.9 MB.
+Total: 5.716459 ms (FindLiveObjects: 0.189333 ms CreateObjectMapping: 0.093458 ms MarkObjects: 5.373667 ms  DeleteObjects: 0.059667 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.433 seconds
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.872 seconds
+Domain Reload Profiling: 1305ms
+	BeginReloadAssembly (96ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (298ms)
+		LoadAssemblies (153ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (169ms)
+			TypeCache.Refresh (160ms)
+				TypeCache.ScanAssembly (153ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (872ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (258ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (134ms)
+			ProcessInitializeOnLoadMethodAttributes (36ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.1 KB). Loaded Objects now: 6486.
+Memory consumption went from 472.5 MB to 472.1 MB.
+Total: 2.582958 ms (FindLiveObjects: 0.188584 ms CreateObjectMapping: 0.107458 ms MarkObjects: 2.182708 ms  DeleteObjects: 0.103791 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (316.9 KB). Loaded Objects now: 6486.
+Memory consumption went from 383.6 MB to 383.3 MB.
+Total: 2.489291 ms (FindLiveObjects: 0.158750 ms CreateObjectMapping: 0.072750 ms MarkObjects: 2.200375 ms  DeleteObjects: 0.057041 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (316.9 KB). Loaded Objects now: 6486.
+Memory consumption went from 382.5 MB to 382.2 MB.
+Total: 4.261958 ms (FindLiveObjects: 0.245458 ms CreateObjectMapping: 0.102417 ms MarkObjects: 3.844417 ms  DeleteObjects: 0.069416 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.432 seconds
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.858 seconds
+Domain Reload Profiling: 1290ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (303ms)
+		LoadAssemblies (147ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (168ms)
+				TypeCache.ScanAssembly (162ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (858ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (253ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (131ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.0 KB). Loaded Objects now: 6491.
+Memory consumption went from 480.7 MB to 480.4 MB.
+Total: 2.563250 ms (FindLiveObjects: 0.178375 ms CreateObjectMapping: 0.089334 ms MarkObjects: 2.192125 ms  DeleteObjects: 0.103083 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6491.
+Memory consumption went from 391.9 MB to 391.6 MB.
+Total: 2.582750 ms (FindLiveObjects: 0.156875 ms CreateObjectMapping: 0.070792 ms MarkObjects: 2.285958 ms  DeleteObjects: 0.068500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.418 seconds
+Refreshing native plugins compatible for Editor in 1.65 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.140 seconds
+Domain Reload Profiling: 1558ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (291ms)
+		LoadAssemblies (145ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (167ms)
+			TypeCache.Refresh (159ms)
+				TypeCache.ScanAssembly (153ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1140ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (508ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (249ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (126ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.1 KB). Loaded Objects now: 6496.
+Memory consumption went from 489.3 MB to 489.0 MB.
+Total: 2.679042 ms (FindLiveObjects: 0.202791 ms CreateObjectMapping: 0.099584 ms MarkObjects: 2.265708 ms  DeleteObjects: 0.110583 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6496.
+Memory consumption went from 400.5 MB to 400.2 MB.
+Total: 2.713125 ms (FindLiveObjects: 0.163375 ms CreateObjectMapping: 0.074125 ms MarkObjects: 2.417458 ms  DeleteObjects: 0.057666 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.436 seconds
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.991 seconds
+Domain Reload Profiling: 1426ms
+	BeginReloadAssembly (96ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (301ms)
+		LoadAssemblies (147ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (168ms)
+				TypeCache.ScanAssembly (161ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (991ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (339ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (101ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (129ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.2 KB). Loaded Objects now: 6501.
+Memory consumption went from 497.9 MB to 497.5 MB.
+Total: 2.635500 ms (FindLiveObjects: 0.184208 ms CreateObjectMapping: 0.094250 ms MarkObjects: 2.234667 ms  DeleteObjects: 0.121834 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (316.9 KB). Loaded Objects now: 6501.
+Memory consumption went from 409.1 MB to 408.7 MB.
+Total: 2.744917 ms (FindLiveObjects: 0.173625 ms CreateObjectMapping: 0.089250 ms MarkObjects: 2.401250 ms  DeleteObjects: 0.080375 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.430 seconds
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.899 seconds
+Domain Reload Profiling: 1328ms
+	BeginReloadAssembly (90ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (301ms)
+		LoadAssemblies (142ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (179ms)
+			TypeCache.Refresh (169ms)
+				TypeCache.ScanAssembly (162ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (899ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (286ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (57ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (124ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.2 KB). Loaded Objects now: 6506.
+Memory consumption went from 506.5 MB to 506.2 MB.
+Total: 2.661000 ms (FindLiveObjects: 0.222708 ms CreateObjectMapping: 0.109459 ms MarkObjects: 2.203708 ms  DeleteObjects: 0.124666 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6506.
+Memory consumption went from 417.7 MB to 417.4 MB.
+Total: 2.526250 ms (FindLiveObjects: 0.162125 ms CreateObjectMapping: 0.079333 ms MarkObjects: 2.225167 ms  DeleteObjects: 0.059083 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.439 seconds
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.894 seconds
+Domain Reload Profiling: 1333ms
+	BeginReloadAssembly (95ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (304ms)
+		LoadAssemblies (150ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (168ms)
+				TypeCache.ScanAssembly (161ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (894ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (255ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (132ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.0 KB). Loaded Objects now: 6511.
+Memory consumption went from 0.50 GB to 0.50 GB.
+Total: 2.643083 ms (FindLiveObjects: 0.217167 ms CreateObjectMapping: 0.095083 ms MarkObjects: 2.207916 ms  DeleteObjects: 0.122416 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6511.
+Memory consumption went from 426.3 MB to 426.0 MB.
+Total: 2.822583 ms (FindLiveObjects: 0.192208 ms CreateObjectMapping: 0.093083 ms MarkObjects: 2.477542 ms  DeleteObjects: 0.059291 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17f4c7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/maxbuchholz/VGolfPrototype/VGolfPrototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.440 seconds
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Native extension for iOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.876 seconds
+Domain Reload Profiling: 1316ms
+	BeginReloadAssembly (93ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (12ms)
+	LoadAllAssembliesAndSetupDomain (308ms)
+		LoadAssemblies (149ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (180ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (163ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (876ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (255ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (131ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5750 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (352.2 KB). Loaded Objects now: 6516.
+Memory consumption went from 0.51 GB to 0.51 GB.
+Total: 2.688834 ms (FindLiveObjects: 0.190208 ms CreateObjectMapping: 0.097500 ms MarkObjects: 2.286250 ms  DeleteObjects: 0.114417 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (317.0 KB). Loaded Objects now: 6516.
+Memory consumption went from 434.9 MB to 434.6 MB.
+Total: 2.643833 ms (FindLiveObjects: 0.182917 ms CreateObjectMapping: 0.091083 ms MarkObjects: 2.304250 ms  DeleteObjects: 0.065125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2734.966652 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af50c9ee14de9c5258954fa6b75a8c9c') in 0.006186 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 14.309313 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f449c43c1c6947ed91845410c9b168a') in 0.001410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 75.972689 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8a4ab595ea3e29c80764979cf5f579') in 0.001305 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 13.524325 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541c631fec2fec3a9da5cf1b5fbf9252') in 0.001182 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 6.682757 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8262a24256b5b9ac6c8c6df3552e6de') in 0.001189 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 10.728884 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e965aa8d36d0b788d6ea9eb46bb6cc9') in 0.001060 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 8.092361 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbb0383ab06ec632608e2196b2ce1b4') in 0.001204 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 12.712615 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a24268fd663a701928cb01b3b8e93a75') in 0.001285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 5.642147 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3372309f45099cefcb2e7df4bd5f517c') in 0.001389 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 9.099757 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd23263a7aee9380dce6af5bacf792b9') in 0.001442 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 3.275643 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62bcc1d946fb07ca65c4cc8a2b6fa816') in 0.001195 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 5.660179 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e0669fa8df5b8b98c0bdb4717378838') in 0.001213 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 7.847994 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8efa0025945f7f03bcf53cef7ef0f3dd') in 0.001423 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 12.707447 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b6d4e30e2c39cb73ea53e0ef8007d2') in 0.001388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 1.213157 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23578756308978ab45ef2fa125da7ff1') in 0.001224 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 13.526620 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4702b8fd47d517c17f054a31abf7fcf9') in 0.001276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 1.412840 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e94f6131e563594002fcf75f211ed706') in 0.001162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 13.731849 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9cd1215d257a21dc2dc2891ad2765a0') in 0.001117 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 18.788615 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42fa572411414051e4a8637bef889a67') in 0.001153 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 5.862243 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca32acfbe02934e12da3f60a3e3d7244') in 0.001169 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 18.158821 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16017c31854f102892158863aaf3f0ba') in 0.001363 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 1.802239 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85341773b783146ee9f9bf783fb68b9') in 0.001025 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 8.086259 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af094d16322aa2136013bdf57b112f9f') in 0.001147 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 5.037641 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af6c092e1069156f8e38664e6da633c') in 0.001187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 6.053971 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48dca0ac50b03038144154066a4e482') in 0.001188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 8.885243 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '446050f69ebe6c20b1d7ff087328350c') in 0.001144 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 4.641347 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71c737d3669f11db4376f7b789c81fe') in 0.001209 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 4.041624 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f5faae36b2dffe2a94e4105d0838a31') in 0.001175 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 37.568526 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e59c2fdd9ec0b25663d4408769d9a713') in 0.001211 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 8.260278 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed279c6980320cb44bb622230cf5971e') in 0.001138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 1.419400 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f74991cca14ac808f2e1c458bbdbdf7') in 0.001166 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 4.835096 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '313cb4a57c3dec210fd45e65ae561eda') in 0.001207 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 3.414688 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969496f31c0e7323088d94d2565d2c63') in 0.001169 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 5.442167 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57528fb44cf01c4161afa2f045ca8b24') in 0.001183 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 128.557302 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9ff1bfd3deb4080c459abf16d84c1a1') in 0.001285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 29.085088 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9255c2ef2bf2ef4843fea40cb1dd284c') in 0.001138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 4.457053 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54713932624b8ea07a7110b8059346b9') in 0.001139 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 195.467606 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c1a7318518f354da03a40ca969ff8a') in 0.001216 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 4.598120 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc7ebaa04c427a534314164615188e75') in 0.001159 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 8.178409 seconds.
+  path: Assets/Scenery/Block.png
+  artifactKey: Guid(45fc4090725954094be2f22779fc2e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/Block.png using Guid(45fc4090725954094be2f22779fc2e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58023bb50fef3befef673d020fbd1432') in 0.000718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.001862 seconds.
+  path: Assets/Goal/Goal.png
+  artifactKey: Guid(ed3f28e0c19014b7298ce65b5c2ab5b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goal/Goal.png using Guid(ed3f28e0c19014b7298ce65b5c2ab5b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af90d49c9dd953be33e5fdefffe31264') in 0.001583 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.679466 seconds.
+  path: Assets/VictoryAssets/ThumbsUp.png
+  artifactKey: Guid(f36bfae402e454102aa2cfa9087fd324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VictoryAssets/ThumbsUp.png using Guid(f36bfae402e454102aa2cfa9087fd324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53937719981e3cfad820a61e4d24dd5f') in 0.001654 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1.846601 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4273e08010c14f44c5d96ac6f58ec913') in 0.001485 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 9.498157 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5420e926f171178c625f2714b7293608') in 0.001305 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 12.913312 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73d9969756c1743942d86f89136c1ec1') in 0.001606 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 34.327778 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6fe623b10dd30313fb2c4e3d2d13621') in 0.001360 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 2.019016 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1358e683df8beec620def7dcc8675df') in 0.001246 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.014222 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '099ef3ff582ea078365ea83e8ad265c3') in 0.001460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.814919 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cac361a868dae0600f81f7628b1e8b8') in 0.001258 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.440594 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2198ac60a91a0004590fcddff5e62f50') in 0.001414 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.601981 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27459f36ed1f0772d6dc718590b7efa9') in 0.001261 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.438783 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438f32ddb91ca0329516df4dea8b3008') in 0.001314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 9.693367 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6755cfa05227bba24350f609aca7cc4') in 0.001364 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 163.075709 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ad0260d645f3bc6b4b68724a2cf9385') in 0.001402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 5.061243 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54006cc8cd43de87908130d69fef3e63') in 0.001263 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 7.456023 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f59422af907a5c2521598c81dbb1d5db') in 0.001351 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.442650 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6951c35b1ae06ec961ef211693c284') in 0.001394 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 8.069065 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da268f56d4290c85771b2bb213b007aa') in 0.001367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.599765 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5f9cb68118f5fd5dfc50e517235748') in 0.001298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.019964 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8d1ff2d7b07c53c0041411ec8a058cc') in 0.001286 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.033604 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '751478ea5708b1907e072f6e826e6424') in 0.001309 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 17.770217 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57bc72306a1aa636e378df11166886f4') in 0.001359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 10.104416 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e1d9dfc3ca934316f58999dfffa0903') in 0.001306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.846190 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caa0672659f13b04cfc1cae5a9ed6a42') in 0.001242 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 10.895258 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe04ee25fece80a2728886203fa7a783') in 0.001208 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 124.224492 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55bfbd6be28e461d589accf56ae52e26') in 0.001468 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 1.002052 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '701494724877af71d32f955a563d9978') in 0.001336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 6.499035 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6bebf126e838edb0a5239c88fdee7ad') in 0.001438 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 250.311578 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e17282f5f6e8fb6a8a809cc2b5cfc69') in 0.001386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 1.811525 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adc0850bd303ac4d74262647eecbe6bb') in 0.001383 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 6.264253 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a9b9452e0c4386c6edf00c70ded892') in 0.001298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 7.280111 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c2ac773a57b6e5b401c5318c5f8b17') in 0.001276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.030603 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0441f7b005e9aff1c5e07827b78ea6c') in 0.001447 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 88.773982 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73c21f742ecdb23a8d526d58d0ce75f9') in 0.001332 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.591152 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b36c25b190bd0017a137f9e9acc8b3d2') in 0.001548 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 148.199344 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750484a1f46040388c559089d8b44c28') in 0.001146 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 8.776577 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e9c2e22835f3019b9a8ecb95ed9757') in 0.001542 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 4.628679 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '737c4c011c188f5853ceeb4aa8762497') in 0.001215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 9.331143 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5a37842e10ac00b5b678716fca9d6c') in 0.001570 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 30.622118 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aac3b3459a63d85e88c8592012b8d864') in 0.001386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 10.922663 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b34cef4bf668f754efb9972270189ac') in 0.001243 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 8.097658 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c4c7af61222a2dcb3090c472b03aa49') in 0.001723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 5.837770 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25ed8ff0f071e6ea5b3606c6a7b42fc') in 0.001597 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 11.532304 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e79034082e8deacc65365e10cdedbdb1') in 0.001351 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 49.649110 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51ea28fd0d70fb17bca048bda7c4fe9b') in 0.001347 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 73.911573 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57abdb68b047c2ebce6eab9f9146fafc') in 0.002566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 1.385520 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7abf3b1349aad2fb9609cdd545fe0c') in 0.001713 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 0.802540 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e81174d658d0a4f4413ce53444338fe') in 0.001380 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 14.275058 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb857bc8fe262fcf9320ed22497318ea') in 0.001272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 4.987684 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd71f732c12dd4103aa4d0307eedc3e') in 0.001410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 7.108999 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f58bd6f5a6e0083cd815c0a374d17417') in 0.001315 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.807967 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ca8d3a1e4011cc6ef9dda0ae47b52ca') in 0.001162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 6.857078 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aff2945d9df973886eeba7f230915ebe') in 0.001202 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 2.635879 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7421e10d7b2dd98b55e0abe43cf8d53f') in 0.001325 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 7.246402 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f1c24365910e537cb73c13713b149f') in 0.001452 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.183065 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd3b1e3d7dcc476f4377faca40808a6f') in 0.001384 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 117.797035 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3229f0d36b0298462f5838f2d0385887') in 0.001481 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 281.512484 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a078bf93f2223c9b6a08b0715aaa9e6f') in 0.006175 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 8.645860 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f929d497859d740cfdbf8b2097c5d78f') in 0.002061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 290.744118 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fe3ff9663010e1f435ba69fafa16623') in 0.001831 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 1.796260 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d12e9a754ef3aeacd05e6564ff0f0fb') in 0.001254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 96.516709 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0326bff001e78b586a8dec74893cb529') in 0.001198 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 3.001234 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1e373c349e56b2b72a69840269ffd2c') in 0.001213 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 2.067010 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bcc19ee5cf87f76c9f548fc76dfb007') in 0.001175 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 193.484058 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd605560fe0db7a936951d47b0ce3f91a') in 0.001382 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 5.270615 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9481c81c463744f1a7091a5fa76a3933') in 0.001171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 1.822303 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dcf39648163171ee8d56d8b11faec45') in 0.001226 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 10.872512 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0bd2d6d39545f8fb82df4df1158846c') in 0.001159 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 8.484957 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '667c874221ff2de4beb5956328b8ec39') in 0.001391 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 9.083648 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00d3dda9fb34570c47ba15f1918b038') in 0.001972 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 6.257656 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6813cf5deba52713981dbfe915670e5f') in 0.001266 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 2.612862 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec1ccc98a11282181197d5a449e323a') in 0.001382 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 1.822290 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44299a8c8070798fde3ae0fc3aaee6c4') in 0.001449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 5.415306 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '132c50d0fde91c9bbe5dac6296ba2b6d') in 0.001425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 39.563591 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '558fb9bf3bd08c4fa93a5868fc279f37') in 0.001528 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 10.695580 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e93dbb3459bc515fdb64e6e3edcdf4') in 0.001608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 13.507639 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8d314971b773a50f3342b892939d8b') in 0.001367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 7.256651 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a38bac678b52f85ac0f56e7f1256184') in 0.001341 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 49.666710 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e55a143b2f3f4903fe15a9b6e82f9d92') in 0.001457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 11.541963 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b58eff5003c69eebd40e45af13cc0c') in 0.001445 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 0.582259 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a2e1e78131e6060cd5c85f065a39e8a') in 0.001297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 5.248177 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c8a9f23a58a39a14d6089d4a3fa7bd') in 0.001445 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33
+========================================================================
+Received Import Request.
+  Time since last request: 7.064006 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a68a7fcec51bdc8f419417b2961b2b8b') in 0.008296 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 5.435138 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2bc435a2f38ec53aeb6eaf7de16e084') in 0.002957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 14.481518 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49a9db947963d776f7505b78794932ee') in 0.001492 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 32
+========================================================================
+Received Import Request.
+  Time since last request: 2.015219 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '403e9c0868a8411de951434bfd3dcbda') in 0.002626 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 35.758986 seconds.
+  path: Assets/Touch/PullBackJoystick.prefab
+  artifactKey: Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Touch/PullBackJoystick.prefab using Guid(fd9d2e1666b3f4789a15442e27947366) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba82ac7998fcae62070708797e29b969') in 0.001558 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 33

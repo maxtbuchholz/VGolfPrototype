@@ -1,29 +1,30 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3530a9c2-74e2-4bf5-a4e5-ae483130a764" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7ec8940d-1ec1-4a90-8383-f962b3b43f51" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/CollisionEffects.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Touch/JoyStickShape.cs">
     <Files>
-      <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" />
+      <File FileName="Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Drawing/Blackboard/SGBlackboardCategory.cs" Line="1" Column="1" />
       <File FileName="Assets/Touch/TouchHandler.cs" />
       <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" />
       <File FileName="Assets/GameScripts/Goal.cs" />
-      <File FileName="Assets/GameScripts/Projection.cs" Line="25" Column="1" />
-      <File FileName="Assets/GameScripts/GravityWell.cs" Line="42" Column="40" />
-      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/Projection.cs" />
+      <File FileName="Assets/GameScripts/GravityWell.cs" Line="60" Column="18" />
+      <File FileName="Assets/GameScripts/BallSpeedReporter.cs" />
       <File FileName="Assets/CollisionCounter.cs" />
-      <File FileName="Assets/GameScripts/BallGravityhandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameScripts/BallGravityhandler.cs" />
       <File FileName="Assets/GameScripts/LaunchPad.cs" />
-      <File FileName="Assets/GhostBallCollision.cs" Line="7" Column="1" />
-      <File FileName="Assets/CollisionEffects.cs" Line="36" Column="51" />
-      <File FileName="Assets/GameScripts/GoalArrow.cs" Line="38" Column="44" />
-      <File FileName="Assets/Particles/KillParticleOnFinish.cs" Line="10" Column="1" />
+      <File FileName="Assets/GhostBallCollision.cs" />
+      <File FileName="Assets/GameScripts/GoalArrow.cs" Line="57" Column="13" />
+      <File FileName="Assets/Particles/KillParticleOnFinish.cs" />
+      <File FileName="Assets/GameScripts/CollisionEffects.cs" Line="36" Column="73" />
+      <File FileName="Assets/Touch/JoyStickShape.cs" Line="16" Column="72" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

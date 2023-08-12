@@ -83,6 +83,7 @@
     <Compile Include="Assets/GameScripts/Goal.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
     <Compile Include="Assets/CollisionCounter.cs" />
+    <Compile Include="Assets/Touch/JoyStickShape.cs" />
     <Compile Include="Assets/Particles/KillParticleOnFinish.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />
   </ItemGroup>
