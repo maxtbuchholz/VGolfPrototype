@@ -62,7 +62,7 @@ public class GravityWell : MonoBehaviour
                     //Debug.DrawLine(transform.position, affectedObjects[i].transform.position, Color.yellow);
                     Vector2 offset = vDist;// (transform.position - affectedObjects[i].transform.position);
                                            //offset = offset.normalized;
-                    float mag = 5.0f;// * percentPfUllGrav;// offset.magnitude;
+                    float mag = 5.0f;// offset.magnitude;
                     var rig = obj.GetComponent<Rigidbody2D>();
                     Vector2 force = offset / mag / mag * (gravityPull);
                     force *= percentPfUllGrav;

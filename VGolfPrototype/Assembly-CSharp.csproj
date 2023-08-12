@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets/VictoryScripts/SlideBackground.cs" />
     <Compile Include="Assets/GameScripts/BallGravityhandler.cs" />
+    <Compile Include="Assets/GameScripts/CollisionEffects.cs" />
     <Compile Include="Assets/GameScripts/BallSpeedReporter.cs" />
     <Compile Include="Assets/GameScripts/GravityWell.cs" />
     <Compile Include="Assets/Trajectory/Trajectory.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets/GameScripts/Goal.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
     <Compile Include="Assets/CollisionCounter.cs" />
+    <Compile Include="Assets/Particles/KillParticleOnFinish.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />
   </ItemGroup>
   <ItemGroup>
