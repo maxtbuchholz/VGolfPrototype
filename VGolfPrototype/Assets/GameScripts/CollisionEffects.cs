@@ -39,7 +39,7 @@ public class CollisionEffects: MonoBehaviour
         //par.main = main;//.startSpeed = new ParticleSystem.MinMaxCurve { constantMin = 1, constantMax = (lastSpeed / 3) + 1 };
         float angle = Mathf.Rad2Deg * (Mathf.Atan2(transform.position.y - point.y, transform.position.x - point.x));
         //Vector2 vectorAngle = new Vector2(transform.position.x - point.x, transform.position.y - point.y);
-        par.transform.eulerAngles = new Vector2(-angle, 90);
+        par.transform.eulerAngles = new Vector3(0,0, angle - 117.5f);
         par.transform.position = new Vector3(point.x, point.y, transform.position.z);
         par.Play();
     }

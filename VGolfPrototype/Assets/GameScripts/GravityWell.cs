@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class GravityWell : MonoBehaviour
 {
+    [SerializeField] Collider2D AffectedGravArea;
     [SerializeField] GameObject[] affectedObjects;
     BallGravityhandler[] affectedObjectsGravHandlers;
     Collider2D[] affectedObjectsColliders;
@@ -52,9 +54,9 @@ public class GravityWell : MonoBehaviour
                 Vector2 ClosestDist = Physics2D.ClosestPoint(obj.transform.position, CenterCollider);
                 Vector2 vDist = new Vector2(ClosestDist.x - obj.transform.position.x, ClosestDist.y - obj.transform.position.y);
                 float dist = vDist.magnitude;
-                //float dist = Mathf.Sqrt(dx + dy);
-                //DebugText.text = Mathf.Round(dist).ToString();
-                if (dist <= radius)
+            //float dist = Mathf.Sqrt(dx + dy);
+            //DebugText.text = Mathf.Round(dist).ToString();
+                if (AffectedGravArea.OverlapPoint(obj.transform.position))
                 {
                     gra.UpdateGravityInfluence(transform.GetInstanceID(), true);
                     LastTimeWasGrav = true;
