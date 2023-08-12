@@ -159,7 +159,7 @@ public class BallSpeedReporter : MonoBehaviour
                 FramesThoughtGrounded++;
             else
                 FramesThoughtGrounded = 0;
-            if (FramesThoughtGrounded > 9)
+            if ((FramesThoughtGrounded > 9) && (colllGroundAmount > 0) && (rb2d.velocity.magnitude < 0.2))
             {
                 grounded = true;
             }
@@ -167,9 +167,10 @@ public class BallSpeedReporter : MonoBehaviour
 
         //grounded = true;
     }
+    private int colllGroundAmount = 0;
     private void OnCollisionExit2D(Collision2D collision)
     {
-
+        colllGroundAmount--;
         grounded = false;
         if (isReal)
         {
@@ -183,11 +184,7 @@ public class BallSpeedReporter : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (GetGrounded())
-        {
-            //FramesThoughtGrounded = 1;
-            //grounded = true;
-        }
+        colllGroundAmount++;
             if (col.gameObject.transform.parent != null)
             {
                 if (col.gameObject.CompareTag("Movable") || col.gameObject.CompareTag("Well"))

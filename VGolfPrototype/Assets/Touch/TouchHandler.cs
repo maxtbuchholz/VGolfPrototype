@@ -21,8 +21,8 @@ public class TouchHandler : MonoBehaviour
     private List<int> touchesWeThinkAreActive;
     private Dictionary<int, string> touchJob;
     private Dictionary<int, Vector2> originalTouchPos;
-    private float maxPullBack = 4.0f;
-    private float pushForce = 5f;
+    private float maxPullBack = 8.0f;
+    private float pushForce = 3f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
     bool CanStartAim = true;

@@ -6,6 +6,7 @@ using static UnityEngine.ParticleSystem;
 public class CollisionEffects: MonoBehaviour
 {
     [SerializeField] ParticleSystem collisionParticle;
+    private Color particleStartColor = Color.white;
     private Rigidbody2D rg2d;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,14 @@ public class CollisionEffects: MonoBehaviour
     {
         foreach (ContactPoint2D contact in col.contacts)
         {
+            if(col.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer SR))
+            {
+                particleStartColor = SR.color;
+            }
+            else
+            {
+                particleStartColor = Color.white;
+            }
             if(lastSpeed > 10)
                 ShowAndRunParticle(contact.point);
         }
@@ -33,9 +42,12 @@ public class CollisionEffects: MonoBehaviour
     {
         ParticleSystem par = GameObject.Instantiate(collisionParticle);
         Burst bur = par.emission.GetBurst(0);
-        bur.count = new MinMaxCurve { constant = ( 2 * lastSpeed) - 5 };
+        float burstCount = (lastSpeed - 10)/6;
+        if (burstCount > 20) burstCount = 20;
+        bur.count = new MinMaxCurve { constant = burstCount };
         var main = par.main;
-        main.startSpeed = new ParticleSystem.MinMaxCurve { constantMin = 0.05f, constantMax = (lastSpeed / 8) }; //(lastSpeed / 8) + 0.5f
+        main.startSpeed = new ParticleSystem.MinMaxCurve { constantMin = 0.05f, constantMax = (lastSpeed / 20) }; //(lastSpeed / 8) + 0.5f
+        main.startColor = particleStartColor;// new ParticleSystem.MinMaxCurve {  constantMin = particleStartColor, constantMax = Color.gray };
         //par.main = main;//.startSpeed = new ParticleSystem.MinMaxCurve { constantMin = 1, constantMax = (lastSpeed / 3) + 1 };
         float angle = Mathf.Rad2Deg * (Mathf.Atan2(transform.position.y - point.y, transform.position.x - point.x));
         //Vector2 vectorAngle = new Vector2(transform.position.x - point.x, transform.position.y - point.y);
