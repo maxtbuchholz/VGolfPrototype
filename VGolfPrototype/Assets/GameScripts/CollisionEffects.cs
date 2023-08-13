@@ -42,8 +42,8 @@ public class CollisionEffects: MonoBehaviour
     {
         ParticleSystem par = GameObject.Instantiate(collisionParticle);
         Burst bur = par.emission.GetBurst(0);
-        float burstCount = (lastSpeed - 10)/6;
-        if (burstCount > 20) burstCount = 20;
+        float burstCount = (lastSpeed - 10)/10;
+        if (burstCount > 10) burstCount = 10;
         bur.count = new MinMaxCurve { constant = burstCount };
         var main = par.main;
         main.startSpeed = new ParticleSystem.MinMaxCurve { constantMin = 0.05f, constantMax = (lastSpeed / 20) }; //(lastSpeed / 8) + 0.5f

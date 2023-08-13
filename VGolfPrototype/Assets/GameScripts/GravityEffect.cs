@@ -21,7 +21,7 @@ public class GravityEffect : MonoBehaviour
             CreateGravEffect();
         }
     }
-    private int effectAmount = 10;
+    private int effectAmount = 6;
     private SpriteRenderer[] effectSprites;
     private GameObject[] effects;
     private float effectRepeatTime = 5.0f;

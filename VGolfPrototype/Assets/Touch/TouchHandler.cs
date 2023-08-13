@@ -162,6 +162,7 @@ public class TouchHandler : MonoBehaviour
         projection.Hide();
         if (PullDistanceLongEnough)
         {
+            BallSpeed.BallShot();
             //Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
             Rigidbody2D rb = Ball.GetComponent<Rigidbody2D>();
             rb.velocity = rb.velocity + Force;

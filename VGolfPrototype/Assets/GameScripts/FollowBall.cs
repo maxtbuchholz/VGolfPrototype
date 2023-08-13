@@ -36,7 +36,7 @@ public class FollowBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 ballPos = new Vector3(ball.position.x + 3, ball.position.y, transform.position.z);
+        Vector3 ballPos = new Vector3(ball.position.x, ball.position.y + (0.5f * verticalCameraExtent), transform.position.z);
         if((ballPos.x + horizontalCameraExtent) > boundRight)
         {
             ballPos.x = boundRight - horizontalCameraExtent;

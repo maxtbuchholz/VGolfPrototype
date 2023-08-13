@@ -54,6 +54,7 @@ public class BallSpeedReporter : MonoBehaviour
     float rotSinTime = 0;
     private void Update()
     {
+        timeSinceShot += Time.deltaTime;
         //DebugText.text = transform.parent.ToString();
         UpdateGrounded();
         //DebugText.text = gameObject.transform.parent.ToString();
@@ -99,6 +100,11 @@ public class BallSpeedReporter : MonoBehaviour
             LastTimeWasEnabled = false;
         }
     }
+    public void BallShot()
+    {
+        timeSinceShot = 0;
+    }
+    private float timeSinceShot;
     private bool InGoal = false;
     public void SetInGoal()
     {
@@ -153,7 +159,11 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private void UpdateGrounded()
     {
-        if (!grounded)
+        if(timeSinceShot > 10)
+        {
+            grounded = true;
+        }
+        else if (!grounded)
         {
             if (GetGrounded())
                 FramesThoughtGrounded++;

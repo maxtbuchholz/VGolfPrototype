@@ -15,7 +15,7 @@ public class GravityWell : MonoBehaviour
     private bool[] affectedIsTouching;
     private Collider2D CenterCollider;
     float radius = 5;
-    float gravityPull = 5;
+    float gravityPull = 10;
     private void Start()
     {
         List<GameObject> tempobj = new List<GameObject>(GameObject.FindGameObjectsWithTag("Ball"));
