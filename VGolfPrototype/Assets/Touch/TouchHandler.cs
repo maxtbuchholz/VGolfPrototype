@@ -16,6 +16,7 @@ public class TouchHandler : MonoBehaviour
     [SerializeField] GameObject PullBackJoystick;
     [SerializeField] BallSpeedReporter BallSpeed;
     [SerializeField] private TextMeshProUGUI DebugText;
+    [SerializeField] JoyStickShape joyStickShape;
     private List<int> activeTouches;
     private List<int> prevFrameActiveTouches;
     private List<int> touchesWeThinkAreActive;
@@ -26,6 +27,7 @@ public class TouchHandler : MonoBehaviour
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
     bool CanStartAim = true;
+    private float minPullDist = 0.8f;
     private void Start()
     {
         DebugText.text = "Init";
@@ -111,8 +113,9 @@ public class TouchHandler : MonoBehaviour
                 Vector3 JoyCirPos = new Vector3(tempPos.x, tempPos.y, PullBackJoystick.transform.position.z);
                 PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = JoyCirPos;
 
-                if (hypot > 0.8)
+                if (hypot > minPullDist)
                 {
+                    joyStickShape.UpdateColor(1);
                     PullDistanceLongEnough = true;
                     projection.Show();
                     Vector2 currentMvmtForce = Vector2.zero;
@@ -127,6 +130,7 @@ public class TouchHandler : MonoBehaviour
                 }
                 else
                 {
+                    joyStickShape.UpdateColor(hypot / minPullDist);
                     PullDistanceLongEnough = false;
                     projection.Hide();
                 }
