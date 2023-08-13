@@ -164,8 +164,6 @@ public class BallSpeedReporter : MonoBehaviour
                 grounded = true;
             }
         }
-
-        //grounded = true;
     }
     private int colllGroundAmount = 0;
     private void OnCollisionExit2D(Collision2D collision)

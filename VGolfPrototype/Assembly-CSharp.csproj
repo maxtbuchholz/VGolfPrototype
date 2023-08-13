@@ -81,6 +81,7 @@
     <Compile Include="Assets/PassDataScripts/DataGameToVictory.cs" />
     <Compile Include="Assets/VictoryScripts/VictoryScreenStart.cs" />
     <Compile Include="Assets/GameScripts/Goal.cs" />
+    <Compile Include="Assets/GravityEffect.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
     <Compile Include="Assets/CollisionCounter.cs" />
     <Compile Include="Assets/Touch/JoyStickShape.cs" />

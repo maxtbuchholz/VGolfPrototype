@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 32
-    y: 102
+    x: 23
+    y: 66
     width: 1489
     height: 846
   m_ShowMode: 4
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21
+  controlID: 53
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 22
+  controlID: 54
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 23
+  controlID: 55
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 284
     height: 532
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 572.5
     height: 796
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -296,10 +296,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 38
-    y: 631
+    x: 23
+    y: 628
     width: 915.5
-    height: 244
+    height: 243
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -330,8 +330,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 316
-    y: 133
+    x: 307
+    y: 96
     width: 630.5
     height: 511
   m_SerializedDataModeController:
@@ -428,8 +428,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 32
-    y: 132
+    x: 23
+    y: 96
     width: 283
     height: 511
   m_SerializedDataModeController:
@@ -447,21 +447,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a2fcfdff3c07feffa007feffc4eb0000d6eb0000
+      m_ExpandedIDs: e441f9ff7e42f9fff844f9ff2a46f9ff2054f9ffba54f9ff3457f9ff6658f9ff9e61f9ff3c62f9ffb664f9ffe865f9ffa46ef9ff3e6ff9ffd671f9ff0873f9ffe6a9f9fff6a9f9ff06aaf9ff16aaf9ff26aaf9ff36aaf9ff46aaf9ff56aaf9ff66aaf9ff76aaf9ff90e0f9ff4aebf9ff2afaf9ff5e0ffaffd40ffaffe40ffaffb010faff5c39faff6c39faff383afaff1444faff8a44faff9a44faff6645faff744efaffa262faff1888faffde88faff768bfaffa88cfaff36a1faff02a2faff9aa4faffcca5fafffcb2faffe4b3faff7cb6faffaeb7faff8ea8fbffc865fcff0666fcffce6dfcff966efcff2e71fcff6072fcffd289fcff9a8afcff128dfcff428efcff2a96fcfff296fcff6a99fcff9a9afcff58a6fcff42a7fcffbaa9fcffeaaafcff60bcfcff04bdfcff78bffcffa4c0fcff22d1fcffbed1fcff54d4fcff84d5fcffc62cfdff6c2dfdffe02ffdff0c31fdffb840fdff5c41fdffee43fdff1a45fdff2cd0fdffd0d0fdff44d3fdff9cd4fdffa2e2fdff46e3fdffbae5fdff12e7fdff68f8fdff0cf9fdff80fbfdffd8fcfdff6e14feff1015feff8417feffdc18feff003efeffa23efeff3441feff7a42feff404ffeffe44ffeff5852feff9e53feff2e82feffd282feff4685feff8686feff5ebdfeff02befeff76c0feffa0c1feffdad0feff7ed1fefff2d3feff1cd5feff4cf6fefff0f6feff64f9feff7cfafeff9408ffff3809ffffac0bffffc40cffff481affffec1affff601dffff781effff242affffc82affff5a2dffff722effffe445ffffb446ffff2849ffff3a4affff4884ffffec84ffff7e87ffff7888ffff24d0ffffc8d0ffff5ad3ffff50d4ffff2aeeffffceeeffff60f1ffff50f2ffff12fbfffff29a0100689b010062ab01007cab0100f2ab0100a8b30100c2b30100ecbb010006bc010030c401004ac4010098cc0100b2cc010014cd010028cd010016ce010042ce0100b8ce0100e8d3010002d401005cd4010064d4010078d401008cd401001cd5010082d501009ad50100aad50100d4d50100d8d5010008d601001ed60100620702007c070200b60f0200d00f02007a1a0200941a0200f61a0200f81a02000a1b0200f81b0200021c0200241c02002c1c02009a1c0200583d0200723d0200e83d02000a3f0200825202009c52020012530200d05a0200ea5a0200605b0200206302003a630200b0630200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: GravEffect0
+        m_OriginalName: GravEffect0
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -394602
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -491,8 +491,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 316
-    y: 132
+    x: 307
+    y: 96
     width: 630.5
     height: 511
   m_SerializedDataModeController:
@@ -549,7 +549,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -601,7 +601,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 2
@@ -627,7 +627,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 3
@@ -640,7 +640,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 4
@@ -692,7 +692,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 5
@@ -705,7 +705,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 6
@@ -718,7 +718,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 7
@@ -730,9 +730,9 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 0
-      snapOffset: {x: -415, y: -116}
+      snapOffset: {x: 215.5, y: -116}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 2
       id: Scene View/Particles
       index: 0
       layout: 4
@@ -838,24 +838,24 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
-      index: 12
+      index: 11
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
     m_OverlaysVisible: 1
   m_WindowGUID: 57b4dcf0ec8d6474ea26a2b5d599bb0f
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 0
-  m_SceneIsLit: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: -2.7468, z: 0.1}
+    m_Target: {x: -4.2, y: -24.67, z: 10}
     speed: 2
-    m_Value: {x: 0, y: -2.7468, z: 0.1}
+    m_Value: {x: -4.199999, y: -24.669996, z: 9.999998}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -866,7 +866,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -905,9 +905,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.6996548
+    m_Target: 9.983034
     speed: 2
-    m_Value: 3.7024317
+    m_Value: 10.0966215
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -952,8 +952,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 32
-    y: 664
+    x: 23
+    y: 628
     width: 915.5
     height: 243
   m_SerializedDataModeController:
@@ -977,7 +977,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Touch
+    - Assets/Scenery
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -985,16 +985,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Touch
+  - Assets/Scenery
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/maxbuchholz/VGolfPrototype/VGolfPrototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 97}
-    m_SelectedIDs: da740000
-    m_LastClickedID: 29914
-    m_ExpandedIDs: 00000000a6740000f074000080b8000082b8000084b8000086b8000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 49}
+    m_SelectedIDs: ec740000
+    m_LastClickedID: 29932
+    m_ExpandedIDs: 00000000c274000008750000c2960000c4960000c6960000c896000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1022,7 +1022,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a6740000
+    m_ExpandedIDs: 00000000c2740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1050,7 +1050,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: f27100009e8a000012720000
+    m_ExpandedInstanceIDs: f27100009e8a0000127200004472000046720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1098,8 +1098,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 948.5
-    y: 132
+    x: 939.5
+    y: 96
     width: 571.5
     height: 775
   m_SerializedDataModeController:
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 71.10001
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
