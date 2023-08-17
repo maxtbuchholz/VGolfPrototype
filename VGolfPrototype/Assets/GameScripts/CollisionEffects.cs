@@ -28,7 +28,8 @@ public class CollisionEffects: MonoBehaviour
         {
             if(col.gameObject.TryGetComponent<SpriteRenderer>(out SpriteRenderer SR))
             {
-                particleStartColor = SR.color;
+                //particleStartColor = SR.color;
+                particleStartColor = SR.material.color;
             }
             else
             {

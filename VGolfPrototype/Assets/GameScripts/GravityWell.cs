@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -12,10 +13,12 @@ public class GravityWell : MonoBehaviour
     BallGravityhandler[] affectedObjectsGravHandlers;
     Collider2D[] affectedObjectsColliders;
     [SerializeField] TextMeshProUGUI DebugText;
+    [SerializeField] bool goal = false;
     private bool[] affectedIsTouching;
     private Collider2D CenterCollider;
     float radius = 5;
-    float gravityPull = 10;
+    float gravRangeRadius;
+    [SerializeField] float gravityPull = 10;
     private void Start()
     {
         List<GameObject> tempobj = new List<GameObject>(GameObject.FindGameObjectsWithTag("Ball"));
@@ -26,6 +29,7 @@ public class GravityWell : MonoBehaviour
         }
         affectedObjects = tempobj.ToArray();
         SetUpAffectedObjects();
+        gravRangeRadius = CenterCollider.bounds.extents.magnitude;
     }
     public void SetAffectEdObjectListForProjection(GameObject obj)
     {
@@ -44,7 +48,14 @@ public class GravityWell : MonoBehaviour
         Vector2 WellPos = transform.position;
         for (int i = 0; i < affectedObjects.Length; i++)
         {
-            AddGravToObject(affectedObjects[i], affectedObjectsColliders[i], affectedObjectsGravHandlers[i], 1);
+            try
+            {
+                AddGravToObject(affectedObjects[i], affectedObjectsColliders[i], affectedObjectsGravHandlers[i], 1);
+            }
+            catch(Exception e)
+            {
+                Debug.Log(e.Message); 
+            }
         }
     }
     public void AddGravToObject(GameObject obj, Collider2D col, BallGravityhandler gra, float percentPfUllGrav)
@@ -52,6 +63,7 @@ public class GravityWell : MonoBehaviour
             if (true)
             {
                 Vector2 ClosestDist = Physics2D.ClosestPoint(obj.transform.position, CenterCollider);
+                Vector2 DistanceInside = Physics2D.ClosestPoint(obj.transform.position, AffectedGravArea);
                 Vector2 vDist = new Vector2(ClosestDist.x - obj.transform.position.x, ClosestDist.y - obj.transform.position.y);
                 float dist = vDist.magnitude;
             //float dist = Mathf.Sqrt(dx + dy);
@@ -64,10 +76,16 @@ public class GravityWell : MonoBehaviour
                     //Debug.DrawLine(transform.position, affectedObjects[i].transform.position, Color.yellow);
                     Vector2 offset = vDist;// (transform.position - affectedObjects[i].transform.position);
                                            //offset = offset.normalized;
-                    float mag = 5.0f;// offset.magnitude;
+                    float mag = (dist + 1) / (dist + DistanceInside.magnitude + 1);
                     var rig = obj.GetComponent<Rigidbody2D>();
-                    Vector2 force = offset / mag / mag * (gravityPull);
+                    Vector2 force = offset * mag * (gravityPull);
                     force *= percentPfUllGrav;
+                if (goal)
+                {
+                    float orMag = force.magnitude;
+                    rig.velocity = ((force.normalized * 5 + rig.velocity.normalized) * orMag) / 3f;
+                }
+                else
                     rig.velocity = rig.velocity + force;
                 }
                 else

@@ -112,7 +112,7 @@ public class BallSpeedReporter : MonoBehaviour
         //BackCircle.gameObject.SetActive(true);
         ballTrail.gameObject.SetActive(false);
         WaveCircleParent.SetActive(false);
-        BallDashedLineParent.gameObject.SetActive(false);
+        //BallDashedLineParent.gameObject.SetActive(false);
         //InnerSplitCircleParent.gameObject.SetActive(false);
     }
     private float WaveCircleTime = 0;

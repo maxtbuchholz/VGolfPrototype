@@ -70,7 +70,6 @@
     <Compile Include="Assets/GameScripts/Projection.cs" />
     <Compile Include="Assets/Touch/TouchHandler.cs" />
     <Compile Include="Assets/VictoryScripts/ThumbsUpAnimation.cs" />
-    <Compile Include="Assets/GameScripts/GoalHitReport.cs" />
     <Compile Include="Assets/GameScripts/GravityEffect.cs" />
     <Compile Include="Assets/GameScripts/ResizeWallColliders.cs" />
     <Compile Include="Assets/GameScripts/SizeCameraToScreen.cs" />

@@ -12,4 +12,8 @@ public class InitVictoryCamera : MonoBehaviour
             cam.orthographicSize = DataGameToVictory.instance.GetGameCameraOrthSize();
         }
     }
+    private void LateUpdate()
+    {
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, DataGameToVictory.instance.GetGameCameraYOffset(), -1);
+    }
 }

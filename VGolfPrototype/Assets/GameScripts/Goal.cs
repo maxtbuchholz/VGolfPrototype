@@ -7,39 +7,48 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] RectTransform GoalRect;
     [SerializeField] BallSpeedReporter BallSpeed;
     [SerializeField] Transform Ball;
     [SerializeField] TextMeshProUGUI DebugText;
     [SerializeField] GameObject GameCamera;
     [SerializeField] TouchHandler TouchH;
+    [SerializeField] Collider2D goalCollider;
     private bool VictoryLoaded = false;
-    private bool ShouldCheck = false;
-    public void CheckForGoal()
+    public void Start()
     {
-        ShouldCheck = true;
+        if (gameObject.scene.name == "Simulation")
+            Destroy(this);
     }
+    private float prevY;
     public void Update()
     {
-        if (ShouldCheck && !VictoryLoaded)
+        //if (goalCollider.OverlapPoint(Ball.position))
+        //{
+        //    overlapping = true;
+        //}
+        if (true)
         {
             //Rect r = GoalRect.rect;
             //r.position = GoalRect.rect.position -  GoalRect.anchoredPosition;
-            Vector2 BallPos = Ball.transform.position;
+            //Vector2 BallPos = Ball.transform.position;
 
-            if (ContainsPoint(BallPos, GoalRect) && BallSpeed.AbleToBeHit)
+            if (goalCollider.OverlapPoint(Ball.position))
             {
                 if (!VictoryLoaded)
                 {
-                    if(Ball.gameObject.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
+                    string name = transform.GetInstanceID().ToString();
+                    VictoryLoaded = true;
+                    name += name;
+                    Debug.Log(name + Time.frameCount);
+                    if (Ball.gameObject.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
                     {
                         BSR.SetInGoal();
                     }
-                    VictoryLoaded = true;
                     DebugText.text += "Goal!";
                     TouchH.enabled = false;
                     int y = SceneManager.GetActiveScene().buildIndex;
-                    DataGameToVictory.instance.SetGameCameraYOffset(transform.position.y);
+                    prevY = GameCamera.transform.position.y;
+                    DataGameToVictory.instance.SetGameCameraYOffset(prevY);
                     if (GameCamera.TryGetComponent<Camera>(out Camera cam))
                     {
                         DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
@@ -47,6 +56,14 @@ public class Goal : MonoBehaviour
                     SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
                     //GameCamera.SetActive(false);
                     //SceneManager.UnloadSceneAsync(y);
+                }
+                else
+                {
+                    if(prevY != GameCamera.transform.position.y)
+                    {
+                        prevY = GameCamera.transform.position.y;
+                        DataGameToVictory.instance.SetGameCameraYOffset(prevY);
+                    }
                 }
             }
         }

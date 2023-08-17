@@ -167,7 +167,6 @@ public class TouchHandler : MonoBehaviour
         if (PullDistanceLongEnough)
         {
             BallSpeed.BallShot();
-            //Ball.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
             Rigidbody2D rb = Ball.GetComponent<Rigidbody2D>();
             rb.velocity = rb.velocity + Force;
             scoreController.ScoreAdOne();
