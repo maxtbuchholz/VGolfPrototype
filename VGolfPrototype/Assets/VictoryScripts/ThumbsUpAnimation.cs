@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class ThumbsUpAnimation : MonoBehaviour
 {
-    private SpriteRenderer Thumbs;
+    [SerializeField] SpriteRenderer Thumbs;
     private float OriginalScale;
     private float LargeScale;
     private float SmallScale;
@@ -19,8 +19,9 @@ public class ThumbsUpAnimation : MonoBehaviour
     float AnimationTime = 0;
     void Start()
     {
-        Thumbs = GetComponent<SpriteRenderer>();
-        Thumbs.enabled = false;
+        //Thumbs = GetComponent<SpriteRenderer>();
+        if(DoCurrAnimation == -1)
+            Thumbs.enabled = false;
         OriginalScale = transform.localScale.x;
         LargeScale = OriginalScale + 10;
         SmallScale = OriginalScale * ScaleDiff;

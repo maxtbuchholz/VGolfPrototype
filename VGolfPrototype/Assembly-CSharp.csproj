@@ -83,6 +83,7 @@
     <Compile Include="Assets/VictoryScripts/VictoryScreenStart.cs" />
     <Compile Include="Assets/GameScripts/Goal.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
+    <Compile Include="Assets/WaveTextEffect.cs" />
     <Compile Include="Assets/Touch/JoyStickShape.cs" />
     <Compile Include="Assets/Particles/KillParticleOnFinish.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />

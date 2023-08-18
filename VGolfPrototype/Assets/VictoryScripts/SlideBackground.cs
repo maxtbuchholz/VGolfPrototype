@@ -21,6 +21,6 @@ public class SlideBackground : MonoBehaviour
         hitBottom = true;
         SlideDownRb2D.velocity = new Vector2(0, 0);
         SlideUpRb2D.velocity = new Vector2(0, 0);
-        VStart.SetToCenter();
+        //VStart.SetToCenter();
     }
 }
