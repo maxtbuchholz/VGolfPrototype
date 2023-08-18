@@ -49,6 +49,7 @@ public class Goal : MonoBehaviour
                     int y = SceneManager.GetActiveScene().buildIndex;
                     prevY = GameCamera.transform.position.y;
                     DataGameToVictory.instance.SetGameCameraYOffset(prevY);
+                    DataGameToVictory.instance.SetGameSceneName(SceneManager.GetActiveScene().name);
                     if (GameCamera.TryGetComponent<Camera>(out Camera cam))
                     {
                         DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);

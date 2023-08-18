@@ -8,6 +8,7 @@ public class DataGameToVictory : MonoBehaviour
     private float GameCameraYOffset = -1;
     private float GameCameraOrthSize = -1;
     public static DataGameToVictory instance;
+    private string gameSceneName = null;
     private void Awake()
     {
         if (instance == null)
@@ -22,6 +23,14 @@ public class DataGameToVictory : MonoBehaviour
     public int GetScore()
     {
         return Score;
+    }
+    public void SetGameSceneName(string gameSceneName)
+    {
+        this.gameSceneName = gameSceneName;
+    }
+    public string GetgGmeSceneName()
+    {
+        return gameSceneName;
     }
     public void SetGameCameraYOffset(float GameCameraYOffset)
     {
