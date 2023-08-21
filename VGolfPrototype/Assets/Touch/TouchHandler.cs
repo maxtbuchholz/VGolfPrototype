@@ -17,6 +17,7 @@ public class TouchHandler : MonoBehaviour
     [SerializeField] BallSpeedReporter BallSpeed;
     [SerializeField] private TextMeshProUGUI DebugText;
     [SerializeField] JoyStickShape joyStickShape;
+    [SerializeField] GameButtons gameButtons;
     private List<int> activeTouches;
     private List<int> prevFrameActiveTouches;
     private List<int> touchesWeThinkAreActive;
@@ -58,7 +59,9 @@ public class TouchHandler : MonoBehaviour
         if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();
         for (int i = 0; i < UnityEngine.Input.touchCount; i++)
         {
-            int fingerIndex = UnityEngine.Input.touches[i].fingerId;
+            if (gameButtons.notTouching(i))
+            {
+                int fingerIndex = UnityEngine.Input.touches[i].fingerId;
             activeTouches.Add(fingerIndex);
             string fingerJob = "";
             touchJob.TryGetValue(fingerIndex, out fingerJob);
@@ -135,6 +138,7 @@ public class TouchHandler : MonoBehaviour
                     projection.Hide();
                 }
             }
+        }
         }
         prevFrameActiveTouches = activeTouches;
         for (int i = 0; i < touchesWeThinkAreActive.Count; i++)
