@@ -56,7 +56,7 @@ public class WaveTextEffect : MonoBehaviour
     }
 
     // Update is called once per frame
-    float timeForSin = 0;
+    float timeForSin = -1;
     float loopTime = 2.0f;
     float growAmount = 0.15f;
     float letterTimeOffset = 0.1f;
@@ -64,7 +64,8 @@ public class WaveTextEffect : MonoBehaviour
     int[] letterAnimationCompletionData;
     void Update()
     {
-        timeForSin += Time.deltaTime;
+        if(timeForSin >= 0)
+            timeForSin += Time.deltaTime;
         for (int i = 0; i < letters.Length; i++) 
         {
             if ((timeForSin >= letterTimeOffset * i) && (letterAnimationCompletionData[i] == 0))
@@ -86,5 +87,9 @@ public class WaveTextEffect : MonoBehaviour
                 letters[i].transform.localScale = new Vector3(locTime, locTime, locTime);
             }
         }
+    }
+    public void Go()
+    {
+        timeForSin = 0;
     }
 }

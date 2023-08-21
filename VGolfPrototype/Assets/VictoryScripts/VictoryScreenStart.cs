@@ -9,20 +9,28 @@ public class VictoryScreenStart : MonoBehaviour
     //[SerializeField] GameObject Background;
     //[SerializeField] GameObject Background2;
     [SerializeField] GameObject CentralBackground;
+    [SerializeField] RectTransform Page;
+    [SerializeField] RectTransform Pagemask;
+    [SerializeField] Rigidbody2D PageRdb2;
     [SerializeField] RectTransform BackgroundCanvas;
     [SerializeField] ThumbsUpAnimation ThumbsUpA;
+    [SerializeField] List<Transform> Ball;
+    [SerializeField] WaveTextEffect ThanksFor;
+    [SerializeField] WaveTextEffect Playing;
     void Start()
     {
+        DataGameToVictory.instance.GetGameCamera().GetComponent<Camera>().enabled = false;
         //ResizeWallColliders();
         //SizeToScreen();
         ResizeBackground();
-        //MoveToPlaces();
+        MoveToPlaces();
     }
     private void ResizeBackground()
     {
         if (!CentralBackground.TryGetComponent<RectTransform>(out RectTransform RectB)) return;
         float height = BackgroundCanvas.rect.height;
         float width = BackgroundCanvas.rect.width;
+        Page.sizeDelta = BackgroundCanvas.rect.size;
         height /= RectB.rect.height;
         width /= RectB.rect.width;
         height /= 100;
@@ -32,16 +40,39 @@ public class VictoryScreenStart : MonoBehaviour
         //Background.transform.localScale = set;
         //Background2.transform.localScale = set;
         CentralBackground.transform.localScale = centerSet;
+        //Pagemask.transform.localScale = centerSet;
+        //BottomCollider.transform.localPosition = new Vector2(0,-0.5f);
         ThumbsUpA.StartAnimation();
     }
-    //private void MoveToPlaces()
-    //{
-    //    float height = SlideDown.rect.height;
-    //    SlideDown.transform.localPosition = new Vector2(0,height / 1f);
-    //    SlideUp.transform.localPosition = new Vector2(0, -height / 1f);
-    //    Background.transform.localPosition = new Vector2(0, -height / 4f);
-    //    Background2.transform.localPosition = new Vector2(0, height / 4f);
-    //}
+    private void MoveToPlaces()
+    {
+        float height = BackgroundCanvas.rect.height;
+        //Vector3 ballPos = Ball.transform.localPosition;
+        Page.localPosition = new Vector2(0, -height);
+        //Ball.transform.localPosition = ballPos;
+    }
+    bool inPlace = false;
+    private void Update()
+    {
+        if(Page.localPosition.y < 0)
+        {
+            PageRdb2.velocity = new Vector2(0, 30);
+        }
+        else if(!inPlace)
+        {
+            inPlace = true;
+            PageRdb2.velocity = new Vector2(0, 0);
+            Page.localPosition = new Vector2(0, 0);
+            PageRdb2.bodyType = RigidbodyType2D.Static;
+            ThanksFor.Go();
+            Playing.Go();
+            for (int i = 0; i < Ball.Count; i++)
+            {
+                Ball[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
+        }
+
+    }
     //private void ResizeWallColliders()
     //{
     //    BoxCollider2D Box = GetComponent<BoxCollider2D>();

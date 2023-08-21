@@ -54,8 +54,9 @@ public class Goal : MonoBehaviour
                     {
                         DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
                     }
-                    GameCamera.SetActive(false);
+                    DataGameToVictory.instance.SetGameCamera(GameCamera);
                     SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
+                    //GameCamera.SetActive(false);
                     //GameCamera.SetActive(false);
                     //SceneManager.UnloadSceneAsync(y);
                 }
