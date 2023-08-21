@@ -5,18 +5,7 @@ using UnityEngine;
 public class GameButtons : MonoBehaviour
 {
     [SerializeField] List<Collider2D> buttons;
-    private Camera cam;
-    // Start is called before the first frame update
-    void Start()
-    {
-        cam = Camera.main;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] Camera cam;
     public bool notTouching(int index)
     {
         Touch testTouch = UnityEngine.Input.touches[index];

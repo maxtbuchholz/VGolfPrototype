@@ -314,7 +314,7 @@ MonoBehaviour:
   BallSpeed: {fileID: 2807454934518703596}
   DebugText: {fileID: 668623233}
   joyStickShape: {fileID: 1438467734}
-  gameButtons: {fileID: 0}
+  gameButtons: {fileID: 682257244}
 --- !u!114 &162040456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,7 +2180,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 682257242}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -2236,6 +2236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttons:
   - {fileID: 682257245}
+  cam: {fileID: 545401586}
 --- !u!61 &682257245
 BoxCollider2D:
   m_ObjectHideFlags: 0
