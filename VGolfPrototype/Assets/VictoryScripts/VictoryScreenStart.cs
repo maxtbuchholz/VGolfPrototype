@@ -42,7 +42,7 @@ public class VictoryScreenStart : MonoBehaviour
         CentralBackground.transform.localScale = centerSet;
         //Pagemask.transform.localScale = centerSet;
         //BottomCollider.transform.localPosition = new Vector2(0,-0.5f);
-        ThumbsUpA.StartAnimation();
+        //ThumbsUpA.StartAnimation();
     }
     private void MoveToPlaces()
     {
@@ -52,11 +52,11 @@ public class VictoryScreenStart : MonoBehaviour
         //Ball.transform.localPosition = ballPos;
     }
     bool inPlace = false;
-    private void Update()
+    private void FixedUpdate()
     {
         if(Page.localPosition.y < 0)
         {
-            PageRdb2.velocity = new Vector2(0, 30);
+            PageRdb2.velocity = new Vector2(0, 40);
         }
         else if(!inPlace)
         {
@@ -68,7 +68,13 @@ public class VictoryScreenStart : MonoBehaviour
             Playing.Go();
             for (int i = 0; i < Ball.Count; i++)
             {
-                Ball[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                Ball[i].gameObject.AddComponent<Rigidbody2D>();
+                Rigidbody2D rb2d = Ball[i].GetComponent<Rigidbody2D>();
+                rb2d.mass = 1;
+                rb2d.drag = 0;
+                rb2d.angularDrag = 0;
+                rb2d.gravityScale = 1;
+                rb2d.bodyType = RigidbodyType2D.Dynamic;
             }
         }
 

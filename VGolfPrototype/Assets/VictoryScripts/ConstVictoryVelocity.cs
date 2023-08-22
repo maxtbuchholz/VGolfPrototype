@@ -12,8 +12,16 @@ public class ConstVictoryVelocity : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector2 dir = rgbd.velocity.normalized;
-        if(rgbd.velocity.magnitude  < speed)
-            rgbd.velocity = dir * speed;
+        if (rgbd == null)
+        {
+            if (!gameObject.TryGetComponent<Rigidbody2D>(out rgbd))
+                return;
+        }
+        else
+        {
+            Vector2 dir = rgbd.velocity.normalized;
+            if (rgbd.velocity.magnitude < speed)
+                rgbd.velocity = dir * speed;
+        }
     }
 }
