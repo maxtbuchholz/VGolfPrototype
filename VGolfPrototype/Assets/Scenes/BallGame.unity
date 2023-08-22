@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1191063148}
+  par: 5
 --- !u!210 &162040457
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -3309,6 +3310,7 @@ MonoBehaviour:
   GameCamera: {fileID: 545401584}
   TouchH: {fileID: 162040455}
   goalCollider: {fileID: 950468055}
+  scoreController: {fileID: 162040456}
 --- !u!58 &950468055
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3918,7 +3920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -1}
+  m_AnchoredPosition: {x: -1, y: -0.3}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1191063148
@@ -3941,7 +3943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 0 / 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3968,8 +3970,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.88
-  m_fontSizeBase: 2.88
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5797,7 +5799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3195301782961477323, guid: 6d2234dca29e544d0944d2187d032d41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.73
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 3195301782961477323, guid: 6d2234dca29e544d0944d2187d032d41, type: 3}
       propertyPath: m_LocalPosition.y

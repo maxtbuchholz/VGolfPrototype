@@ -13,6 +13,7 @@ public class Goal : MonoBehaviour
     [SerializeField] GameObject GameCamera;
     [SerializeField] TouchHandler TouchH;
     [SerializeField] Collider2D goalCollider;
+    [SerializeField] ScoreController scoreController;
     private bool VictoryLoaded = false;
     public void Start()
     {
@@ -50,6 +51,8 @@ public class Goal : MonoBehaviour
                     prevY = GameCamera.transform.position.y;
                     DataGameToVictory.instance.SetGameCameraYOffset(prevY);
                     DataGameToVictory.instance.SetGameSceneName(SceneManager.GetActiveScene().name);
+                    DataGameToVictory.instance.SetScore(scoreController.GetScore());
+                    DataGameToVictory.instance.SetPar(scoreController.GetPar());
                     if (GameCamera.TryGetComponent<Camera>(out Camera cam))
                     {
                         DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);

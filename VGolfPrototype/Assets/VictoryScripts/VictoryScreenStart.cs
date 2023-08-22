@@ -52,10 +52,17 @@ public class VictoryScreenStart : MonoBehaviour
         //Ball.transform.localPosition = ballPos;
     }
     bool inPlace = false;
+    //private float moveDistPerUp = 20.0f;
     private void FixedUpdate()
     {
         if(Page.localPosition.y < 0)
         {
+            //float dst = Page.transform.position.y;
+            //if ((dst + moveDistPerUp) > 0)
+            //    Page.localPosition = new Vector2(0, 0);
+            //else
+            //    Page.localPosition = new Vector2(0, Page.localPosition.y + moveDistPerUp);
+
             PageRdb2.velocity = new Vector2(0, 40);
         }
         else if(!inPlace)

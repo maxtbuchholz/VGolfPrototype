@@ -71,7 +71,9 @@
     <Compile Include="Assets/GameScripts/Projection.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
     <Compile Include="Assets/Touch/TouchHandler.cs" />
+    <Compile Include="Assets/VictoryScripts/SetScoreVictoryScreen.cs" />
     <Compile Include="Assets/GameScripts/ResizeWallColliders.cs" />
+    <Compile Include="Assets/SettingsScripts/SettingsButtons.cs" />
     <Compile Include="Assets/GameScripts/CollisionCounter.cs" />
     <Compile Include="Assets/VictoryScripts/InitVictoryCamera.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
@@ -90,9 +92,9 @@
     <Compile Include="Assets/Touch/JoyStickShape.cs" />
     <Compile Include="Assets/SettingsScripts/SettingsScreenStart.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />
-    <Compile Include="Assets/SettingsButtons.cs" />
     <Compile Include="Assets/VictoryScripts/ConstVictoryVelocity.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets/SettingsScripts/VolumeSliders.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/GameScripts/BallGravityhandler.cs" />
     <Compile Include="Assets/GameScripts/CollisionEffects.cs" />
@@ -111,7 +113,6 @@
     <Compile Include="Assets/GameScripts/RotateTransform.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/GameScripts/GravityEffect.cs" />
-    <Compile Include="Assets/VolumeSliders.cs" />
     <Compile Include="Assets/GameScripts/SizeCameraToScreen.cs" />
     <Compile Include="Assets/GameScripts/LaunchPad.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />

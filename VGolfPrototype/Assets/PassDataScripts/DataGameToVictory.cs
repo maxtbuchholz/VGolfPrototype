@@ -5,6 +5,7 @@ using UnityEngine;
 public class DataGameToVictory : MonoBehaviour
 {
     private int Score = -1;
+    private int Par = -1;
     private float GameCameraYOffset = -1;
     private float GameCameraOrthSize = -1;
     public static DataGameToVictory instance;
@@ -18,6 +19,14 @@ public class DataGameToVictory : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+    }
+    public void SetPar(int Par)
+    {
+        this.Par = Par;
+    }
+    public int Getpar()
+    {
+        return Par;
     }
     public void SetButtonList(List<Collider2D> buttons)
     {
