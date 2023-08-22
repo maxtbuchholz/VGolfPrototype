@@ -54,3 +54,6 @@ TagManager:
   - name: VictoryBasic
     uniqueID: 2203585179
     locked: 0
+  - name: Settings
+    uniqueID: 1156538095
+    locked: 0

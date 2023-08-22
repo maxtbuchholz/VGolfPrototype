@@ -59,8 +59,6 @@ public class TouchHandler : MonoBehaviour
         if ((pullingIndex != -1) && (UnityEngine.Input.touchCount == 0)) ResetTouch();
         for (int i = 0; i < UnityEngine.Input.touchCount; i++)
         {
-            if (gameButtons.notTouching(i))
-            {
                 int fingerIndex = UnityEngine.Input.touches[i].fingerId;
             activeTouches.Add(fingerIndex);
             string fingerJob = "";
@@ -68,30 +66,37 @@ public class TouchHandler : MonoBehaviour
             if (!prevFrameActiveTouches.Contains(fingerIndex))
             {
                 if (!touchesWeThinkAreActive.Contains(fingerIndex)) touchesWeThinkAreActive.Add(fingerIndex);
-                if (CanStartAim && BallSpeed.AbleToBeHit && (pullingIndex == -1))   //aim
+                if (gameButtons.notTouching(i))
                 {
-                    CanStartAim = false;
-                    pullingIndex = fingerIndex;
-                    touchJob[fingerIndex] = "Ball";
-                    Vector3 JoyStickPos = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
-                    JoyStickPos.z = transform.position.z - 0.5f;
-                    PullBackJoystick.transform.position = JoyStickPos;
-                    PullBackJoystick.SetActive(true);
-                }
-                else if (BallSpeed.AbleToBeHit)                                     //launch
-                {
-                    for (int j = 0; j < touchesWeThinkAreActive.Count; j++)
+                    if (CanStartAim && BallSpeed.AbleToBeHit && (pullingIndex == -1))   //aim
                     {
-                        touchJob.TryGetValue(touchesWeThinkAreActive[j], out string job);
-                        if (job == "Ball")
+                        CanStartAim = false;
+                        pullingIndex = fingerIndex;
+                        touchJob[fingerIndex] = "Ball";
+                        Vector3 JoyStickPos = camera.ScreenToWorldPoint(UnityEngine.Input.touches[i].position);
+                        JoyStickPos.z = transform.position.z - 0.5f;
+                        PullBackJoystick.transform.position = JoyStickPos;
+                        PullBackJoystick.SetActive(true);
+                    }
+                    else if (BallSpeed.AbleToBeHit)                                     //launch
+                    {
+                        for (int j = 0; j < touchesWeThinkAreActive.Count; j++)
                         {
-                            CanStartAim = true;
-                            touchJob[touchesWeThinkAreActive[j]] = "Used";
-                            LaunchBall();
-                            pullingIndex = -1;
-                            touchJob[fingerIndex] = "Used";
+                            touchJob.TryGetValue(touchesWeThinkAreActive[j], out string job);
+                            if (job == "Ball")
+                            {
+                                CanStartAim = true;
+                                touchJob[touchesWeThinkAreActive[j]] = "Used";
+                                LaunchBall();
+                                pullingIndex = -1;
+                                touchJob[fingerIndex] = "Used";
+                            }
                         }
                     }
+                }
+                else
+                {
+                    touchJob[fingerIndex] = "ButtonClick";
                 }
             }
             else if ((pullingIndex != -1) && (fingerJob == "Ball"))   //switch aim touch
@@ -138,7 +143,6 @@ public class TouchHandler : MonoBehaviour
                     projection.Hide();
                 }
             }
-        }
         }
         prevFrameActiveTouches = activeTouches;
         for (int i = 0; i < touchesWeThinkAreActive.Count; i++)

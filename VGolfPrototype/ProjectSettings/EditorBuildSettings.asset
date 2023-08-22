@@ -11,6 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: bf30d3a6e33d74502b84ceff44c7faa6
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 70b1008216f09407b8cf70532ba8f9bd
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dc27d2a1f88c94ba39548d9f17f8f3fc, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2c1a2f574f8f14277a2ed422b7a3f4fe, type: 2}
+  m_UseUCBPForAssetBundles: 0

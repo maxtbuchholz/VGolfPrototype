@@ -10,12 +10,30 @@ public class DataGameToVictory : MonoBehaviour
     public static DataGameToVictory instance;
     private string gameSceneName = null;
     private GameObject gameCamera;
+    private TouchHandler touchHandler;
+    private List<Collider2D> buttons;
     private void Awake()
     {
         if (instance == null)
             instance = this;
         else
             Destroy(gameObject);
+    }
+    public void SetButtonList(List<Collider2D> buttons)
+    {
+        this.buttons = buttons;
+    }
+    public List<Collider2D> GetButtonList()
+    {
+        return buttons;
+    }
+    public void SetTouchHandler(TouchHandler touchHandler)
+    {
+        this.touchHandler = touchHandler;
+    }
+    public TouchHandler GetTouchHandler()
+    {
+        return touchHandler;
     }
     public void SetScore(int Score)
     {
