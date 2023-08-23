@@ -23,7 +23,7 @@ public class VictoryScreenStart : MonoBehaviour
         //ResizeWallColliders();
         //SizeToScreen();
         ResizeBackground();
-        MoveToPlaces();
+        //MoveToPlaces();
     }
     private void ResizeBackground()
     {

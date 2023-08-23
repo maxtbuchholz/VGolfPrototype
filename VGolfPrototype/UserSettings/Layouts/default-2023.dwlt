@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1507
     height: 846
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 471.5
     width: 1150.5
     height: 324.5
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -340,9 +340,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 1a7a0000
-    m_LastClickedID: 31258
-    m_ExpandedIDs: 00000000ce790000
+    m_SelectedIDs: 368d0000
+    m_LastClickedID: 36150
+    m_ExpandedIDs: 00000000d279000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -370,7 +370,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce790000
+    m_ExpandedIDs: 00000000d2790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -395,8 +395,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 687a0000
-    m_LastClickedInstanceID: 31336
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c6730000
     m_RenameOverlay:
@@ -469,7 +469,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 47.70001
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -516,7 +516,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7af0ffff1ef1ffff0cf4ffff2ef4ffff66f5ffff08fbffff047500004a750000507500001076000030760000
+      m_ExpandedIDs: a865feffb26cfeff566dfeff4470feff6670feffa071feff4075feff0e8cfeffb28cfeffa08ffeffc28ffefffa90feff109cfeffbc9cfeffa49ffeffc29ffefff6a0feff020bffffaa0bffff980effffba0efffff20fffffe620ffff9221ffff7a24ffff9824ffffcc25ffffee4bffff924cffff7a4fffff984fffffcc50ffffcedcffff72ddffff36e0ffff58e0ffff90e1ffff30f1ffffd4f1ffffc2f4ffffe4f4ffff1cf6ffff6afaffff7afaffff08fbffff04750000087500005475000024760000c28a0000288b0000368b00003c8c000088950000c8950000ec950000fc9500008c9700004eb600008eb6000052b8000064fb000074fb0000aafb0000c2fb0000d8fb0000f6030100280401005e050100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -532,7 +532,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -631,7 +631,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -800,7 +800,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 24, y: 0}
+      snapOffset: {x: 24, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
@@ -1029,9 +1029,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.9813216, y: -7.004806, z: -0.09634132}
+    m_Target: {x: 8.732891, y: -21.972876, z: 0.46034276}
     speed: 2
-    m_Value: {x: -0.6276493, y: -29.429316, z: -1.0063591}
+    m_Value: {x: 8.683514, y: -22.026863, z: 0.46197394}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1081,9 +1081,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.4323845
+    m_Target: 14.662443
     speed: 2
-    m_Value: 12.760078
+    m_Value: 14.499326
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 750, y: 1334}
+  m_TargetSize: {x: 816.5, y: 429.5}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1165,10 +1165,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -187.5
-    m_HBaseRangeMax: 187.5
-    m_VBaseRangeMin: -333.5
-    m_VBaseRangeMax: 333.5
+    m_HBaseRangeMin: -204.125
+    m_HBaseRangeMax: 204.125
+    m_VBaseRangeMin: -107.375
+    m_VBaseRangeMax: 107.375
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1188,7 +1188,7 @@ MonoBehaviour:
       y: 21
       width: 816.5
       height: 429.5
-    m_Scale: {x: 0.64392805, y: 0.64392805}
+    m_Scale: {x: 2, y: 2}
     m_Translation: {x: 408.25, y: 214.75}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1196,12 +1196,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -633.9994
-      y: -333.5
-      width: 1267.9988
-      height: 667
+      x: -204.125
+      y: -107.375
+      width: 408.25
+      height: 214.75
     m_MinimalGUI: 1
-  m_defaultScale: 0.64392805
+  m_defaultScale: 2
   m_LastWindowPixelSize: {x: 1633, y: 901}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

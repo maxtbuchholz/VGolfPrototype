@@ -3215,7 +3215,7 @@ GameObject:
   - component: {fileID: 950468054}
   - component: {fileID: 950468055}
   m_Layer: 9
-  m_Name: Circle
+  m_Name: Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3311,6 +3311,7 @@ MonoBehaviour:
   TouchH: {fileID: 162040455}
   goalCollider: {fileID: 950468055}
   scoreController: {fileID: 162040456}
+  ballExplosionParticle: {fileID: 1566779683237136685, guid: 0934d41f58414450fb6ae16b44ebf02a, type: 3}
 --- !u!58 &950468055
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3920,8 +3921,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -0.3}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: -1, y: -0.67}
+  m_SizeDelta: {x: 5, y: 2}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1191063148
 MonoBehaviour:
@@ -4704,7 +4705,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ec48c6246c6164be2a7e06d9d963665b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5799,7 +5800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3195301782961477323, guid: 6d2234dca29e544d0944d2187d032d41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.91
+      value: 1.21
       objectReference: {fileID: 0}
     - target: {fileID: 3195301782961477323, guid: 6d2234dca29e544d0944d2187d032d41, type: 3}
       propertyPath: m_LocalPosition.y

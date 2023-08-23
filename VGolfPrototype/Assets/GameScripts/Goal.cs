@@ -14,6 +14,7 @@ public class Goal : MonoBehaviour
     [SerializeField] TouchHandler TouchH;
     [SerializeField] Collider2D goalCollider;
     [SerializeField] ScoreController scoreController;
+    [SerializeField] ParticleSystem ballExplosionParticle;
     private bool VictoryLoaded = false;
     public void Start()
     {
@@ -21,6 +22,8 @@ public class Goal : MonoBehaviour
             Destroy(this);
     }
     private float prevY;
+    private float BallInTime = -1;
+    private bool didballPoof = false;
     public void Update()
     {
         //if (goalCollider.OverlapPoint(Ball.position))
@@ -37,31 +40,8 @@ public class Goal : MonoBehaviour
             {
                 if (!VictoryLoaded)
                 {
-                    string name = transform.GetInstanceID().ToString();
+                    BallInTime = 0;
                     VictoryLoaded = true;
-                    name += name;
-                    Debug.Log(name + Time.frameCount);
-                    if (Ball.gameObject.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
-                    {
-                        BSR.SetInGoal();
-                    }
-                    DebugText.text += "Goal!";
-                    TouchH.enabled = false;
-                    int y = SceneManager.GetActiveScene().buildIndex;
-                    prevY = GameCamera.transform.position.y;
-                    DataGameToVictory.instance.SetGameCameraYOffset(prevY);
-                    DataGameToVictory.instance.SetGameSceneName(SceneManager.GetActiveScene().name);
-                    DataGameToVictory.instance.SetScore(scoreController.GetScore());
-                    DataGameToVictory.instance.SetPar(scoreController.GetPar());
-                    if (GameCamera.TryGetComponent<Camera>(out Camera cam))
-                    {
-                        DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
-                    }
-                    DataGameToVictory.instance.SetGameCamera(GameCamera);
-                    SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
-                    //GameCamera.SetActive(false);
-                    //GameCamera.SetActive(false);
-                    //SceneManager.UnloadSceneAsync(y);
                 }
                 else
                 {
@@ -71,6 +51,50 @@ public class Goal : MonoBehaviour
                         DataGameToVictory.instance.SetGameCameraYOffset(prevY);
                     }
                 }
+            }
+            if(BallInTime >= 0)
+            {
+                BallInTime += Time.deltaTime;
+            }
+
+            if ((BallInTime > 1.0f) && !didballPoof)  //explosion
+            {
+                didballPoof = true; SpriteRenderer[] srs = Ball.GetComponentsInChildren<SpriteRenderer>();
+                for (int i = 0; i < srs.Length; i++)
+                {
+                    srs[i].enabled = false;
+                }
+                ParticleSystem par = GameObject.Instantiate(ballExplosionParticle);
+                par.transform.position = Ball.transform.position;
+                par.Play();
+            }
+            if (BallInTime > 2.0f)  //send to victory page
+            {
+                BallInTime = -1;
+                string name = transform.GetInstanceID().ToString();
+                name += name;
+                Debug.Log(name + Time.frameCount);
+                if (Ball.gameObject.TryGetComponent<BallSpeedReporter>(out BallSpeedReporter BSR))
+                {
+                    BSR.SetInGoal();
+                }
+                DebugText.text += "Goal!";
+                TouchH.enabled = false;
+                int y = SceneManager.GetActiveScene().buildIndex;
+                prevY = GameCamera.transform.position.y;
+                DataGameToVictory.instance.SetGameCameraYOffset(prevY);
+                DataGameToVictory.instance.SetGameSceneName(SceneManager.GetActiveScene().name);
+                DataGameToVictory.instance.SetScore(scoreController.GetScore());
+                DataGameToVictory.instance.SetPar(scoreController.GetPar());
+                if (GameCamera.TryGetComponent<Camera>(out Camera cam))
+                {
+                    DataGameToVictory.instance.SetGameCameraOrthSize(cam.orthographicSize);
+                }
+                DataGameToVictory.instance.SetGameCamera(GameCamera);
+                SceneManager.LoadScene("Victory", LoadSceneMode.Additive);
+                //GameCamera.SetActive(false);
+                //GameCamera.SetActive(false);
+                //SceneManager.UnloadSceneAsync(y);
             }
         }
     }

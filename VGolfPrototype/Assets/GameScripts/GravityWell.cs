@@ -82,8 +82,9 @@ public class GravityWell : MonoBehaviour
                     force *= percentPfUllGrav;
                 if (goal)
                 {
-                    float orMag = force.magnitude;
-                    rig.velocity = ((force.normalized * 5 + rig.velocity.normalized) * orMag) / 3f;
+                    rig.velocity = rig.velocity + force;
+                    //float orMag = force.magnitude;
+                    //rig.velocity = ((force.normalized * 5 + rig.velocity.normalized) * orMag) / 3f;
                 }
                 else
                     rig.velocity = rig.velocity + force;
