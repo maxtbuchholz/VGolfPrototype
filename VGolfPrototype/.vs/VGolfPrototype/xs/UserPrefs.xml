@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{73BF3E00-EDB0-0437-BC31-DCD1340A12EA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameScripts/GravityWell.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Touch/TouchHandler.cs">
     <Files>
-      <File FileName="Assets/Touch/TouchHandler.cs" />
-      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" Line="27" Column="6" />
-      <File FileName="Assets/GameScripts/Goal.cs" Line="61" Column="14" />
+      <File FileName="Assets/Touch/TouchHandler.cs" Line="49" Column="11" />
+      <File FileName="Assets/VictoryScripts/VictoryScreenStart.cs" />
+      <File FileName="Assets/GameScripts/Goal.cs" />
       <File FileName="Assets/GameScripts/Projection.cs" />
-      <File FileName="Assets/GameScripts/GravityWell.cs" Line="87" Column="30" />
+      <File FileName="Assets/GameScripts/GravityWell.cs" Line="98" Column="36" />
       <File FileName="Assets/GameScripts/BallSpeedReporter.cs" />
       <File FileName="Assets/GameScripts/BallGravityhandler.cs" />
       <File FileName="Assets/GameScripts/LaunchPad.cs" />
       <File FileName="Assets/GameScripts/GoalArrow.cs" />
       <File FileName="Assets/Particles/KillParticleOnFinish.cs" />
-      <File FileName="Assets/GameScripts/CollisionEffects.cs" Line="44" Column="9" />
+      <File FileName="Assets/GameScripts/CollisionEffects.cs" />
       <File FileName="Assets/Touch/JoyStickShape.cs" />
       <File FileName="Assets/GameScripts/FollowBall.cs" />
       <File FileName="Assets/GameScripts/GravityEffect.cs" />
@@ -27,6 +28,7 @@
       <File FileName="Assets/VictoryScripts/ConstVictoryVelocity.cs" />
       <File FileName="Assets/VictoryScripts/SetScoreVictoryScreen.cs" />
       <File FileName="Assets/GameScripts/ScoreController.cs" />
+      <File FileName="Assets/SettingsScripts/VolumeSliders.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -45,13 +47,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4443663b-2dcf-4a87-b9cd-71b3844b87dd" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../Assets/GameScripts/Goal.cs" line="20" column="35" endLine="20" endColumn="56" offsetX="-1" offsetY="-1" expression="BallSpeed.AbleToBeHit" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b6669e5e-956d-46f8-a781-7a77b5af7ebc" />
 </Properties>

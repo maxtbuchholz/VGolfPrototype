@@ -49,7 +49,7 @@ public class TouchHandler : MonoBehaviour
         //projection.Show();
         //try
         //{
-        //    projection.SimulatrTrajectory(Ball.transform.position, new Vector2(-10, 0), BallRB.velocity, 0.0f, Ball.transform.rotation);
+        //projection.SimulatrTrajectory(Ball.transform.position, new Vector2(10, 10), BallRB.velocity, 0.0f, Ball.transform.rotation);
         //}
         //catch (System.Exception e)
         //{

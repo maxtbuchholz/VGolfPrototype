@@ -115,7 +115,7 @@ public class Projection : MonoBehaviour
                 {
                     launchpads[j].GhostUpdate();
                 }
-                physicsScene.Simulate(Time.deltaTime);
+                physicsScene.Simulate(Time.fixedDeltaTime);
                 Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
                 line.SetPosition(i, sPos);
                 LinePos[i] = sPos;

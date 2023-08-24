@@ -6,6 +6,8 @@ using static UnityEngine.ParticleSystem;
 public class CollisionEffects: MonoBehaviour
 {
     [SerializeField] ParticleSystem collisionParticle;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip HitSound;
     private Color particleStartColor = Color.white;
     private Rigidbody2D rg2d;
     // Start is called before the first frame update
@@ -35,8 +37,17 @@ public class CollisionEffects: MonoBehaviour
             {
                 particleStartColor = Color.white;
             }
-            if(lastSpeed > 10)
+            if(lastSpeed > 1f)
+            {
+                float per = lastSpeed / 10;
+                if (per > 1) per = 1;
+                per = Mathf.Sqrt(per);
+                audioSource.PlayOneShot(HitSound, PlayerPrefs.GetFloat("SoundEffectVolume", 1) * per);
+            }
+            if (lastSpeed > 10)
+            {
                 ShowAndRunParticle(contact.point);
+            }
         }
     }
     private void ShowAndRunParticle(Vector2 point)
