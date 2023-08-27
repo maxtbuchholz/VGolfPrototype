@@ -7,7 +7,7 @@ public class FollowBall : MonoBehaviour
 {
     [SerializeField] Camera camera;
     [SerializeField] Canvas gameCanvas;
-    [SerializeField] Transform ball;
+    [SerializeField] public Transform ball;
     private RectTransform bounds;
     float boundRight;
     float boundLeft;

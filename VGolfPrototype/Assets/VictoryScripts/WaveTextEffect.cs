@@ -9,6 +9,7 @@ public class WaveTextEffect : MonoBehaviour
 {
     [SerializeField] GameObject childCopyObj;
     [SerializeField] string textToShow = "Put Text Here";
+    [SerializeField] bool GoAtStart = false;
     private GameObject[] letters;
     private float offset = 0f;
     private float originalScale;
@@ -53,10 +54,11 @@ public class WaveTextEffect : MonoBehaviour
         }
         letterAnimationCompletionData = new int[letters.Length];
         timeForSin -= initOffsetTime;
+        if (GoAtStart) Go(); 
     }
 
     // Update is called once per frame
-    float timeForSin = -1;
+    float timeForSin = -9999999999;
     float loopTime = 2.0f;
     float growAmount = 0.15f;
     float letterTimeOffset = 0.1f;
@@ -64,7 +66,7 @@ public class WaveTextEffect : MonoBehaviour
     int[] letterAnimationCompletionData;
     void Update()
     {
-        if(timeForSin >= 0)
+        if(timeForSin >= -initOffsetTime)
             timeForSin += Time.deltaTime;
         for (int i = 0; i < letters.Length; i++) 
         {
@@ -90,6 +92,6 @@ public class WaveTextEffect : MonoBehaviour
     }
     public void Go()
     {
-        timeForSin = 0;
+        timeForSin = -initOffsetTime;
     }
 }

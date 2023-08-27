@@ -44,6 +44,7 @@ public class GameButtons : MonoBehaviour
             }
 
             DataGameToVictory.instance.SetGameCamera(this.cam);
+            DataGameToVictory.instance.SetGameSceneName(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("Settings", LoadSceneMode.Additive); // loads current scene
         }
     }

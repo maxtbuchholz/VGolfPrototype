@@ -46,6 +46,7 @@ public class TouchHandler : MonoBehaviour
     int pullingIndex = -1;
     private void FixedUpdate()
     {
+        //DebugText.text = BallSpeed.AbleToBeHit.ToString();
         //projection.Show();
         //try
         //{

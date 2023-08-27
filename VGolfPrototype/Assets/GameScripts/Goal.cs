@@ -24,6 +24,7 @@ public class Goal : MonoBehaviour
     private float prevY;
     private float BallInTime = -1;
     private bool didballPoof = false;
+    private bool switchedCameraToGoal = false;
     public void Update()
     {
         //if (goalCollider.OverlapPoint(Ball.position))
@@ -56,7 +57,11 @@ public class Goal : MonoBehaviour
             {
                 BallInTime += Time.deltaTime;
             }
-
+            if ((BallInTime > 1.0f) && !switchedCameraToGoal)  //explosion
+            {
+                switchedCameraToGoal = true;
+                GameCamera.GetComponent<FollowBall>().ball = transform;
+            }
             if ((BallInTime > 1.0f) && !didballPoof)  //explosion
             {
                 didballPoof = true; SpriteRenderer[] srs = Ball.GetComponentsInChildren<SpriteRenderer>();

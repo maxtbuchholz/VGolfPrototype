@@ -42,7 +42,7 @@ public class JoyStickShape : MonoBehaviour
         {
             if (float.IsNaN(alphaPercent))
                 alphaPercent = 0.01f;
-            DebugText.text = alphaPercent.ToString();
+            //DebugText.text = alphaPercent.ToString();
             for (int i = 0; i < childSprites.Length; i++)
                 childSprites[i].color = new Color(1, 1, 1, alphaPercent * maxAlpha);
             //DebugText.text = (alphaPercent).ToString();

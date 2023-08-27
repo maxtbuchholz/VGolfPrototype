@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartPage.unity
+    guid: d27f8ff7d4edd4b6e9dd059954df3c8b
+  - enabled: 1
     path: Assets/Scenes/BallGame.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
@@ -14,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 70b1008216f09407b8cf70532ba8f9bd
+  - enabled: 1
+    path: Assets/Scenes/TurorialScreens/1TutoriallScreen.unity
+    guid: 445bcaa7227ee4c00969f4dc27580d0b
+  - enabled: 1
+    path: Assets/Scenes/TurorialScreens/2TutoriallScreen.unity
+    guid: 9cc72fc7158424e03ad4ae891de2b84f
+  - enabled: 1
+    path: Assets/Scenes/TurorialScreens/3TutoriallScreen.unity
+    guid: 28ce79282bd314f5fa62394bd1446881
+  - enabled: 1
+    path: Assets/Scenes/TurorialScreens/4TutoriallScreen.unity
+    guid: 5eaf344b83ccf49988bc3799a5b88a0b
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dc27d2a1f88c94ba39548d9f17f8f3fc, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2c1a2f574f8f14277a2ed422b7a3f4fe, type: 2}

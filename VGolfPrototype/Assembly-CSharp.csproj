@@ -70,6 +70,8 @@
     <Compile Include="Assets/VictoryScripts/ResizeGameUiCanvas.cs" />
     <Compile Include="Assets/GameScripts/Projection.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
+    <Compile Include="Assets/StartScreenScripts/StartScreenButtons.cs" />
+    <Compile Include="Assets/TutorialScripts/TutorialButtons.cs" />
     <Compile Include="Assets/Touch/TouchHandler.cs" />
     <Compile Include="Assets/VictoryScripts/SetScoreVictoryScreen.cs" />
     <Compile Include="Assets/GameScripts/ResizeWallColliders.cs" />
@@ -89,7 +91,9 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
+    <Compile Include="Assets/TutorialScripts/UnivFadeIn.cs" />
     <Compile Include="Assets/Touch/JoyStickShape.cs" />
+    <Compile Include="Assets/StartScreenScripts/ButtonFadeIn.cs" />
     <Compile Include="Assets/SettingsScripts/SettingsScreenStart.cs" />
     <Compile Include="Assets/GameScripts/SpriteSorter.cs" />
     <Compile Include="Assets/VictoryScripts/ConstVictoryVelocity.cs" />
@@ -128,8 +132,10 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/GameScripts/Goal.cs" />
+    <Compile Include="Assets/StartScreenScripts/StartScreenStart.cs" />
     <Compile Include="Assets/GameScripts/FPSCounter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+    <Compile Include="Assets/TutorialScripts/ResizeDovToTopAndBottom.cs" />
     <Compile Include="Assets/Particles/KillParticleOnFinish.cs" />
   </ItemGroup>
   <ItemGroup>

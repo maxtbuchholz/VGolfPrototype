@@ -48,6 +48,7 @@ public class Projection : MonoBehaviour
     }
     void CreatePhysicsScene()
     {
+        if (gameObject.scene.name == "Simulation") return;
         simulationScene = SceneManager.CreateScene("Simulation", new CreateSceneParameters(LocalPhysicsMode.Physics2D));
         physicsScene = simulationScene.GetPhysicsScene2D();
         GravityWells = new List<GravityWell>();

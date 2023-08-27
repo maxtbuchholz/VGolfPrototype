@@ -115,6 +115,9 @@ public class GoalArrow : MonoBehaviour
     float ArrowOffset = 0.1f;
     float ArrowMoveMaxOffset = 0.1f;
     float TimeArrowOffsetPerOneSec = 0.1f;
+
+    float minAppearDist = 5.0f;
+    float maxAppearDist = 8.0f;
     private void UpdateGoalArrow()
     {
         sTime += Time.deltaTime;
@@ -122,12 +125,32 @@ public class GoalArrow : MonoBehaviour
         //sTime /= MaxTime;
         for(int i = 0; i < ArrowSprites.Length; i++)
         {
+            float bGDist = (Ball.transform.position - Goal.transform.position).magnitude;
+            if(bGDist > maxAppearDist)
+            {
+                Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
+                originalArrowColor.a = 0.5f;
+                ArrowSprites[i].color = originalArrowColor;
+            }
+            else if(bGDist > minAppearDist)
+            {
+                Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
+                float per = (bGDist - minAppearDist) / (maxAppearDist - minAppearDist);
+                originalArrowColor.a = 0.5f * per;
+                ArrowSprites[i].color = originalArrowColor;
+            }
+            else
+            {
+                Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
+                originalArrowColor.a = 0f;
+                ArrowSprites[i].color = originalArrowColor;
+            }
             float val = ArrowMoveMaxOffset * Mathf.Sin((1f / MaxTime) * sTime * 6.28318530718f);
             ArrowSprites[i].gameObject.transform.localPosition = new Vector3(0, val , ArrowSprites[i].gameObject.transform.localPosition.z);
-            //float val = Mathf.Sin((1f / MaxTime) * (sTime + ((float)i * TimeArrowOffsetPerOneSec * MaxTime)) * 6.28318530718f);
+            ////float val = Mathf.Sin((1f / MaxTime) * (sTime + ((float)i * TimeArrowOffsetPerOneSec * MaxTime)) * 6.28318530718f);
             //Color originalArrowColor = ArrowSprites[i].GetComponent<SpriteRenderer>().color;
             //originalArrowColor.a = (val * (MaxAlpha)) + (0.5f * MaxAlpha);
-            //DebugText.text = (originalArrowColor.a).ToString();
+            ////DebugText.text = (originalArrowColor.a).ToString();
             //ArrowSprites[i].color = originalArrowColor;
         }
     }
