@@ -25,17 +25,19 @@ public class JoyStickShape : MonoBehaviour
         TouchStick.transform.eulerAngles = new Vector3(0, 0, angle + 90);
         SlideBar.transform.eulerAngles = new Vector3(0, 0, angle - 270);
         Vector2 MaskPos = transform.position - TouchStick.position;
+        //MaskPos /= 5;
+        //MaskPos *= transform.localScale.x;
         float mag = MaskPos.magnitude;
         mag += 14f;// TouchmaskMoveDownAmount;
         MaskPos = MaskPos.normalized * mag;
         //Debug.DrawLine(transform.position, TouchStick.position, Color.yellow);
-        TouchStickMask.position = (new Vector3(transform.position.x - MaskPos.x, transform.position.y - MaskPos.y, transform.position.z));// new Vector3(TouchStick.position.x, TouchStick.position.y, TouchStick.position.z);
+        TouchStickMask.position = (new Vector3(TouchStick.position.x, TouchStick.position.y, TouchStick.position.z));// new Vector3(TouchStick.position.x, TouchStick.position.y, TouchStick.position.z);
         //DebugText.text = MaskPos.ToString();
         TouchStickMask.rotation = TouchStick.rotation;
         BottomCircleMask.position = physBottomCircle.position;
     }
     float currColorAlpha = 1f;
-    float maxAlpha = 0.2f;
+    float maxAlpha = 0.4f;
     public void UpdateColor(float alphaPercent)
     {
         if(alphaPercent != currColorAlpha)

@@ -23,8 +23,8 @@ public class TouchHandler : MonoBehaviour
     private List<int> touchesWeThinkAreActive;
     private Dictionary<int, string> touchJob;
     private Dictionary<int, Vector2> originalTouchPos;
-    private float maxPullBack = 8.0f;
-    private float pushForce = 3f;
+    private float maxPullBack = 16.0f;
+    private float pushForce = 30f;
     private Vector2 Force;
     private bool PullDistanceLongEnough = false;
     bool CanStartAim = true;
@@ -46,11 +46,10 @@ public class TouchHandler : MonoBehaviour
     int pullingIndex = -1;
     private void FixedUpdate()
     {
-        //DebugText.text = BallSpeed.AbleToBeHit.ToString();
-        //projection.Show();
         //try
         //{
-        //projection.SimulatrTrajectory(Ball.transform.position, new Vector2(10, 10), BallRB.velocity, 0.0f, Ball.transform.rotation);
+        //    projection.Show();
+        //    projection.SimulatrTrajectory(Ball.transform.position, new Vector2(10, 10), BallRB.velocity, 0.0f, Ball.transform.rotation);
         //}
         //catch (System.Exception e)
         //{
@@ -118,7 +117,7 @@ public class TouchHandler : MonoBehaviour
                 Vector2 trajSpeed = new Vector2((tempPos.x - origPos.x) / maxPullBack, (tempPos.y - origPos.y) / maxPullBack);
                 float distance = Vector2.Distance(origPos, tempPos);
                 Vector2 direction = (origPos - tempPos).normalized;
-                Force = direction * distance * pushForce;
+                Force = (direction * distance * pushForce) / maxPullBack;
                 Vector3 JoyCirPos = new Vector3(tempPos.x, tempPos.y, PullBackJoystick.transform.position.z);
                 PullBackJoystick.transform.GetChild(0).transform.GetChild(0).transform.position = JoyCirPos;
 

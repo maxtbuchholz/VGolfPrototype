@@ -67,7 +67,7 @@ public class GravityEffect : MonoBehaviour
             float locTime = currTime + (i * offset);
             locTime %= effectRepeatTime;
             locTime /= effectRepeatTime;
-            effectSprites[i].color = new Color(1, 1, 1, locTime / 4);
+            effectSprites[i].color = new Color(1, 1, 1, locTime / 1.5f);
             locTime = 1 - locTime;
             effects[i].transform.localScale = new Vector2(locTime, locTime);
         }

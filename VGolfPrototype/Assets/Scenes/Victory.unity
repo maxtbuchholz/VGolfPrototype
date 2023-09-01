@@ -562,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childCopyObj: {fileID: 1128397012}
   textToShow: Thanks for
+  GoAtStart: 0
   initOffsetTime: 0
 --- !u!222 &224735634
 CanvasRenderer:
@@ -1594,13 +1595,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.8
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.6203728
+        time: 0.0076904297
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1862,6 +1863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childCopyObj: {fileID: 402939967}
   textToShow: Playing!
+  GoAtStart: 0
   initOffsetTime: 1
 --- !u!222 &957319740
 CanvasRenderer:
@@ -2531,13 +2533,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.8
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.6203728
+        time: 0.0076904297
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2907,13 +2909,13 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.8
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.6203728
+        time: 0.0076904297
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3382,7 +3384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 200.72}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1436669029

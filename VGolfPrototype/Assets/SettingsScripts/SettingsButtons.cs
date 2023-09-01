@@ -8,14 +8,17 @@ public class SettingsButtons : MonoBehaviour
 {
     public void BackToGam()
     {
-        int countLoaded = SceneManager.sceneCount;
-        Scene[] loadedScenes = new Scene[countLoaded];
+        //int countLoaded = SceneManager.sceneCountInBuildSettings;
+        //Scene[] loadedScenes = new Scene[countLoaded];
 
-        for (int i = 0; i < countLoaded; i++)
-        {
-            if (SceneManager.GetSceneAt(i).name == "Settings")
-                SceneManager.UnloadSceneAsync(i);
-        }
+        //for (int i = 0; i < countLoaded; i++)
+        //{
+        //    loadedScenes[i] = SceneManager.GetSceneAt(i);
+        //    //int n = loadedScenes[i].buildIndex;
+        //    if (loadedScenes[i].name == "Settings")
+        //        SceneManager.UnloadSceneAsync(i);
+        //}
+        SceneManager.UnloadSceneAsync("Settings");
         DataGameToVictory.instance.GetGameCamera().GetComponent<Camera>().enabled = true;
         DataGameToVictory.instance.GetTouchHandler().enabled = true;
         List<Collider2D> buttons = DataGameToVictory.instance.GetButtonList();

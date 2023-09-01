@@ -61,7 +61,7 @@ public class WaveTextEffect : MonoBehaviour
     float timeForSin = -9999999999;
     float loopTime = 2.0f;
     float growAmount = 0.15f;
-    float letterTimeOffset = 0.1f;
+    [SerializeField] float letterTimeOffset = 0.1f;
     [SerializeField] float initOffsetTime = 0;
     int[] letterAnimationCompletionData;
     void Update()

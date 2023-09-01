@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -132.45001, y: -114.399994}
+  m_AnchoredPosition: {x: -145, y: -100}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &67528780
@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoalHole
       objectReference: {fileID: 0}
+    - target: {fileID: 5173496988407819651, guid: e8ac79baba952476b837480a05f04b10, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2286136817557685544, guid: e8ac79baba952476b837480a05f04b10, type: 3}
     - {fileID: 12499948888890552, guid: e8ac79baba952476b837480a05f04b10, type: 3}
@@ -851,7 +855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This game is pretty much just mini golf, except its verticle instead of
+  m_text: This game is pretty much just mini golf, except its vertical instead of
     horizontal
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}
@@ -1815,7 +1819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Goal  looks like this:'
+  m_text: 'The Goal looks like this:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}
   m_sharedMaterial: {fileID: 4378537459562490546, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}

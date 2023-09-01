@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -132.45001, y: -114.399994}
+  m_AnchoredPosition: {x: -145, y: -100}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &67528780
@@ -1216,10 +1216,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1556694152}
     m_Modifications:
+    - target: {fileID: 2179670695210561983, guid: c673051836586495c8843c5b97043f44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a0689d56646f4ed0a36e6fd1a307527, type: 2}
     - target: {fileID: 6069277592927055863, guid: c673051836586495c8843c5b97043f44, type: 3}
       propertyPath: UpwardForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6878729174308429223, guid: c673051836586495c8843c5b97043f44, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a0689d56646f4ed0a36e6fd1a307527, type: 2}
     - target: {fileID: 8452898204598511813, guid: c673051836586495c8843c5b97043f44, type: 3}
       propertyPath: m_Name
       value: LaunchPad
@@ -1433,7 +1441,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d20a17f6d28e04c808e1236d3dce9cbb, type: 2}
+  - {fileID: 2100000, guid: c7337d033e46246ca9d4034232640068, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

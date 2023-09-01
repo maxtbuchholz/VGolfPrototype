@@ -242,7 +242,7 @@ RectTransform:
   m_Children:
   - {fileID: 5426347611939548943}
   - {fileID: 2652913320872060065}
-  - {fileID: 8384606336317458054}
+  - {fileID: 2678883761920942858}
   - {fileID: 3095676334730377702}
   - {fileID: 1930572691720633429}
   m_Father: {fileID: 1449255086139124888}
@@ -566,7 +566,7 @@ Transform:
   m_LocalScale: {x: 1.3115942, y: 2, z: 0.7246377}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6652682091779013514}
+  m_Father: {fileID: 2678883761920942858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6760851570611706559
 SpriteRenderer:
@@ -1257,6 +1257,42 @@ Transform:
   - {fileID: 4939558767131064268}
   m_Father: {fileID: 1449255086139124888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6190836926238092542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2678883761920942858}
+  m_Layer: 5
+  m_Name: MaskParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2678883761920942858
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190836926238092542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8384606336317458054}
+  m_Father: {fileID: 6652682091779013514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.02}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7253047785008374792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TouchStick: {fileID: 3284782198594311549}
   SlideBar: {fileID: 6652682091779013514}
-  TouchStickMask: {fileID: 8384606336317458054}
+  TouchStickMask: {fileID: 2678883761920942858}
   DebugText: {fileID: 0}
   BottomCircleMask: {fileID: 3095676334730377702}
   physBottomCircle: {fileID: 4939558767131064268}

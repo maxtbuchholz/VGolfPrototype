@@ -37,9 +37,9 @@ public class CollisionEffects: MonoBehaviour
             {
                 particleStartColor = Color.white;
             }
-            if(lastSpeed > 1f)
+            if(lastSpeed > 5f)
             {
-                float per = lastSpeed / 10;
+                float per = Mathf.Sqrt(lastSpeed);
                 if (per > 1) per = 1;
                 per = Mathf.Sqrt(per);
                 audioSource.PlayOneShot(HitSound, PlayerPrefs.GetFloat("SoundEffectVolume", 1) * per);
@@ -54,8 +54,8 @@ public class CollisionEffects: MonoBehaviour
     {
         ParticleSystem par = GameObject.Instantiate(collisionParticle);
         Burst bur = par.emission.GetBurst(0);
-        float burstCount = (lastSpeed - 10)/10;
-        if (burstCount > 10) burstCount = 10;
+        float burstCount = (lastSpeed - 5)/10;
+        if (burstCount > 20) burstCount = 20;
         bur.count = new MinMaxCurve { constant = burstCount };
         var main = par.main;
         main.startSpeed = new ParticleSystem.MinMaxCurve { constantMin = 0.05f, constantMax = (lastSpeed / 20) }; //(lastSpeed / 8) + 0.5f

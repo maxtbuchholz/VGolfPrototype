@@ -5,7 +5,7 @@ using UnityEngine;
 public class ConstVictoryVelocity : MonoBehaviour
 {
     private Rigidbody2D rgbd;
-    private float speed = 25f;
+    private float speed = 35f;
     private void Start()
     {
         rgbd = gameObject.GetComponent<Rigidbody2D>();

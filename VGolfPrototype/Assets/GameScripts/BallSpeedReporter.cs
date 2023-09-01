@@ -70,7 +70,7 @@ public class BallSpeedReporter : MonoBehaviour
             if (!LastTimeWasEnabled)
             {
                     //BackCircle.gameObject.SetActive(false);
-                    ballTrail.gameObject.SetActive(false);
+                    //ballTrail.gameObject.SetActive(false);
                     WaveCircleParent.SetActive(true);
                     //BallDashedLineParent.gameObject.SetActive(true);
                     //InnerSplitCircleParent.gameObject.SetActive(true);
@@ -87,7 +87,7 @@ public class BallSpeedReporter : MonoBehaviour
             if (LastTimeWasEnabled)
             {
                 //BackCircle.gameObject.SetActive(true);
-                ballTrail.gameObject.SetActive(true);
+                //ballTrail.gameObject.SetActive(true);
                 WaveCircleParent.SetActive(false);
                 for (int i = 0; i < WaveCircleRenderers.Length; i++)
                 {
@@ -159,9 +159,9 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private void UpdateGrounded()
     {
-        if((timeSinceShot > 10) && false)
+        if(timeSinceShot > 10)
         {
-            //grounded = true;
+            grounded = true;
         }
         else if (!grounded)
         {
@@ -197,6 +197,7 @@ public class BallSpeedReporter : MonoBehaviour
             {
                 if (col.gameObject.CompareTag("Movable") || col.gameObject.CompareTag("Well"))
                 {
+                if(gameObject.transform.parent.transform.localScale.x == gameObject.transform.parent.transform.localScale.y)
                     gameObject.transform.SetParent(col.gameObject.transform.parent.transform, true);
                 }
             }

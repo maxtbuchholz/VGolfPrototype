@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -132.45001, y: -114.399994}
+  m_AnchoredPosition: {x: -145, y: -100}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &67528780
@@ -2499,7 +2499,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Release your finder to send the ball flying
+  m_text: Release your finger to send the ball flying
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}
   m_sharedMaterial: {fileID: 4378537459562490546, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}
