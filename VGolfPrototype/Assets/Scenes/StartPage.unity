@@ -357,7 +357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Go Through a Tutorial
+  m_text: 'Go Through a Tutorial first
 
 '
   m_isRightToLeft: 0
@@ -1178,7 +1178,7 @@ GameObject:
   - component: {fileID: 1029481595}
   - component: {fileID: 1029481594}
   m_Layer: 14
-  m_Name: Orrr
+  m_Name: Or
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,10 +1217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childCopyObj: {fileID: 1873056420}
-  textToShow: O r r r
+  textToShow: Or
   GoAtStart: 1
-  letterTimeOffset: 0.08
-  initOffsetTime: 2.2
+  letterTimeOffset: 0.16
+  initOffsetTime: 2.6
 --- !u!222 &1029481595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: O r r r
+  m_text: Or
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}
   m_sharedMaterial: {fileID: 4378537459562490546, guid: fecd3f193c53f4f9c901d00aebcab033, type: 2}
@@ -2188,8 +2188,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 102.9
@@ -2252,7 +2252,7 @@ GameObject:
   - component: {fileID: 1955806204}
   - component: {fileID: 1955806203}
   m_Layer: 14
-  m_Name: Go Through a Tutorial
+  m_Name: Go Through a Tutorial first
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2291,7 +2291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childCopyObj: {fileID: 288266899}
-  textToShow: Go Through a Tutorial
+  textToShow: Go Through a Tutorial first
   GoAtStart: 1
   letterTimeOffset: 0.04
   initOffsetTime: 1.5

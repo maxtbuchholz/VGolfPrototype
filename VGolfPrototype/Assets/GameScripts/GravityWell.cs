@@ -82,6 +82,8 @@ public class GravityWell : MonoBehaviour
                 var rig = obj.GetComponent<Rigidbody2D>();
                 Vector2 force = offset * mag * (gravityPull);
                 force *= percentPfUllGrav;
+                if(dist > 0)
+                    force *= (1 / dist);
                 if (goal && (optionalGoalCollider != null))
                 {
                     UpdateAsGoal(force, rig, obj);
@@ -121,7 +123,7 @@ public class GravityWell : MonoBehaviour
             float CurMag = CurDist.magnitude;
             float NexMag = NextPos.magnitude;
 
-            float timeToCenter = 1f;
+            float timeToCenter = 2f;
             float multiplyer;
             if (TimeInBlackHole > timeToCenter)
                 multiplyer = 0f;
@@ -135,8 +137,8 @@ public class GravityWell : MonoBehaviour
                 Vector2 GoTo = (FinPos - CurDist);
                 float magv = rig.velocity.magnitude;
                 //float speed = 200f * (TimeInBlackHole / timeToCenter);
-                if (magv < 40f)
-                    magv = 40f;
+                //if (magv < 40f)
+                //    magv = 40f;
                 rig.velocity = magv * GoTo.normalized;
             }
         }

@@ -103,7 +103,8 @@ public class Projection : MonoBehaviour
         }
         Vector2[] LinePos = new Vector2[MaxPhysicsFrameIterations];
         line.positionCount = MaxPhysicsFrameIterations;
-        for (int i = 0; i < MaxPhysicsFrameIterations; i++)
+        line.SetPosition(0, ghostObj.transform.position);
+        for (int i = 1; i < MaxPhysicsFrameIterations; i++)
         {
             if (true)
             {

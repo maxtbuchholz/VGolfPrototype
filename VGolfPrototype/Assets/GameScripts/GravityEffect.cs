@@ -21,10 +21,10 @@ public class GravityEffect : MonoBehaviour
             CreateGravEffect();
         }
     }
-    private int effectAmount = 8;
+    [SerializeField] int effectAmount = 8;
     private SpriteRenderer[] effectSprites;
     private GameObject[] effects;
-    private float effectRepeatTime = 5.0f;
+    [SerializeField] float effectRepeatTime = 5.0f;
     private float offset;
     void CreateGravEffect()
     {

@@ -254,7 +254,7 @@ MonoBehaviour:
   DebugText: {fileID: 0}
   goal: 1
   optionalGoalCollider: {fileID: 7045516666034813793}
-  gravityPull: 2
+  gravityPull: 0.1
 --- !u!58 &3414180931647294838
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -556,6 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a356eeeea53694ace9df188f6bd74b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectAmount: 8
+  effectRepeatTime: 5
 --- !u!58 &3767761976973050225
 CircleCollider2D:
   m_ObjectHideFlags: 0
