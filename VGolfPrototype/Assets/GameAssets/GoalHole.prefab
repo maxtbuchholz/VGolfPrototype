@@ -253,6 +253,7 @@ MonoBehaviour:
   affectedObjects: []
   DebugText: {fileID: 0}
   goal: 1
+  optionalGoalCollider: {fileID: 7045516666034813793}
   gravityPull: 2
 --- !u!58 &3414180931647294838
 CircleCollider2D:

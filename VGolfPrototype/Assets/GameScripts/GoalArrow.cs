@@ -15,7 +15,7 @@ public class GoalArrow : MonoBehaviour
     [SerializeField] Transform ArrowParent;
     private SpriteRenderer[] ArrowSprites;
 
-    private float MinDistanceFromGoal = 2f;
+    private float MinDistanceFromGoal = 4f;
     bool origPosSet = false;
     private void Start()
     {

@@ -107,17 +107,17 @@ public class Projection : MonoBehaviour
         {
             if (true)
             {
+                physicsScene.Simulate(Time.fixedDeltaTime);
+                Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
                 for (int j = 0; j < GravityWells.Count; j++)
                 {
-                    if(i > -1)
+                    if (i > -1)
                         GravityWells[j].AddGravToObject(ghostObj, ghostCol, ghostGrav, 1.0f);
                 }
                 for (int j = 0; j < launchpads.Count; j++)
                 {
                     launchpads[j].GhostUpdate();
                 }
-                physicsScene.Simulate(Time.fixedDeltaTime);
-                Vector3 sPos = new Vector3(ghostObj.transform.position.x, ghostObj.transform.position.y, ghostObj.transform.position.z + 11);
                 line.SetPosition(i, sPos);
                 LinePos[i] = sPos;
                 //for (int j = 0; j < GravityWells.Count; j++)

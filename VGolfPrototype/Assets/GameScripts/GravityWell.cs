@@ -14,6 +14,7 @@ public class GravityWell : MonoBehaviour
     Collider2D[] affectedObjectsColliders;
     [SerializeField] TextMeshProUGUI DebugText;
     [SerializeField] bool goal = false;
+    [SerializeField] Collider2D optionalGoalCollider;
     private bool[] affectedIsTouching;
     private Collider2D CenterCollider;
     float radius = 5;
@@ -58,6 +59,7 @@ public class GravityWell : MonoBehaviour
             }
         }
     }
+    float unescapeRadius = 1.4f;
     public void AddGravToObject(GameObject obj, Collider2D col, BallGravityhandler gra, float percentPfUllGrav)
     {
         if (true)
@@ -80,46 +82,9 @@ public class GravityWell : MonoBehaviour
                 var rig = obj.GetComponent<Rigidbody2D>();
                 Vector2 force = offset * mag * (gravityPull);
                 force *= percentPfUllGrav;
-                if (goal)
+                if (goal && (optionalGoalCollider != null))
                 {
-                    rig.velocity = rig.velocity + force;
-
-                    Vector2 ColPos = CenterCollider.transform.position;
-                    Vector2 CurDist = obj.transform.position - CenterCollider.transform.position;
-                    Vector2 NextPos = CurDist + rig.velocity.normalized;
-                    float CurMag = CurDist.magnitude;
-                    float NexMag = NextPos.magnitude;
-                    if (NexMag > CurMag)
-                    {
-                        Vector2 FinPos = NextPos.normalized * CurMag;
-                        //Debug.DrawLine(CenterCollider.transform.position, CurDist + ColPos, UnityEngine.Color.white);
-                        //Debug.DrawLine(CenterCollider.transform.position, NextPos + ColPos, UnityEngine.Color.gray);
-                        //Debug.DrawLine(CurDist + ColPos, NextPos + ColPos, UnityEngine.Color.red);
-                        //Debug.DrawLine(NextPos + ColPos, FinPos + ColPos, UnityEngine.Color.yellow);
-
-                        Vector2 GoTo = (FinPos - CurDist);
-                        //Debug.DrawLine(FinPos + ColPos, CurDist + ColPos, UnityEngine.Color.green);
-                        rig.velocity = rig.velocity.magnitude * GoTo.normalized;
-                    }
-                    //Vector3 curVel = rig.velocity.normalized;
-                    //Vector3 curDist = obj.transform.position - CenterCollider.transform.position;
-                    //Vector3 nextPos = (curVel + obj.transform.position) - CenterCollider.transform.position;
-                    //if (nextPos.magnitude > curDist.magnitude) //nextPos.magnitude > curDist.magnitude !AffectedGravArea.OverlapPoint(curVel + obj.transform.position
-                    //{
-                    //    nextPos = nextPos.normalized * (curDist.magnitude / 1f);
-                    //    //Debug.Log(curDist.magnitude + " | " + nextPos.magnitude);
-                    //    Debug.DrawLine(CenterCollider.transform.position, curDist + CenterCollider.transform.position, UnityEngine.Color.white);
-                    //    Debug.DrawLine(CenterCollider.transform.position, nextPos + CenterCollider.transform.position, UnityEngine.Color.gray);
-                    //    Debug.DrawLine(curVel + obj.transform.position, obj.transform.position, UnityEngine.Color.red);
-                    //    Debug.DrawLine(nextPos + CenterCollider.transform.position, curVel + obj.transform.position, UnityEngine.Color.yellow);
-                    //    //nx = nextPos - z;
-                    //    //Debug.DrawLine(nextPos + CenterCollider.transform.position, curVel + obj.transform.position, UnityEngine.Color.green);
-                    //    //rig.velocity = nextPos.normalized * rig.velocity.magnitude;
-
-                    //    //Debug.DrawLine(obj.transform.position, Vector3.zero, UnityEngine.Color.yellow);
-                    //}
-                    //float orMag = force.magnitude;
-                    //rig.velocity = ((force.normalized * 5 + rig.velocity.normalized) * orMag) / 3f;
+                    UpdateAsGoal(force, rig, obj);
                 }
                 else
                 {
@@ -132,6 +97,47 @@ public class GravityWell : MonoBehaviour
                 gra.UpdateGravityInfluence(transform.GetInstanceID(), false);
                 LastTimeWasGrav = false;
                 //Debug.DrawLine(obj.transform.position + new Vector3(0.1f,0.1f,0.1f), Vector3.zero, UnityEngine.Color.yellow);
+            }
+        }
+    }
+    float TimeInBlackHole = 0f;
+    int objInGravID = -1;
+    private void UpdateAsGoal(Vector2 force, Rigidbody2D rig, GameObject obj)
+    {
+        if (objInGravID != obj.GetInstanceID())
+        {
+            objInGravID = obj.GetInstanceID();
+            TimeInBlackHole = 0f;
+        }
+        rig.velocity = rig.velocity + force;
+        Bounds unBounds = optionalGoalCollider.bounds;
+        unBounds.center = new Vector3(unBounds.center.x, unBounds.center.y, obj.transform.position.z);
+        if (unBounds.Contains(obj.transform.position))
+        {
+            TimeInBlackHole += Time.deltaTime;
+            Vector2 ColPos = CenterCollider.transform.position;
+            Vector2 CurDist = obj.transform.position - CenterCollider.transform.position;
+            Vector2 NextPos = CurDist + rig.velocity.normalized;
+            float CurMag = CurDist.magnitude;
+            float NexMag = NextPos.magnitude;
+
+            float timeToCenter = 1f;
+            float multiplyer;
+            if (TimeInBlackHole > timeToCenter)
+                multiplyer = 0f;
+            else
+                multiplyer = 0.40f * (1 - (TimeInBlackHole / timeToCenter));
+            float rad = optionalGoalCollider.transform.lossyScale.x * multiplyer;
+
+            if (NexMag != rad) //!= CurMag
+            {
+                Vector2 FinPos = NextPos.normalized * rad;
+                Vector2 GoTo = (FinPos - CurDist);
+                float magv = rig.velocity.magnitude;
+                //float speed = 200f * (TimeInBlackHole / timeToCenter);
+                if (magv < 40f)
+                    magv = 40f;
+                rig.velocity = magv * GoTo.normalized;
             }
         }
     }
