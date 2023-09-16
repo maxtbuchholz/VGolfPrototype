@@ -8,6 +8,7 @@ TagManager:
   - Movable
   - Ball
   - Well
+  - PlayMusic
   layers:
   - Default
   - TransparentFX

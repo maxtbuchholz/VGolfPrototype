@@ -73,9 +73,24 @@ public class Projection : MonoBehaviour
                 GravityWells.RemoveAt(i);
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
-
+        if(hideOverTimeTime > timeToHide)
+        {
+            line.enabled = false;
+            hideOverTimeTime = -1;
+            line.startColor = originalLineColor;
+            line.endColor = originalLineColor;
+        }
+        else if(hideOverTimeTime >= 0)
+        {
+            hideOverTimeTime += Time.deltaTime;
+            float perc = 1 - (hideOverTimeTime / timeToHide);
+            perc *= originalLineColor.a;
+            Color gradCol = new Color(originalLineColor.r, originalLineColor.g, originalLineColor.b, originalLineColor.a * perc);
+            line.startColor = gradCol;
+            line.endColor = gradCol;
+        }
     }
     [SerializeField] LineRenderer line;
     [SerializeField] int MaxPhysicsFrameIterations;
@@ -163,6 +178,14 @@ public class Projection : MonoBehaviour
         //        ren.enabled = true;
         //    }
         //}
+    }
+    private Color originalLineColor;
+    private float hideOverTimeTime = -1;
+    private float timeToHide = 0.5f;
+    public void HideOverTime()
+    {
+        originalLineColor = line.startColor;
+        hideOverTimeTime = 0;
     }
     public void Hide()
     {

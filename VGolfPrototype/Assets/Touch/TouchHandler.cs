@@ -165,13 +165,13 @@ public class TouchHandler : MonoBehaviour
     private void ResetTouch()   //function to reset the touches because im big dum dum
     {
         pullingIndex = -1;
-        projection.Hide();
+        projection.HideOverTime();
         CanStartAim = true;
     }
 
     private void LaunchBall()
     {
-        projection.Hide();
+        projection.HideOverTime();
         if (PullDistanceLongEnough)
         {
             BallSpeed.BallShot();

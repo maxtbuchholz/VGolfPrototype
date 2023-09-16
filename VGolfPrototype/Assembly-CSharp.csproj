@@ -84,6 +84,7 @@
     <Compile Include="Assets/GameScripts/ResizeGameBackground.cs" />
     <Compile Include="Assets/PassDataScripts/DataGameToVictory.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
+    <Compile Include="Assets/PlayMusic.cs" />
     <Compile Include="Assets/VictoryScripts/VictoryScreenStart.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />

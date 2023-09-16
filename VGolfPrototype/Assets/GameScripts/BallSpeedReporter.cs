@@ -159,7 +159,7 @@ public class BallSpeedReporter : MonoBehaviour
     }
     private void UpdateGrounded()
     {
-        if(timeSinceShot > 10)
+        if(timeSinceShot > 1000000000)
         {
             grounded = true;
         }

@@ -23,9 +23,19 @@ public class VolumeSliders : MonoBehaviour
     public void MusicControl()
     {
         PlayerPrefs.SetFloat("MusicVolume", MusicSlider.value);
+        PlayMusic[] pM = FindObjectsOfType<PlayMusic>();
+        foreach(PlayMusic M in pM)
+        {
+            M.FixedUpdate();
+        }
     }
     public void SoundEffectControl()
     {
         PlayerPrefs.SetFloat("SoundEffectVolume", SoundEffectsSlider.value);
+        PlayMusic[] pM = FindObjectsOfType<PlayMusic>();
+        foreach (PlayMusic M in pM)
+        {
+            M.FixedUpdate();
+        }
     }
 }

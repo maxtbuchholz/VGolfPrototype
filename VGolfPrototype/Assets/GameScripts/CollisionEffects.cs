@@ -37,11 +37,12 @@ public class CollisionEffects: MonoBehaviour
             {
                 particleStartColor = Color.white;
             }
-            if(lastSpeed > 5f)
+            if(lastSpeed > 2f)
             {
-                float per = Mathf.Sqrt(lastSpeed);
-                if (per > 1) per = 1;
-                per = Mathf.Sqrt(per);
+                float per = Mathf.Pow(lastSpeed, 2) / 8; //Mathf.Pow(lastSpeed, 0.25f);
+                if (per > 3) per = 3f;
+                //per = Mathf.Sqrt(per);
+                //per = Mathf.Sqrt(per);
                 audioSource.PlayOneShot(HitSound, PlayerPrefs.GetFloat("SoundEffectVolume", 1) * per);
             }
             if (lastSpeed > 10)
